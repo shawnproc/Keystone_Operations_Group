@@ -166,45 +166,74 @@ body {
   position: relative;
   overflow: hidden;
   padding: 120px 24px 80px;
-  background: linear-gradient(150deg, var(--off-white) 0%, #e8f5f7 50%, var(--teal-pale) 100%);
+  background: var(--navy);
+}
+
+/* Video background */
+.hero-video-wrap {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+.hero-video-wrap video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.hero-video-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(
+    135deg,
+    rgba(10, 25, 38, 0.82) 0%,
+    rgba(10, 40, 55, 0.70) 50%,
+    rgba(15, 74, 88, 0.55) 100%
+  );
 }
 .hero-bg {
   position: absolute;
   inset: 0;
+  z-index: 2;
   background:
-    radial-gradient(ellipse 60% 60% at 80% 20%, rgba(74,171,184,0.15) 0%, transparent 60%),
-    radial-gradient(ellipse 40% 40% at 10% 80%, rgba(15,74,88,0.08) 0%, transparent 60%);
+    radial-gradient(ellipse 50% 60% at 0% 50%, rgba(10,25,38,0.6) 0%, transparent 70%);
   pointer-events: none;
 }
 .hero-content {
-  max-width: 1160px;
-  margin: 0 auto;
+  position: relative;
+  z-index: 3;
   flex: 1;
-  max-width: 560px;
+  max-width: 620px;
 }
 .hero-eyebrow {
   font-size: 0.8rem;
   font-weight: 600;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--teal-mid);
+  color: var(--teal-light);
   margin-bottom: 20px;
 }
 .hero h1 {
   font-family: 'Playfair Display', serif;
-  font-size: clamp(2.6rem, 5vw, 4rem);
+  font-size: clamp(2.6rem, 5vw, 4.2rem);
   line-height: 1.15;
-  color: var(--navy);
+  color: var(--white);
   margin-bottom: 24px;
 }
 .hero-sub {
   font-size: 1.1rem;
-  color: var(--text-mid);
+  color: rgba(255,255,255,0.8);
   line-height: 1.7;
-  max-width: 480px;
+  max-width: 500px;
   margin-bottom: 40px;
 }
 .hero-actions { display: flex; gap: 16px; flex-wrap: wrap; }
+.hero .btn-ghost {
+  color: var(--white);
+  border-color: rgba(255,255,255,0.4);
+}
+.hero .btn-ghost:hover { background: rgba(255,255,255,0.1); }
 
 .hero-visual {
   position: absolute;
@@ -214,6 +243,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  z-index: 3;
 }
 .hero-card {
   background: var(--white);

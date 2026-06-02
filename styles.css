@@ -125,13 +125,13 @@ body {
   max-width: 1160px;
   margin: 0 auto;
   padding: 0 24px;
-  height: 88px;
+  height: 110px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 .nav-logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
-.logo-img { height: 72px; width: auto; object-fit: contain; mix-blend-mode: multiply; }
+.logo-img { height: 100px; width: auto; object-fit: contain; mix-blend-mode: multiply; }
 .footer-logo-img { height: 56px; mix-blend-mode: normal; filter: brightness(0) invert(1); }
 .nav-links {
   display: flex;

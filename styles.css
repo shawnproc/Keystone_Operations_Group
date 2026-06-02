@@ -131,24 +131,8 @@ body {
   justify-content: space-between;
 }
 .nav-logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
-.logo-icon { width: 40px; height: 40px; }
-.logo-icon.small { width: 32px; height: 32px; }
-.logo-text {
-  font-family: 'Inter', sans-serif;
-  font-weight: 800;
-  font-size: 1rem;
-  color: var(--navy);
-  line-height: 1.1;
-  letter-spacing: 0.04em;
-  display: flex;
-  flex-direction: column;
-}
-.logo-text span {
-  font-weight: 400;
-  font-size: 0.6rem;
-  letter-spacing: 0.18em;
-  color: var(--text-mid);
-}
+.logo-img { height: 48px; width: auto; object-fit: contain; }
+.footer-logo-img { height: 40px; filter: brightness(0) invert(1); }
 .nav-links {
   display: flex;
   align-items: center;

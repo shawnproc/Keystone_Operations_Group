@@ -131,8 +131,8 @@ body {
   justify-content: space-between;
 }
 .nav-logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
-.logo-img { height: 100px; width: auto; object-fit: contain; mix-blend-mode: multiply; }
-.footer-logo-img { height: 56px; mix-blend-mode: normal; filter: brightness(0) invert(1); }
+.logo-img { height: 100px; width: auto; object-fit: contain; }
+.footer-logo-img { height: 56px; filter: brightness(0) invert(1); }
 .nav-links {
   display: flex;
   align-items: center;

@@ -22,8 +22,8 @@ Last Updated: June 2026
 - ⬜ Business cards / email signature
 
 ### Legal & Business Setup
-- ⬜ Business entity formed (LLC recommended)
-- ⬜ EIN obtained
+- ✅ Business entity formed (LLC)
+- ✅ EIN obtained
 - ⬜ Business bank account opened
 - ⬜ Business email set up (info@keystoneoperationsgroup.net)
 - ⬜ Terms of service written
@@ -34,7 +34,7 @@ Last Updated: June 2026
 - ✅ Domain purchased (keystoneoperationsgroup.net)
 - ✅ GitHub repo created
 - ✅ GitHub Pages live
-- ⬜ Custom domain pointed to GitHub Pages (Cloudflare DNS)
+- ✅ Custom domain pointed to GitHub Pages (Cloudflare DNS)
 - ⬜ SSL certificate active (HTTPS)
 
 ---
@@ -186,11 +186,11 @@ Last Updated: June 2026
 
 ## What's Next Right Now
 
-1. ⬜ Form LLC and get EIN
-2. ⬜ Open business bank account
-3. ⬜ Set up GHL agency account
-4. ⬜ Create Stripe account
-5. ⬜ Connect Stripe to GHL
-6. ⬜ Point domain to GitHub Pages (fix DNS in Cloudflare)
+1. ✅ Form LLC and get EIN
+2. ✅ Point domain to GitHub Pages (Cloudflare DNS fixed)
+3. ⬜ Open business bank account
+4. ⬜ Set up GHL agency account
+5. ⬜ Create Stripe account
+6. ⬜ Connect Stripe to GHL
 7. ⬜ Record demo videos
 8. ⬜ Train Hermes and GHL AI on all documents

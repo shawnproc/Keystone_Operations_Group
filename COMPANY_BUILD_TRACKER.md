@@ -24,18 +24,20 @@ Last Updated: June 2026
 ### Legal & Business Setup
 - ✅ Business entity formed (LLC)
 - ✅ EIN obtained
-- ⬜ Business bank account opened
+- ⬜ Business bank account opened (Navy Federal)
 - ⬜ Business email set up (info@keystoneoperationsgroup.net)
-- ⬜ Terms of service written
-- ⬜ Privacy policy written
-- ⬜ Client service agreement / contract written
+- ✅ Terms of service written
+- ✅ Privacy policy written
+- ✅ Client service agreement / contract written
+- ⬜ Refund policy defined (is setup fee refundable?)
+- ⬜ Stripe dispute / chargeback policy documented
 
 ### Domain & Hosting
 - ✅ Domain purchased (keystoneoperationsgroup.net)
 - ✅ GitHub repo created
 - ✅ GitHub Pages live
 - ✅ Custom domain pointed to GitHub Pages (Cloudflare DNS)
-- ⬜ SSL certificate active (HTTPS)
+- ✅ SSL certificate active (HTTPS / padlock confirmed)
 
 ---
 
@@ -52,6 +54,9 @@ Last Updated: June 2026
 - ✅ Why Keystone section
 - ✅ Contact section
 - ✅ Footer
+- ✅ Terms of Service page
+- ✅ Privacy Policy page
+- ✅ Terms & Privacy links added to footer
 
 ### Functionality
 - ✅ Contact form connected to Formspree (emails to info@)
@@ -159,16 +164,28 @@ Last Updated: June 2026
 
 ---
 
-## PHASE 7 — Growth
+## PHASE 7 — Growth & Marketing
 
+- ⬜ Google Business Profile created
+- ⬜ LinkedIn company page created
+- ⬜ Referral program built (incentive for client referrals)
 - ⬜ 5 active clients
 - ⬜ 10 active clients
 - ⬜ GHL cost covered by client revenue
 - ⬜ Testimonials section live on website
 - ⬜ Case studies written (1 per industry served)
-- ⬜ Referral program built
 - ⬜ Pricing increased for new clients (founding members stay locked)
 - ⬜ Evaluate custom client portal build
+
+---
+
+## PHASE 8 — Business Administration
+
+- ⬜ Bookkeeping system set up (Wave — free, or QuickBooks)
+- ⬜ Separate business bank account actively used for all revenue/expenses
+- ⬜ Monthly revenue tracked vs GHL overhead
+- ⬜ Quarterly tax estimates set aside
+- ⬜ Annual review — pricing, services, growth goals
 
 ---
 
@@ -188,9 +205,11 @@ Last Updated: June 2026
 
 1. ✅ Form LLC and get EIN
 2. ✅ Point domain to GitHub Pages (Cloudflare DNS fixed)
-3. ⬜ Open business bank account
-4. ⬜ Set up GHL agency account
-5. ⬜ Create Stripe account
-6. ⬜ Connect Stripe to GHL
-7. ⬜ Record demo videos
-8. ⬜ Train Hermes and GHL AI on all documents
+3. ✅ SSL certificate confirmed active
+4. ⬜ Open business bank account (Navy Federal)
+5. ✅ Write Terms of Service + Privacy Policy (website legal pages)
+6. ✅ Write Client Service Agreement
+7. ⬜ Set up GHL agency account
+8. ⬜ Create Stripe account and connect to GHL
+9. ⬜ Record demo videos
+10. ⬜ Train Hermes and GHL AI on all documents

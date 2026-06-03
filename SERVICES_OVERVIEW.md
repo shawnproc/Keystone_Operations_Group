@@ -119,6 +119,30 @@ Multi-step, conditional logic, or multiple channels
 
 ---
 
+## Support Policy
+- If any flow or automation breaks, it gets fixed at no charge
+- Client never needs to reach out to set this up — we sold them the system,
+  we maintain the system
+- This is a core part of what the Monthly Support Plan covers
+
+## Cancellation Policy
+- If a client cancels their Monthly Support Plan, all flows and automations
+  are turned off immediately
+- The system runs through Keystone's GoHighLevel account — when they leave,
+  access ends
+- Clients do not own or keep the flows — they are licensing the running system
+- This means the monthly plan is not optional if they want the automation
+  to keep working
+
+---
+
+## What the Monthly Support Plan Actually Covers
+1. System stays on and running
+2. Anything that breaks gets fixed for free
+3. Keystone monitors and maintains the automation on their behalf
+
+---
+
 ## Pricing Tiers
 
 ### Starter — $99 setup + $297/mo Monthly Support Plan (Founding Rate)

@@ -490,6 +490,159 @@ body {
 .ai-cta-block h3 { font-size: 2rem; font-weight: 700; color: var(--white); margin-bottom: 12px; }
 .ai-cta-block p { color: rgba(255,255,255,0.7); margin-bottom: 32px; font-size: 1.05rem; }
 
+/* ===== PRICING ===== */
+.pricing { background: var(--off-white); }
+
+.founding-banner {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: linear-gradient(135deg, var(--navy), var(--teal-dark));
+  color: var(--white);
+  padding: 20px 32px;
+  border-radius: var(--radius-lg);
+  margin-bottom: 48px;
+}
+.founding-icon { font-size: 2rem; flex-shrink: 0; }
+.founding-banner strong { display: block; font-size: 1.05rem; margin-bottom: 4px; }
+.founding-banner p { font-size: 0.88rem; opacity: 0.8; margin: 0; }
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  align-items: start;
+  margin-bottom: 64px;
+}
+.pricing-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 36px 28px;
+  border: 1px solid var(--border);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.pricing-featured {
+  border-color: var(--teal-mid);
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-8px);
+}
+.pricing-badge {
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(135deg, var(--teal-dark), var(--teal-mid));
+  color: var(--white);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  padding: 6px 20px;
+  border-radius: 50px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.pricing-tier {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--navy);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+.pricing-setup {
+  font-size: 0.95rem;
+  color: var(--text-mid);
+  font-weight: 500;
+}
+.pricing-setup span { font-size: 0.82rem; }
+.pricing-monthly {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+.price-future {
+  font-size: 1rem;
+  color: var(--text-light);
+  text-decoration: line-through;
+}
+.price-current {
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: var(--teal-dark);
+  line-height: 1;
+}
+.price-current span { font-size: 1rem; font-weight: 500; color: var(--text-mid); }
+.pricing-desc {
+  font-size: 0.88rem;
+  color: var(--text-mid);
+  line-height: 1.6;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--border);
+}
+.pricing-features {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+}
+.pricing-features li {
+  font-size: 0.88rem;
+  color: var(--text);
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+.pricing-features li::first-letter { color: var(--teal-mid); }
+.pricing-lock {
+  text-align: center;
+  font-size: 0.78rem;
+  color: var(--text-light);
+  margin-top: 4px;
+}
+
+/* A La Carte */
+.alacarte {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 48px;
+  border: 1px solid var(--border);
+}
+.alacarte-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.alacarte-header h3 { font-size: 1.6rem; font-weight: 700; color: var(--navy); margin-bottom: 8px; }
+.alacarte-header p { color: var(--text-mid); font-size: 0.95rem; }
+.alacarte-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+.alacarte-group h4 {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--teal-mid);
+  margin-bottom: 16px;
+}
+.alacarte-items { display: flex; flex-direction: column; gap: 2px; }
+.alacarte-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 16px;
+  border-radius: 8px;
+  transition: background 0.15s;
+}
+.alacarte-item:hover { background: var(--off-white); }
+.alacarte-item span { font-size: 0.9rem; color: var(--text); }
+.alacarte-item em { display: block; font-size: 0.78rem; color: var(--text-light); font-style: normal; }
+.alacarte-item strong { font-size: 1rem; font-weight: 700; color: var(--teal-dark); white-space: nowrap; margin-left: 16px; }
+
 /* ===== WHO WE HELP ===== */
 .who-we-help { background: var(--navy); color: var(--white); }
 .who-we-help .section-header h2 { color: var(--white); }
@@ -656,6 +809,9 @@ body {
   .hero-visual { display: none; }
   .about-grid { grid-template-columns: 1fr; gap: 48px; }
   .services-grid { grid-template-columns: repeat(2, 1fr); }
+  .pricing-grid { grid-template-columns: 1fr; }
+  .pricing-featured { transform: none; }
+  .alacarte-grid { grid-template-columns: 1fr; }
   .who-grid { grid-template-columns: repeat(2, 1fr); }
   .who-card-wide { grid-column: span 2; flex-direction: column; }
   .ai-grid { grid-template-columns: repeat(2, 1fr); }

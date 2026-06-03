@@ -414,28 +414,28 @@
             </div>
           </div>
         </div>
-        <form class="contact-form" onsubmit="handleSubmit(event)">
+        <form class="contact-form" action="https://formspree.io/f/mykagaro" method="POST">
           <div class="form-row">
             <div class="form-group">
               <label>First Name</label>
-              <input type="text" placeholder="Jane" required />
+              <input type="text" name="first_name" placeholder="Jane" required />
             </div>
             <div class="form-group">
               <label>Last Name</label>
-              <input type="text" placeholder="Smith" required />
+              <input type="text" name="last_name" placeholder="Smith" required />
             </div>
           </div>
           <div class="form-group">
             <label>Email</label>
-            <input type="email" placeholder="jane@company.com" required />
+            <input type="email" name="email" placeholder="jane@company.com" required />
           </div>
           <div class="form-group">
             <label>Organization</label>
-            <input type="text" placeholder="Your Company" />
+            <input type="text" name="organization" placeholder="Your Company" />
           </div>
           <div class="form-group">
             <label>Area of Interest</label>
-            <select>
+            <select name="area_of_interest">
               <option value="">Select a service...</option>
               <option>Workflow Automation</option>
               <option>Operational Strategy</option>
@@ -446,10 +446,9 @@
           </div>
           <div class="form-group">
             <label>Message</label>
-            <textarea placeholder="Tell us about your goals and challenges..." rows="4"></textarea>
+            <textarea name="message" placeholder="Tell us about your goals and challenges..." rows="4"></textarea>
           </div>
           <button type="submit" class="btn-primary full-width">Send Message</button>
-          <p class="form-success" id="form-success">Thank you! We'll be in touch shortly.</p>
         </form>
       </div>
     </div>

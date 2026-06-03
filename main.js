@@ -14,15 +14,6 @@ document.querySelectorAll('.nav-links a').forEach(link => {
   link.addEventListener('click', () => navLinks.classList.remove('open'));
 });
 
-// Contact form
-function handleSubmit(e) {
-  e.preventDefault();
-  const success = document.getElementById('form-success');
-  success.classList.add('show');
-  e.target.reset();
-  setTimeout(() => success.classList.remove('show'), 5000);
-}
-
 // Scroll reveal animation
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {

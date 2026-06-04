@@ -205,6 +205,7 @@ Last Updated: June 2026
 | CLIENT_ONBOARDING_SOP.md | Full client journey from lead to live flows |
 | DEMO_VIDEO_GUIDE.md | Script and instructions for tier demo videos |
 | BRAND_GUIDELINES.md | Logo usage, colors, fonts, voice, email signature |
+| EMAIL_HUB.md | Email accounts, signature block, setup instructions, where each email is used |
 | COMPANY_BUILD_TRACKER.md | This file — where we are and what's next |
 
 ---

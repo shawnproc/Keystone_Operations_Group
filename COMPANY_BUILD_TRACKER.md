@@ -27,9 +27,9 @@ Last Updated: June 2026
 - ✅ EIN obtained
 - ⬜ Business bank account opened (Navy Federal)
 - ⬜ Business email set up:
-  - ⬜ Google Workspace account created ($6/mo)
+  - ✅ Google Workspace account created ($6/mo)
   - ⬜ ops@keystoneoperationsgroup.net — primary/internal (GHL, Stripe, GitHub, all ops)
-  - ⬜ info@keystoneoperationsgroup.net — customer facing (contact form only)
+  - ✅ info@keystoneoperationsgroup.net — customer facing (contact form only)
   - ✅ Formspree updated to send to info@
   - ⬜ GHL notifications pointed to ops@
   - ⬜ Stripe registered with ops@

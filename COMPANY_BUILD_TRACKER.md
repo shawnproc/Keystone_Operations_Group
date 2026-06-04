@@ -35,7 +35,7 @@ Last Updated: June 2026
 - ✅ Terms of service written
 - ✅ Privacy policy written
 - ✅ Client service agreement / contract written
-- ⬜ Refund policy defined (is setup fee refundable?)
+- ✅ Refund policy defined (setup fee non-refundable; monthly plan cancel anytime, no contract)
 - ⬜ Stripe dispute / chargeback policy documented
 
 ### Domain & Hosting

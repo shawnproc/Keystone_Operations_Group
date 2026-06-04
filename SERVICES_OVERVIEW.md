@@ -125,14 +125,14 @@ Multi-step, conditional logic, or multiple channels
   we maintain the system
 - This is a core part of what the Monthly Support Plan covers
 
-## Cancellation Policy
-- If a client cancels their Monthly Support Plan, all flows and automations
-  are turned off immediately
-- The system runs through Keystone's GoHighLevel account — when they leave,
-  access ends
-- Clients do not own or keep the flows — they are licensing the running system
-- This means the monthly plan is not optional if they want the automation
-  to keep working
+## Refund & Cancellation Policy
+- **Setup fee is non-refundable** — work begins immediately after payment
+- **Monthly plan has no contract** — clients can cancel at any time, no penalty
+- **No refunds on monthly fees** — service remains active through the current billing period
+- When a client cancels, all flows are deactivated and their account is removed from GHL
+- Clients do not own the flows — they are licensing the running system for as long as
+  their plan is active
+- Founding member rates are honored if a client returns within 30 days of cancellation
 
 ---
 

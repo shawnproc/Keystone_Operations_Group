@@ -31,11 +31,70 @@ enough to have customers, small enough to not have a full team.
 
 ## How to Find Prospects
 
-- Google Maps — search "[industry] [city]" and filter for 15-50 reviews
+- **Warm conversations** — business owners you meet naturally. Once you're
+  in the mindset, you'll keep running into them. These are warmer than any
+  scrape or cold list.
+- Google Maps — search "[industry] [city]" and filter for 15-75 reviews
 - Angi / Thumbtack — contractors actively spending money to grow already
   understand the value of more leads
 - Facebook local business groups
 - Nextdoor — service providers advertising there are almost always owner-operators
+
+### OutScraper (Bulk Prospecting)
+
+OutScraper scrapes Google Maps and exports a spreadsheet with business name,
+phone, website, address, and review count — ready to work from.
+
+**Recommended filter settings:**
+- Category: [target trade — HVAC, plumbing, pest control, etc.]
+- Location: [target city or radius]
+- Reviews: 10 to 75
+- Has phone: Yes
+- Rating: 3.5 to 4.4
+
+The 3.5-4.4 rating sweet spot is key. Businesses rated 4.5+ are usually
+already dialed in. Under 3.5 have deeper problems than automation can fix.
+The middle is almost always an owner-operator doing decent work with no system.
+
+---
+
+## Prospect Filter — Who Is and Isn't Your Client
+
+| Signal | What it means |
+|--------|--------------|
+| Owner answers the phone himself | Your client |
+| Voicemail picks up during business hours | Your client |
+| 15-75 Google reviews, no recent ones | Your client |
+| Has reviews but never responds to them | Your client |
+| Slow or no response to contact form | Your client |
+| Call center answers, polished hold music | Move on |
+| 500+ reviews, multiple locations | Move on |
+| Dedicated booking software already running | Move on |
+| Full office staff handling leads and follow-ups | Move on |
+
+**The rule:** If they've already solved the problem, don't try to resell
+the solution. Find someone who hasn't solved it yet.
+
+---
+
+## The Full Funnel — An Answer for Every Scenario
+
+**Scenario 1 — They're getting leads but losing some:**
+> "You're already busy — but how many leads are slipping through? Missed
+> calls, slow follow-ups, no review asks after the job. We plug those holes
+> automatically."
+→ Sell KOS Monthly Support Plan
+
+**Scenario 2 — They're not getting enough leads:**
+> "Before we talk automation, let's get your phone ringing first."
+→ Sell rank and rent lead gen site. Once leads flow and volume grows,
+they need KOS to handle it.
+
+**Scenario 3 — They already have a full support system:**
+→ Move on. Not your client right now.
+
+You have an answer for every scenario except the one where they've already
+solved everything — and those businesses are easy to spot and skip.
 
 ---
 

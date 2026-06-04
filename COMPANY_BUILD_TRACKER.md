@@ -20,7 +20,7 @@ Last Updated: June 2026
 - ✅ Brand colors defined (teal #1a6b7c / navy #0d1f2d)
 - ✅ Brand guidelines document created
 - ✅ Email signature block defined (see BRAND_GUIDELINES.md)
-- ⬜ Business cards
+- ✅ QR code created (qr-code.png — links to keystoneoperationsgroup.net)
 
 ### Legal & Business Setup
 - ✅ Business entity formed (LLC)

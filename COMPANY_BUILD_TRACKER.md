@@ -87,7 +87,7 @@ Last Updated: June 2026
 ## PHASE 3 — Operations (GHL Setup)
 
 ### Account Setup
-- ⬜ GHL Agency account created (~$297/mo)
+- ✅ GHL Agency account created (~$297/mo)
 - ⬜ GHL white-labeled with Keystone branding
 - ⬜ Agency domain connected
 

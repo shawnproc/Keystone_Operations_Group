@@ -18,8 +18,9 @@ Last Updated: June 2026
 - ✅ Company name decided — Keystone Operations Group
 - ✅ Logo created
 - ✅ Brand colors defined (teal #1a6b7c / navy #0d1f2d)
-- ⬜ Brand guidelines document created
-- ⬜ Business cards / email signature
+- ✅ Brand guidelines document created
+- ✅ Email signature block defined (see BRAND_GUIDELINES.md)
+- ⬜ Business cards
 
 ### Legal & Business Setup
 - ✅ Business entity formed (LLC)
@@ -203,6 +204,7 @@ Last Updated: June 2026
 | GHL_SETUP_BLUEPRINT.md | Step-by-step GHL + Stripe setup guide |
 | CLIENT_ONBOARDING_SOP.md | Full client journey from lead to live flows |
 | DEMO_VIDEO_GUIDE.md | Script and instructions for tier demo videos |
+| BRAND_GUIDELINES.md | Logo usage, colors, fonts, voice, email signature |
 | COMPANY_BUILD_TRACKER.md | This file — where we are and what's next |
 
 ---

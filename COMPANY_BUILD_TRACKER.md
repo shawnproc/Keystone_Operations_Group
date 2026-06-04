@@ -30,7 +30,7 @@ Last Updated: June 2026
   - ⬜ Google Workspace account created ($6/mo)
   - ⬜ ops@keystoneoperationsgroup.net — primary/internal (GHL, Stripe, GitHub, all ops)
   - ⬜ info@keystoneoperationsgroup.net — customer facing (contact form only)
-  - ⬜ Formspree updated to send to info@
+  - ✅ Formspree updated to send to info@
   - ⬜ GHL notifications pointed to ops@
   - ⬜ Stripe registered with ops@
 - ✅ Terms of service written

@@ -25,7 +25,7 @@ Last Updated: June 2026
 ### Legal & Business Setup
 - ✅ Business entity formed (LLC)
 - ✅ EIN obtained
-- ⬜ Business bank account opened (Navy Federal)
+- 🔄 Business bank account opened (Navy Federal) — submitted, pending review
 - ⬜ Business email set up:
   - ✅ Google Workspace account created ($6/mo)
   - ⬜ ops@keystoneoperationsgroup.net — primary/internal (GHL, Stripe, GitHub, all ops)
@@ -92,8 +92,8 @@ Last Updated: June 2026
 - ⬜ Agency domain connected
 
 ### Stripe & Billing
-- ⬜ Stripe account created
-- ⬜ Stripe connected to GHL
+- ✅ Stripe account created
+- ✅ Stripe connected to GHL
 - ⬜ All products created in Stripe:
   - ⬜ Starter setup fee ($99)
   - ⬜ Growth setup fee ($159)

@@ -206,7 +206,7 @@ Last Updated: June 2026
 | DEMO_VIDEO_GUIDE.md | Script and instructions for tier demo videos |
 | BRAND_GUIDELINES.md | Logo usage, colors, fonts, voice, email signature |
 | GROWTH_STRATEGY.md | Target industries, first outreach message, first client strategy, rank and rent model |
-| COMPANY_BUILD_TRACKER.md | This file — where we are and what's next |
+| GO_LIVE_PLAN.md | Day-by-day plan to go live within one week |
 
 ---
 

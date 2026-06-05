@@ -1,6 +1,126 @@
 # Keystone Operations Group — Growth Strategy
 
-Last Updated: June 2026
+Last Updated: June 2026 (Niche Strategy Added)
+
+---
+
+## Niche Strategy — Emergency & After-Hours Service Businesses
+
+The sharpest positioning for Keystone is businesses that receive calls after hours,
+on weekends, or during emergencies — where missing that call means losing the job
+entirely to whoever answers first. These owners can't be at their phone 24/7.
+That's exactly the gap Keystone fills.
+
+**Core Pitch for This Niche:**
+> "You're losing jobs at night. We fix that."
+
+---
+
+### Tier 1 — Emergency / Reactive (Highest Urgency)
+These businesses get calls when something has gone wrong and the customer
+cannot wait until morning. Every unanswered call is a lost job.
+
+**Home & Property Emergency**
+- HVAC — emergency calls at 10pm, broken AC in summer, no heat in winter
+- Plumbing — burst pipes, water heater failures, flooding
+- Electrical — outages, panel issues, safety hazards
+- Garage Door Repair — broken spring, car stuck, security concern
+- Locksmith / Pop-A-Lock — locked out at any hour
+- Water & Fire Damage Restoration — insurance clock starts immediately
+- Mold Remediation — discovered unexpectedly, urgent health concern
+- Sewer & Drain Services — always urgent, never convenient
+- Glass Repair — broken window, security concern, overnight exposure
+- Tree / Storm Damage Removal — calls flood in right after a storm
+- Generator Repair / Installation
+- Commercial Refrigeration Repair — restaurant can't wait until Monday
+- Commercial Kitchen Equipment Repair
+
+**Access & Security**
+- Security System Installation / Monitoring
+- Safe Technicians
+- Car Key Replacement / Ignition Specialists
+- Intercom / Gate Access Repair
+
+---
+
+### Tier 2 — Death, Injury & Trauma
+Some of the most urgent, emotionally charged calls a person ever makes.
+The business that responds first — even with an automated, professional message —
+wins almost every time.
+
+**Death & End of Life**
+- Funeral Homes
+- Cremation Services
+- Grief Counselors / Therapists
+- Estate Cleanout / Hoarding Cleanup
+- Probate Real Estate Agents
+
+**Injury & Medical (Non-Hospital)**
+- Urgent Care Clinics
+- Chiropractors — accident victims, same-day pain calls
+- Physical Therapy Practices
+- Personal Injury Attorneys — someone just got in an accident, Googling immediately
+- Workers Compensation Attorneys — same urgency, same window
+- Medical Transport / Non-Emergency Ambulance
+- Home Health Aides / Caregiving Agencies
+- Veterinary Emergency Clinics
+
+**Accident & Damage**
+- Auto Body Shops — post-accident calls
+- Towing Companies
+- Windshield / Auto Glass Repair
+- Biohazard / Crime Scene Cleanup
+- Bail Bondsmen — family member arrested at 2am, family is searching now
+
+---
+
+### Tier 3 — Strong Fit (Appointment-Driven, Reputation-Dependent)
+Less emergency-driven but still highly vulnerable to missed calls and
+slow follow-up. Recurring customer relationships map directly to your flow library.
+
+**Trades & Home Services**
+- Pest Control
+- Lawn Care / Landscaping
+- Roofing
+- Cleaning Services (Residential + Commercial)
+- Appliance Repair
+- Pool Service
+- Carpet Cleaning
+- Contractors (General, Remodeling, Flooring)
+- Moving Companies
+
+**Health & Wellness**
+- Dental Offices
+- Salons / Barbershops
+- Personal Trainers / Gyms
+- Mental Health Practices (private pay)
+
+**Professional Services**
+- Real Estate Agents / Property Managers
+- Mortgage Brokers
+- Insurance Agents
+- Auto Repair / Detailing
+- Auto Dealerships (used)
+
+**Events & Creative**
+- Photographers / Videographers
+- Wedding / Event Vendors
+
+---
+
+### The Universal Prospect Filter
+Regardless of tier, the right client looks like this:
+
+| Signal | What It Means |
+|--------|---------------|
+| Owner answers the phone himself | Your client |
+| Voicemail picks up during business hours | Your client |
+| 15-75 Google reviews, no recent ones | Your client |
+| Has reviews but never responds to them | Your client |
+| Slow or no response to contact form | Your client |
+| Call center answers, polished hold music | Move on |
+| 500+ reviews, multiple locations | Move on |
+| Full office staff handling leads | Move on |
 
 ---
 

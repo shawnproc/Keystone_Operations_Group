@@ -88,8 +88,8 @@ Last Updated: June 2026
 
 ### Account Setup
 - ✅ GHL Agency account created (~$297/mo)
-- ⬜ GHL white-labeled with Keystone branding
-- ⬜ Agency domain connected
+- ✅ GHL white-labeled with Keystone branding
+- ✅ Agency domain connected (app.keystoneoperationsgroup.net)
 
 ### Stripe & Billing
 - ✅ Stripe account created

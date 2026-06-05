@@ -94,17 +94,17 @@ Last Updated: June 2026
 ### Stripe & Billing
 - ✅ Stripe account created
 - ✅ Stripe connected to GHL
-- ⬜ All products created in Stripe:
-  - ⬜ Starter setup fee ($99)
-  - ⬜ Growth setup fee ($159)
-  - ⬜ Enterprise setup fee ($209)
-  - ⬜ Starter monthly ($297)
-  - ⬜ Growth monthly ($497)
-  - ⬜ Enterprise monthly ($697)
-  - ⬜ Simple flow ($49)
-  - ⬜ Medium flow ($79)
-  - ⬜ Complex flow ($99)
-  - ⬜ All à la carte add-ons
+- ✅ All products created in Stripe:
+  - ✅ Starter setup fee ($99)
+  - ✅ Growth setup fee ($159)
+  - ✅ Enterprise setup fee ($209)
+  - ✅ Starter monthly ($297)
+  - ✅ Growth monthly ($497)
+  - ✅ Enterprise monthly ($697)
+  - ✅ Simple flow ($49)
+  - ✅ Medium flow ($79)
+  - ✅ Complex flow ($99)
+  - ✅ All à la carte add-ons
 
 ### Client Portal
 - ⬜ GHL client portal enabled

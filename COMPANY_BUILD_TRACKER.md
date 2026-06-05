@@ -26,7 +26,7 @@ Last Updated: June 2026
 - ✅ Business entity formed (LLC)
 - ✅ EIN obtained
 - 🔄 Business bank account opened (Navy Federal) — submitted, pending review
-- ⬜ Business email set up:
+- ✅ Business email set up:
   - ✅ Google Workspace account created ($6/mo)
   - ✅ ops@keystoneoperationsgroup.net — primary/internal (GHL, Stripe, GitHub, all ops)
   - ✅ info@keystoneoperationsgroup.net — customer facing (contact form only)

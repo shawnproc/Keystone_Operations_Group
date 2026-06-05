@@ -386,24 +386,139 @@ the call. Don't force one path.
 > the timing, the cost, or just want to make sure it actually works
 > first?"
 Wait for the real objection. That answer tells you what to address.
+Don't move on until you know what's actually in the way.
 
-**"It's not in the budget right now."**
-> "I get that. Starter is $297 a month — if it captures even one
-> extra job you would've missed, it's already paid for itself that
-> month. But I don't want you to stretch for it. When would be a
-> better time to revisit?"
+---
 
-**"I already tried something like this and it didn't work."**
-> "What were you using? I ask because most of what I see either
-> wasn't set up right or was a generic tool not built for a
-> [industry] business. What specifically didn't work for you?"
-Get the real story. Then address it directly or walk away — both
-are fine outcomes.
+### Flipping the No — By Persona
 
-**"I don't want to be locked into a contract."**
-> "There's no contract — cancel any time, no penalty. The only
-> thing non-refundable is the setup fee because we start building
-> immediately. After that you're month to month."
+Not every No is permanent. These are the most common ones and how
+to turn them without it feeling like pressure. The goal is never
+to force it — it's to remove whatever's in the way of something
+they already want.
+
+---
+
+**The Older Generation / Tech-Skeptic**
+
+They're not against results. They're against complexity and being
+sold something they don't understand.
+
+Remove the tech entirely from the conversation. Never say
+"automation," "AI," "workflow," or "system." Speak only in outcomes.
+
+> "You don't log in. You don't learn anything. You don't touch it.
+> It runs in the background and your phone just gets fewer missed
+> calls. That's it."
+
+If they're still not there, plant a seed and walk away clean:
+> "Totally fair. A lot of the guys I work with felt the same way
+> before they saw it. If you ever get curious, reach out."
+
+That response alone converts some of them weeks later. Don't
+underestimate it.
+
+---
+
+**Already Have Something**
+
+This is the most convertible No. Most of what they have is
+incomplete and they know it — they just haven't been asked the
+right question.
+
+Don't challenge what they have. Find the gap.
+
+> "What are you using? I'm not here to replace it — genuinely just
+> curious if it's handling the after-hours piece too, or if that's
+> still falling through."
+
+Almost nobody has the full picture covered. When they admit the
+gap — and most will — you're no longer selling against their
+current setup. You're filling what it's missing.
+
+---
+
+**Price-Sensitive**
+
+These people understand ROI math better than most. Use it.
+
+> "What does one job pay you on average?"
+> [They answer]
+> "Starter is $297 a month. If this captures one call that would've
+> gone to voicemail and turned into a job — it paid for itself.
+> Everything after that is money you weren't getting before."
+
+If they're still hesitant, this is where the incentive structure
+(see below) lands hardest. Zero setup removes the upfront risk
+entirely. Now the only question is one month's commitment.
+
+---
+
+**Complacent / No Interest in Growth**
+
+Some of them genuinely aren't your client right now — and that's
+fine. But some are just comfortable and haven't thought about what's
+quietly slipping away. Don't pitch growth to these people.
+Pitch protection.
+
+> "I'm not saying you need to grow. I'm saying the businesses
+> around you that aren't paying attention to this are slowly losing
+> customers to the ones that are. You've built something that works
+> — this just makes sure it keeps working without you having to
+> manage every piece of it."
+
+That reframe lands differently. It's not "become a different kind
+of business owner." It's "protect what you already built."
+
+---
+
+### Incentive Structure
+
+Use these to lower the barrier to start — not as a desperation
+move, but as a genuine way to remove the friction of the first step.
+Frame every incentive as taking a risk off their plate.
+
+**$0 Setup — Book Today**
+Best for: price-sensitive, fence-sitters
+> "I don't normally do this but I've got an opening today — if you
+> want to move forward I'll waive the setup fee entirely. You just
+> start on the monthly."
+
+**Half Off First Month — Book By [Specific Date]**
+Best for: anyone who needs a nudge but is genuinely interested
+> "I'm in a stretch right now where I'm taking on a few new clients
+> at a reduced rate to fill out the schedule. Through [day] I can
+> do half off your first month. After that it goes back to full price."
+
+Keep the date real and close. A week out at most. Vague deadlines
+don't create urgency.
+
+**First Flow Free**
+Best for: skeptics, people who want to see it before committing
+> "Tell you what — let me build your first flow at no charge. If
+> you see it running and it's not doing what I said, you walk away
+> and owe me nothing."
+
+This removes all risk from the first step. Once they see it working,
+the monthly plan is an easy yes.
+
+**Founding Member Rate Lock**
+Best for: people who respond to exclusivity over urgency
+> "The pricing I'm offering right now is a founding rate — I have a
+> set number of clients I'm locking in at this price before I raise
+> it. Once those spots are filled, new clients pay more. This rate
+> stays with you permanently as long as you're active."
+
+Only use this one if you mean it. The founding rate is real —
+honor it.
+
+---
+
+**The through-line on all of these:**
+You're not pushing them toward something they don't want. You're
+removing whatever's in the way of something they already want.
+Nobody running a business wants to miss calls. Nobody wants a
+competitor to get the job. You're just making it easier to say yes.
 
 ---
 

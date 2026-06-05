@@ -31,7 +31,7 @@ Last Updated: June 2026
   - ⬜ ops@keystoneoperationsgroup.net — primary/internal (GHL, Stripe, GitHub, all ops)
   - ✅ info@keystoneoperationsgroup.net — customer facing (contact form only)
   - ✅ Formspree updated to send to info@
-  - ⬜ GHL notifications pointed to ops@
+  - ✅ GHL notifications pointed to ops@
   - ⬜ Stripe registered with ops@
 - ✅ Terms of service written
 - ✅ Privacy policy written

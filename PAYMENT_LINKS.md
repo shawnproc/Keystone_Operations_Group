@@ -47,12 +47,12 @@ update this document.
 | Software & Tool Integration | $199 | https://buy.stripe.com/test_5kQbIUfdD3R5bcLazed7q09 |
 | Custom Reporting Dashboard | $149 | https://buy.stripe.com/test_aFacMY8Pfbjx6Wv36Md7q0a |
 | Review Generation Campaign | $79/mo | https://buy.stripe.com/test_00weV6e9zgDRa8H0YEd7q0b |
+| Re-engagement Campaign | $79/mo | https://buy.stripe.com/test_9B64gs7Lb2N1a8Hazed7q0c |
 
 ---
 
 ## Notes
 
-- Re-engagement Campaign ($79/mo) link may still need to be created — verify in Stripe dashboard
 - All links require customer name, business name, and phone number at checkout
 - Once Stripe is fully activated with real bank account, regenerate all links in live mode
 - Live links will start with https://buy.stripe.com/ without "test_"

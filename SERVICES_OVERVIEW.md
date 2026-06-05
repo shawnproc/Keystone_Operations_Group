@@ -119,6 +119,14 @@ Multi-step, conditional logic, or multiple channels
 
 ---
 
+## Dispute & Chargeback Policy
+- All sales are final once work has begun (setup fee) or billing period has started (monthly)
+- In the event of a dispute, Keystone will respond with: signed client agreement,
+  intake form submission, and confirmation of flow activation
+- Clients should email info@keystoneoperationsgroup.net to resolve billing concerns
+  before initiating a dispute
+- Fraudulent chargebacks result in immediate account termination
+
 ## Support Policy
 - If any flow or automation breaks, it gets fixed at no charge
 - Client never needs to reach out to set this up — we sold them the system,

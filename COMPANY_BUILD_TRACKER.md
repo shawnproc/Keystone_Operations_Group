@@ -37,7 +37,7 @@ Last Updated: June 2026
 - ✅ Privacy policy written
 - ✅ Client service agreement / contract written
 - ✅ Refund policy defined (setup fee non-refundable; monthly plan cancel anytime, no contract)
-- ⬜ Stripe dispute / chargeback policy documented
+- ✅ Stripe dispute / chargeback policy documented
 
 ### Domain & Hosting
 - ✅ Domain purchased (keystoneoperationsgroup.net)

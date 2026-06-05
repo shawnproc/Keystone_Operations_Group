@@ -218,16 +218,140 @@ solved everything — and those businesses are easy to spot and skip.
 
 ---
 
-## First Outreach Message
+## Outreach Messaging
 
-> "Hey [Name], I help [HVAC/plumbing/pest control] businesses stop losing
-> jobs to missed calls and forgotten follow-ups. Most owners I talk to are
-> leaving 5-10 leads a month on the table just from slow response times.
-> I set up a system that handles it automatically — no extra staff, no extra
-> work on your end. Worth a 5 minute conversation?"
+**The rule across all messages:** Lead with their pain, not your product.
+No pitch deck. No pricing. No features in the first message.
+One goal — get a response.
 
-**Rule:** Lead with their pain, not your product. No pitch deck. No pricing.
-No features in the first message.
+---
+
+### Universal Opener (Any Industry)
+Use this when you want one clean message that works across the board.
+
+> "Hey [Name], I help [industry] businesses stop losing jobs to missed calls
+> and slow follow-ups. Most owners I talk to are leaving 5-10 leads a month
+> on the table just from response time alone. I set up a system that handles
+> it automatically — no extra staff, no extra work on your end.
+> Worth a 5 minute conversation?"
+
+---
+
+### Tier 1 — Emergency & After-Hours Businesses
+
+**HVAC / Plumbing / Electrical**
+> "Hey [Name], when someone's AC goes out at 9pm or a pipe bursts on a
+> Sunday, they call the first number that answers — or texts back. If that's
+> not you, it's your competitor. I set up an after-hours response system
+> that responds instantly so you never lose another emergency job to a
+> missed call. Worth a quick conversation?"
+
+**Garage Door Repair**
+> "Hey [Name], most garage door calls happen outside business hours —
+> broken spring at 7pm, door won't open Monday morning before work.
+> If your phone goes to voicemail, that customer is already calling
+> the next guy. I set up an automatic response system that replies
+> instantly and keeps them on the line until you can call back.
+> Worth 5 minutes?"
+
+**Locksmith / Pop-A-Lock**
+> "Hey [Name], a locked-out customer is on their phone right now searching
+> for help — and they're calling whoever responds first. If your line is
+> busy or goes to voicemail, you lost that job before it started. I build
+> automated response systems that reply instantly so you stay in the
+> running even when you can't pick up. Quick conversation?"
+
+**Water / Fire / Mold Restoration**
+> "Hey [Name], when someone has water pouring into their house at midnight,
+> they don't leave a voicemail and wait — they call the next number on the
+> list. I set up a system that responds to every call and inquiry instantly,
+> day or night, so you're always the first company to make contact.
+> Worth a few minutes?"
+
+**Towing**
+> "Hey [Name], someone broken down on the side of the road isn't going to
+> wait — they're calling down the list until someone responds. I build
+> response systems that reply automatically the moment a call or text comes
+> in so you capture those jobs before another company does.
+> Worth a quick conversation?"
+
+---
+
+### Tier 2 — Death, Injury & Trauma Businesses
+
+**Personal Injury / Workers Comp Attorneys**
+> "Hey [Name], when someone gets injured they start searching immediately —
+> from the hospital, from the car, at 2am. The firm that responds first
+> almost always gets the case. I set up automated intake systems that
+> respond to every inquiry within 60 seconds, day or night, and follow up
+> automatically until they book a consultation. Worth a conversation?"
+
+**Funeral Homes**
+> "Hey [Name], families reaching out to a funeral home are already in one
+> of the hardest moments of their lives. If they call and get a voicemail,
+> they move to the next name on the list — not because they want to, but
+> because they need help right now. I set up a response system that
+> acknowledges every call and message immediately so no family feels ignored.
+> Worth a few minutes to talk through it?"
+
+**Urgent Care Clinics**
+> "Hey [Name], patients searching for urgent care are making a decision in
+> the next 60 seconds. If your response is slow or your follow-up falls
+> through the cracks, they went somewhere else. I build automated systems
+> that respond instantly to every inquiry and follow up automatically —
+> so more of those searches turn into actual visits. Worth a conversation?"
+
+**Bail Bondsmen**
+> "Hey [Name], a family member just got arrested and someone is searching
+> for a bondsman right now — probably at 2am, probably panicking. They're
+> calling whoever responds first. I set up an automatic response system
+> that replies instantly and follows up so you capture those calls even
+> when you're unavailable. Quick conversation?"
+
+---
+
+### Tier 3 — Appointment-Driven Businesses
+
+**General Trades (Pest Control, Landscaping, Cleaning, Roofing)**
+> "Hey [Name], I help [industry] businesses stop losing jobs to missed calls
+> and forgotten follow-ups. Most owners I talk to are leaving 5-10 leads a
+> month on the table just from slow response times. I set up a system that
+> handles it automatically — no extra staff, no extra work on your end.
+> Worth a 5 minute conversation?"
+
+**Salons / Barbershops**
+> "Hey [Name], how many booking requests come in after hours through
+> Instagram, Facebook, or your website — and sit there until the next
+> morning? I set up an automated system that responds instantly to every
+> inquiry and sends appointment reminders so your no-show rate drops too.
+> Worth a quick conversation?"
+
+**Real Estate Agents / Property Managers**
+> "Hey [Name], leads on a listing or rental go cold fast — if someone
+> doesn't hear back within an hour, they've already moved on to the next
+> property. I build automated follow-up systems that respond to every
+> inquiry instantly and keep the conversation going until you can connect.
+> Worth 5 minutes?"
+
+---
+
+### The Review Angle (Any Industry)
+Use this as a standalone opener when their review count is low or stagnant.
+
+> "Hey [Name], you have [X] Google reviews. Your closest competitor has
+> [Y]. Customers decide who to call before they ever pick up the phone —
+> just based on that number. I set up an automatic review request system
+> that goes out after every job so your count grows on its own.
+> Worth a quick conversation?"
+
+---
+
+### Follow-Up Message (If No Response After 3-5 Days)
+Short. No pressure. One more shot.
+
+> "Hey [Name], just following up on my last message. No worries if the
+> timing isn't right — just didn't want it to get buried. Still happy to
+> show you how it works if you're curious."
 
 ---
 

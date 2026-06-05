@@ -28,11 +28,11 @@ Last Updated: June 2026
 - 🔄 Business bank account opened (Navy Federal) — submitted, pending review
 - ⬜ Business email set up:
   - ✅ Google Workspace account created ($6/mo)
-  - ⬜ ops@keystoneoperationsgroup.net — primary/internal (GHL, Stripe, GitHub, all ops)
+  - ✅ ops@keystoneoperationsgroup.net — primary/internal (GHL, Stripe, GitHub, all ops)
   - ✅ info@keystoneoperationsgroup.net — customer facing (contact form only)
   - ✅ Formspree updated to send to info@
   - ✅ GHL notifications pointed to ops@
-  - ⬜ Stripe registered with ops@
+  - ✅ Stripe registered with ops@
 - ✅ Terms of service written
 - ✅ Privacy policy written
 - ✅ Client service agreement / contract written

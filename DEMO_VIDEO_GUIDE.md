@@ -97,3 +97,74 @@ Target length: under 90 seconds per video.
 - Autoplay on hover, muted, looped
 - Full screen option available
 - Mobile-friendly (vertical crop if needed)
+
+---
+
+## Outreach Sales Demo (Separate From Website Videos)
+
+This is a different video entirely — not a tier walkthrough, not for the
+website. This is the video sent by the owner mid-conversation after the
+agent hands off a warm lead. Its job is to make the prospect feel the
+problem before the owner closes.
+
+**One video. Used across all industries.**
+
+**Target length:** 60 seconds. Not 90. Not 2 minutes. 60 seconds.
+If they're reading this on their phone between jobs, they'll watch 60 seconds.
+
+---
+
+### Narrative Theme
+"Here's what happens to a lead when no one answers."
+
+Show the problem first. Show the fix second. Let the gap between the two
+do the selling.
+
+---
+
+### What to Show
+
+**Part 1 — The Problem (first 20 seconds)**
+1. Incoming call — rings, goes to voicemail
+2. Same customer — texts the business — no reply for 2 hours
+3. Same customer — Googles the next competitor, calls them instead
+4. Caption: "That call was worth $400. It just went to your competitor."
+
+**Part 2 — The Fix (next 30 seconds)**
+1. Same scenario — call comes in after hours
+2. Within 60 seconds — customer gets a text: "Hey, we got your call —
+   someone will reach out shortly. What can we help you with?"
+3. Customer replies. Conversation starts.
+4. Job gets booked — no human involved yet
+5. Caption: "Same call. Different outcome."
+
+**Part 3 — The Close Setup (final 10 seconds)**
+1. Clean screen — no clutter
+2. Single line of text on screen:
+   "How much is one missed call worth to your business?"
+3. Fade out. Your name and number. That's it.
+
+---
+
+### Recording Notes
+- No voiceover needed — captions carry it
+- Use a real phone for authenticity — fake texts look fake
+- The competitor search scene is critical — show them Googling,
+  show the competitor listing, show them calling. That's the moment
+  that lands.
+- Keep the energy neutral, not salesy — let the scenario speak
+- Name the file: demo-outreach.mp4
+
+---
+
+### How It Gets Sent
+
+This video is sent by the owner, not the agent.
+After the agent hands off and the owner takes over the conversation:
+
+> "Hey [First Name], [Owner Name] here — [Agent Name] passed me your
+> info. Quick 60 second video that shows exactly what I was talking
+> about. [link] — let me know what you think."
+
+That's it. No pitch. No explanation. Just the video and a question.
+Wait for them to respond before saying anything else.

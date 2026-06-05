@@ -274,7 +274,151 @@ sent to the owner:
 
 ---
 
-## What the Agent Never Does
+## Owner Closing Framework
+
+This picks up the moment the agent hands off a warm lead.
+Everything from here is the owner — not the agent.
+
+---
+
+### Step 1 — Take Over the Thread
+
+Jump into the same SMS thread the agent started. Don't open a new
+conversation, don't call out of nowhere. Continue naturally.
+
+> "Hey [First Name], [Owner Name] here — [Agent Name] passed me your
+> info. Quick 60 second video that shows exactly what I was talking
+> about. [link] — let me know what you think."
+
+Send the video. Then stop. Wait for them to respond.
+Don't follow up in 10 minutes. Give it some room.
+
+---
+
+### Step 2 — They Watch It, They Respond
+
+When they reply — even if it's just "interesting" or "not bad" —
+that's your green light. Lead with the punchline.
+
+**The Opener:**
+> "Glad it made sense. Real question — what's a missed call or a
+> lead that doesn't get followed up actually worth to your business?
+> Like if you had to put a number on it."
+
+Let them answer. Don't fill the silence. Whatever number they say,
+it doesn't matter — the frame is already set. They just told you
+what the problem costs them.
+
+---
+
+### Step 3 — Validate and Connect
+
+Once they give you a number, tie it directly to what they just saw.
+
+**If they give a specific number (e.g. "probably $300-400 a job"):**
+> "Yeah that's exactly the range we hear. And if you're missing even
+> 3 or 4 of those a month — that's over a thousand dollars just
+> sitting on the table. What we set up makes sure that stops happening.
+> Every call gets a response, every lead gets followed up, automatically.
+> You don't touch it."
+
+**If they're vague ("I don't know, hard to say"):**
+> "Fair enough — even if it's one job a week slipping through, that
+> adds up fast. The whole point of what we do is close that gap
+> without adding work on your end. You stay on the tools, we make
+> sure nothing falls through the cracks."
+
+---
+
+### Step 4 — Present the Right Plan
+
+Don't list all three tiers. Read the conversation and lead with the
+one that fits. If you're not sure, start with Growth — it's the
+middle tier and covers the most common needs.
+
+**Starter pitch** *(solo operator, low volume, just wants the basics)*
+> "For where you're at, the Starter plan is probably the move —
+> it's $99 to get set up and $297 a month. Covers missed call
+> response, booking confirmations, and appointment reminders.
+> You're covered on the stuff that costs you the most right now."
+
+**Growth pitch** *(established business, wants reviews + follow-up)*
+> "Based on what you're describing, Growth is probably the right
+> fit — $159 setup, $497 a month. You get everything in Starter
+> plus automatic review requests after every job, re-engagement
+> for customers you haven't heard from in a while, and a monthly
+> report. Most businesses I set this up for say the review piece
+> alone pays for it."
+
+**Enterprise pitch** *(multiple techs, needs full operation automation)*
+> "Sounds like Enterprise makes the most sense for you — $209 to
+> set up, $697 a month. Full operation covered — technician
+> notifications, invoice reminders, seasonal campaigns, the whole
+> thing. You basically stop managing the communication side of the
+> business entirely."
+
+---
+
+### Step 5 — The Close
+
+No pressure. No countdown. Just a clean, direct ask.
+
+**Phone / Video Call Close:**
+> "Want to jump on a quick call and I'll walk you through exactly
+> what it looks like set up for your business? 15 minutes, I'll
+> show you the whole thing live."
+
+**Text / DM Close:**
+> "Want to go ahead and get you set up? I can send you the link
+> right now — takes about 5 minutes and we start building the
+> same day."
+
+Read the energy. If they're warm and moving fast, send the payment
+link in the text. If they seem like they need to see it first, offer
+the call. Don't force one path.
+
+---
+
+### Handling Objections
+
+**"I need to think about it."**
+> "Totally fair. What's the main thing giving you pause — is it
+> the timing, the cost, or just want to make sure it actually works
+> first?"
+Wait for the real objection. That answer tells you what to address.
+
+**"It's not in the budget right now."**
+> "I get that. Starter is $297 a month — if it captures even one
+> extra job you would've missed, it's already paid for itself that
+> month. But I don't want you to stretch for it. When would be a
+> better time to revisit?"
+
+**"I already tried something like this and it didn't work."**
+> "What were you using? I ask because most of what I see either
+> wasn't set up right or was a generic tool not built for a
+> [industry] business. What specifically didn't work for you?"
+Get the real story. Then address it directly or walk away — both
+are fine outcomes.
+
+**"I don't want to be locked into a contract."**
+> "There's no contract — cancel any time, no penalty. The only
+> thing non-refundable is the setup fee because we start building
+> immediately. After that you're month to month."
+
+---
+
+### When to Walk Away
+
+If after two real conversations they're still stalling with no
+clear reason, don't chase it. Leave the door open and move on.
+
+> "No worries at all. If it ever becomes something you want to
+> look at, just reach out — I'll still be here."
+
+Then stop. The right clients close without being dragged across
+the line.
+
+---
 
 - Never mentions GHL, automation software, or any tech stack
 - Never says "as an AI" or anything that breaks the persona

@@ -864,6 +864,11 @@ body {
 /* ===== CONTACT CTA BOX ===== */
 .contact-cta-box { background: rgba(255,255,255,0.05); border: 1px solid rgba(74,171,184,0.2); border-radius: 16px; padding: 48px 40px; display: flex; flex-direction: column; align-items: flex-start; gap: 24px; }
 .contact-cta-box p { font-size: 1.1rem; color: rgba(255,255,255,0.8); line-height: 1.7; }
+.contact-cta-items { display: flex; flex-direction: column; gap: 20px; width: 100%; }
+.contact-cta-item { display: flex; align-items: flex-start; gap: 16px; }
+.contact-cta-icon { font-size: 1.4rem; min-width: 36px; margin-top: 2px; }
+.contact-cta-item h4 { font-size: 0.95rem; font-weight: 600; color: #fff; margin: 0 0 4px 0; }
+.contact-cta-item p { font-size: 0.88rem; color: rgba(255,255,255,0.6); margin: 0; line-height: 1.5; }
 
 /* ===== SMS CONSENT ===== */
 .sms-consent { margin-top: 4px; }

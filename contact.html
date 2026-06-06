@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us — Keystone Operations Group</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <nav class="navbar scrolled" id="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <img src="logo.png" alt="Keystone Operations Group" class="logo-img" style="filter:none;" />
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#services">Services</a></li>
+        <li><a href="index.html#ai-solutions">Our Approach</a></li>
+        <li><a href="index.html#pricing">Pricing</a></li>
+        <li><a href="contact.html" class="nav-cta">Contact Us</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="legal-page">
+    <div class="container">
+      <h1>Get In Touch</h1>
+      <p class="legal-date">We'll get back to you within one business day.</p>
+
+      <div class="contact-grid" style="margin-top: 40px;">
+        <div class="contact-info">
+          <p>Whether you're ready to sign up or just have questions — reach out and we'll take it from there.</p>
+          <div class="contact-details" style="margin-top: 24px;">
+            <div class="contact-item">
+              <span class="contact-icon">&#128205;</span>
+              <span>Washington, D.C. Metro Area</span>
+            </div>
+            <div class="contact-item">
+              <span class="contact-icon">&#128231;</span>
+              <span>info@keystoneoperationsgroup.net</span>
+            </div>
+          </div>
+        </div>
+
+        <form class="contact-form" action="https://formspree.io/f/mykayqza" method="POST">
+          <div class="form-row">
+            <div class="form-group">
+              <label>First Name</label>
+              <input type="text" name="first_name" placeholder="Jane" required />
+            </div>
+            <div class="form-group">
+              <label>Last Name</label>
+              <input type="text" name="last_name" placeholder="Smith" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Email</label>
+            <input type="email" name="email" placeholder="jane@company.com" required />
+          </div>
+          <div class="form-group">
+            <label>Organization</label>
+            <input type="text" name="organization" placeholder="Your Company" />
+          </div>
+          <div class="form-group">
+            <label>Area of Interest</label>
+            <select name="area_of_interest">
+              <option value="">Select a service...</option>
+              <option>Workflow Automation</option>
+              <option>Operational Strategy</option>
+              <option>Process Optimization</option>
+              <option>Technology Integration</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Message</label>
+            <textarea name="message" placeholder="Tell us about your goals and challenges..." rows="4"></textarea>
+          </div>
+          <div class="form-group sms-consent">
+            <label class="checkbox-label">
+              <input type="checkbox" name="sms_consent" required />
+              <span>By providing your information you consent to receive SMS messages from Keystone Operations Group. Message and data rates may apply. Reply STOP to opt out at any time.</span>
+            </label>
+          </div>
+          <button type="submit" class="btn-primary full-width">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p>&copy; 2026 Keystone Operations Group LLC. All rights reserved.</p>
+        <div class="footer-legal">
+          <a href="terms.html">Terms of Service</a>
+          <span>·</span>
+          <a href="privacy.html">Privacy Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

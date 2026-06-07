@@ -72,8 +72,8 @@ Last Updated: June 2026
 - ✅ Scrolling industry ticker
 - ✅ Founding Member banner on pricing
 - ⬜ Demo videos embedded on pricing page (1 per tier)
-- ⬜ AI chat widget installed (GHL powered)
-- ⬜ Checkout / payment flow connected (GHL + Stripe)
+- ✅ AI chat widget installed (GHL powered)
+- 🔒 Checkout / payment flow connected (GHL + Stripe) — blocked: Stripe must be switched to live mode; blocked by Amex business checking account approval
 - ⬜ Client portal link added to navigation
 
 ### Content Still Needed
@@ -91,10 +91,24 @@ Last Updated: June 2026
 - ✅ GHL white-labeled with Keystone branding
 - ✅ Agency domain connected (app.keystoneoperationsgroup.net)
 
+### A2P & SMS Compliance
+- 🔒 A2P Brand registration — blocked: GHL support manual verification in progress (newly formed LLC not yet in carrier identity databases)
+- ⬜ A2P Campaign registration — blocked until Brand is approved
+- 🔄 CNAM registration — In Review
+- 🔄 SHAKEN/STIR registration — Rejected, pending Brand approval before resubmit
+- 🔄 Voice Integrity registration — submitted, pending review
+
+### Intake Form
+- 🔄 Intake form built (fields complete)
+- 🔒 Payment section — blocked: Stripe must be in live mode; blocked by Amex business checking account approval
+- ⬜ SMS consent placeholders replaced (after A2P approved)
+- ⬜ Duplicate form for Growth and Enterprise plans
+
 ### Stripe & Billing
 - ✅ Stripe account created
 - ✅ Stripe connected to GHL
-- ✅ All products created in Stripe:
+- ✅ All products created in Stripe (test mode)
+- 🔒 Recreate products in live mode — blocked by Amex business checking account approval
   - ✅ Starter setup fee ($99)
   - ✅ Growth setup fee ($159)
   - ✅ Enterprise setup fee ($209)

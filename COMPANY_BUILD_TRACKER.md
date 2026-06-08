@@ -74,7 +74,7 @@ Last Updated: June 2026
 - ⬜ Demo videos embedded on pricing page (1 per tier)
 - ✅ AI chat widget installed (GHL powered)
 - 🔒 Checkout / payment flow connected (GHL + Stripe) — blocked: Stripe must be switched to live mode; blocked by Amex business checking account approval
-- ⬜ Client portal link added to navigation
+- ✅ Client portal link added to navigation
 
 ### Content Still Needed
 - ⬜ Real stats added back (once earned)

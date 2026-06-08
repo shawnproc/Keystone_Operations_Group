@@ -143,8 +143,8 @@ Last Updated: June 2026
 - ✅ Payment confirmed → intake form sent (SMS + email)
 - ✅ Intake form submitted → internal notification + client confirmation
 - ✅ Flow request submitted → internal task + client confirmation
-- ⬜ Flow activated → client notification email
-- ⬜ Cancellation → flows off + confirmation email
+- ✅ Flow activated → client notification email
+- ✅ Cancellation → flows off + confirmation email
 
 ### Pre-Launch Checklist
 - ⬜ Full end-to-end spot check of entire business before go-live — every workflow, every form, every email, every page, top to bottom

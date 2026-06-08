@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keystone Operations Group — Logistical Support</title>
+    <meta name="description" content="Coast to coast freight and logistics. Full truckload, LTL, expedited, flatbed. Every mile. Every load. On time.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:ital,wght@0,300;0,400;0,600;0,700;1,300&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Film grain overlay -->
+    <svg class="grain-svg" aria-hidden="true">
+        <filter id="grain-filter">
+            <feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch"/>
+            <feColorMatrix type="saturate" values="0"/>
+        </filter>
+        <rect width="100%" height="100%" filter="url(#grain-filter)" opacity="0.04"/>
+    </svg>
+
+    <!-- Custom cursor -->
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
+
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+        <div class="nav-inner">
+            <a href="#hero" class="nav-logo">
+                <span class="logo-kog">KOG</span>
+                <span class="logo-pipe">|</span>
+                <span class="logo-sub">LOGISTICAL SUPPORT</span>
+            </a>
+            <div class="nav-links">
+                <a href="#services">Services</a>
+                <a href="#network">Network</a>
+                <a href="#why">Why Us</a>
+            </div>
+            <a href="#contact" class="nav-cta">GET A QUOTE</a>
+        </div>
+    </nav>
+
+    <!-- ═══════════════════════════════════════════ -->
+    <!-- HERO — POV Highway                          -->
+    <!-- ═══════════════════════════════════════════ -->
+    <section class="hero" id="hero">
+
+        <div class="hero-scene" id="heroScene">
+
+            <!-- Sky -->
+            <div class="layer layer-sky" id="layerSky"></div>
+
+            <!-- Horizon atmospheric glow -->
+            <div class="layer layer-horizon" id="layerHorizon"></div>
+
+            <!-- Road surface + markings -->
+            <div class="layer layer-road" id="layerRoad">
+                <div class="road-body"></div>
+                <div class="road-shoulder-left"></div>
+                <div class="road-shoulder-right"></div>
+                <div class="road-marking center" id="roadCenter"></div>
+                <div class="road-marking left" id="roadLeft"></div>
+                <div class="road-marking right" id="roadRight"></div>
+            </div>
+
+            <!-- Dashboard silhouette at bottom -->
+            <div class="layer layer-dash" id="layerDash">
+                <div class="dash-body"></div>
+                <div class="dash-wheel"></div>
+                <div class="dash-mirror-left"></div>
+                <div class="dash-mirror-right"></div>
+            </div>
+
+            <!-- Speed lines -->
+            <div class="speed-lines" id="speedLines">
+                <div class="sl sl-1"></div>
+                <div class="sl sl-2"></div>
+                <div class="sl sl-3"></div>
+                <div class="sl sl-4"></div>
+                <div class="sl sl-5"></div>
+                <div class="sl sl-6"></div>
+                <div class="sl sl-7"></div>
+                <div class="sl sl-8"></div>
+            </div>
+
+            <!-- Windshield pillar frames -->
+            <div class="windshield-left"></div>
+            <div class="windshield-right"></div>
+
+            <!-- Vignette -->
+            <div class="vignette"></div>
+        </div>
+
+        <div class="hero-content" id="heroContent">
+            <div class="hero-eyebrow">KEYSTONE OPERATIONS GROUP</div>
+            <h1 class="hero-title">
+                <span class="title-line" id="titleLine1">LOGISTICAL</span>
+                <span class="title-line accent" id="titleLine2">SUPPORT</span>
+            </h1>
+            <p class="hero-tagline">Every Mile. Every Load. On Time.</p>
+            <div class="hero-ctas">
+                <a href="#contact" class="btn-primary">GET A QUOTE</a>
+                <a href="#services" class="btn-ghost">VIEW SERVICES</a>
+            </div>
+        </div>
+
+        <div class="hero-scroll-hint">
+            <div class="scroll-track"><div class="scroll-thumb" id="scrollThumb"></div></div>
+            <span>SCROLL</span>
+        </div>
+
+    </section>
+
+    <!-- ═══════════════════════════════════════════ -->
+    <!-- STATEMENT                                   -->
+    <!-- ═══════════════════════════════════════════ -->
+    <section class="statement" id="statement">
+        <div class="statement-rule"></div>
+        <div class="statement-inner">
+            <p class="statement-label">THE STANDARD</p>
+            <h2 class="statement-text">
+                <span class="reveal-word">We don't</span>&nbsp;<span class="reveal-word">just move</span>&nbsp;<span class="reveal-word em">freight.</span><br>
+                <span class="reveal-word">We keep</span>&nbsp;<span class="reveal-word">America</span>&nbsp;<span class="reveal-word em">moving.</span>
+            </h2>
+            <p class="statement-sub reveal-fade">When the supply chain depends on it, when the deadline is yesterday, when no one else can get it there — that's when you call Keystone.</p>
+        </div>
+        <div class="statement-ticker" id="ticker">
+            <div class="ticker-inner">
+                <span>FULL TRUCKLOAD</span><span class="dot">·</span>
+                <span>LTL FREIGHT</span><span class="dot">·</span>
+                <span>EXPEDITED SHIPPING</span><span class="dot">·</span>
+                <span>FLATBED & HEAVY HAUL</span><span class="dot">·</span>
+                <span>LAST MILE DELIVERY</span><span class="dot">·</span>
+                <span>LOGISTICS COORDINATION</span><span class="dot">·</span>
+                <span>FULL TRUCKLOAD</span><span class="dot">·</span>
+                <span>LTL FREIGHT</span><span class="dot">·</span>
+                <span>EXPEDITED SHIPPING</span><span class="dot">·</span>
+                <span>FLATBED & HEAVY HAUL</span><span class="dot">·</span>
+                <span>LAST MILE DELIVERY</span><span class="dot">·</span>
+                <span>LOGISTICS COORDINATION</span><span class="dot">·</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════ -->
+    <!-- SERVICES — Horizontal Scroll               -->
+    <!-- ═══════════════════════════════════════════ -->
+    <section class="services" id="services">
+        <div class="services-sticky">
+            <div class="services-top">
+                <div class="services-header">
+                    <p class="section-label">WHAT WE HAUL</p>
+                    <h2>Full-Spectrum<br>Logistics</h2>
+                </div>
+                <div class="services-progress-wrap">
+                    <div class="services-progress" id="servicesProgress"></div>
+                </div>
+            </div>
+            <div class="services-viewport">
+                <div class="services-track" id="servicesTrack">
+
+                    <div class="service-card">
+                        <div class="card-num">01</div>
+                        <div class="card-glyph">⬡</div>
+                        <h3>Full Truckload</h3>
+                        <p>Dedicated capacity for high-volume freight. Direct routes, no relay stops, maximum security from dock to dock.</p>
+                        <div class="card-rule"></div>
+                        <div class="card-tag">FTL</div>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="card-num">02</div>
+                        <div class="card-glyph">⬡</div>
+                        <h3>LTL Freight</h3>
+                        <p>Cost-efficient partial loads handled with full-load care. Your freight shares the road — never the priority.</p>
+                        <div class="card-rule"></div>
+                        <div class="card-tag">LTL</div>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="card-num">03</div>
+                        <div class="card-glyph">⬡</div>
+                        <h3>Expedited Shipping</h3>
+                        <p>When the clock is running, we don't stop. Time-critical freight moved with precision and accountability at every hour.</p>
+                        <div class="card-rule"></div>
+                        <div class="card-tag">RUSH</div>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="card-num">04</div>
+                        <div class="card-glyph">⬡</div>
+                        <h3>Flatbed & Heavy Haul</h3>
+                        <p>Oversized. Overweight. No problem. Specialized equipment and certified operators ready for any load, any dimension.</p>
+                        <div class="card-rule"></div>
+                        <div class="card-tag">HEAVY</div>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="card-num">05</div>
+                        <div class="card-glyph">⬡</div>
+                        <h3>Last Mile Delivery</h3>
+                        <p>The final stretch done right. Precision delivery that completes the chain without failure at the finish line.</p>
+                        <div class="card-rule"></div>
+                        <div class="card-tag">LAST MILE</div>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="card-num">06</div>
+                        <div class="card-glyph">⬡</div>
+                        <h3>Logistics Coordination</h3>
+                        <p>End-to-end supply chain management. We handle the complexity — routes, compliance, timing — so you focus on your business.</p>
+                        <div class="card-rule"></div>
+                        <div class="card-tag">FULL SERVICE</div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════ -->
+    <!-- STATS                                       -->
+    <!-- ═══════════════════════════════════════════ -->
+    <section class="stats" id="stats">
+        <div class="stats-road">
+            <div class="stats-road-line"></div>
+        </div>
+        <div class="stats-inner">
+            <div class="stat-item reveal-up">
+                <div class="stat-top">
+                    <span class="stat-number" data-target="48">0</span>
+                    <span class="stat-unit">STATES</span>
+                </div>
+                <div class="stat-label">Coast to Coast Coverage</div>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item reveal-up" style="transition-delay:0.1s">
+                <div class="stat-top">
+                    <span class="stat-number" data-target="99">0</span>
+                    <span class="stat-unit">%</span>
+                </div>
+                <div class="stat-label">On-Time Delivery Rate</div>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item reveal-up" style="transition-delay:0.2s">
+                <div class="stat-top">
+                    <span class="stat-number" data-target="24">0</span>
+                    <span class="stat-unit">/7</span>
+                </div>
+                <div class="stat-label">Dispatch & Support</div>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item reveal-up" style="transition-delay:0.3s">
+                <div class="stat-top">
+                    <span class="stat-number" data-target="0">0</span>
+                    <span class="stat-unit">EXCUSES</span>
+                </div>
+                <div class="stat-label">That's Our Policy</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════ -->
+    <!-- WHY KEYSTONE                                -->
+    <!-- ═══════════════════════════════════════════ -->
+    <section class="why" id="why">
+        <div class="why-inner">
+            <div class="why-left">
+                <p class="section-label reveal-fade">WHY KEYSTONE</p>
+                <h2 class="reveal-up">The Standard<br>Others Measure<br>Against</h2>
+                <div class="why-road-art">
+                    <div class="wra-road"></div>
+                    <div class="wra-dashes">
+                        <div class="wra-dash"></div>
+                        <div class="wra-dash"></div>
+                        <div class="wra-dash"></div>
+                        <div class="wra-dash"></div>
+                        <div class="wra-dash"></div>
+                    </div>
+                    <div class="wra-glow"></div>
+                </div>
+            </div>
+            <div class="why-right">
+                <div class="why-item reveal-up">
+                    <div class="wi-dash">—</div>
+                    <div class="wi-content">
+                        <h4>Accountability at Every Mile</h4>
+                        <p>Real-time tracking. Direct communication. No middlemen, no excuses. You always know exactly where your load is and when it arrives.</p>
+                    </div>
+                </div>
+                <div class="why-item reveal-up" style="transition-delay:0.1s">
+                    <div class="wi-dash">—</div>
+                    <div class="wi-content">
+                        <h4>Operators Who Give a Damn</h4>
+                        <p>Our drivers are vetted, experienced, and treat every load like it's theirs. Because their name is on it too, and that means something.</p>
+                    </div>
+                </div>
+                <div class="why-item reveal-up" style="transition-delay:0.2s">
+                    <div class="wi-dash">—</div>
+                    <div class="wi-content">
+                        <h4>No Surprise Fees. Ever.</h4>
+                        <p>You get a quote. That's what you pay. We build trust on the first load and keep earning it on every one after. Straight numbers, straight talk.</p>
+                    </div>
+                </div>
+                <div class="why-item reveal-up" style="transition-delay:0.3s">
+                    <div class="wi-dash">—</div>
+                    <div class="wi-content">
+                        <h4>Built on the Keystone Standard</h4>
+                        <p>The same operational backbone that runs Keystone Operations Group runs every load we touch. Systems, not guesswork. Execution, not promises.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════ -->
+    <!-- NETWORK                                     -->
+    <!-- ═══════════════════════════════════════════ -->
+    <section class="network" id="network">
+        <div class="network-inner">
+            <div class="network-left">
+                <p class="section-label reveal-fade">OUR NETWORK</p>
+                <h2 class="reveal-up">Nationwide.<br>No Exceptions.</h2>
+                <p class="network-sub reveal-fade">From the Pacific Coast to the Eastern Seaboard, from the Gulf to the Great Lakes — if there's a road, we run it.</p>
+                <a href="#contact" class="btn-primary reveal-up">CHECK YOUR ROUTE</a>
+            </div>
+            <div class="network-right">
+                <div class="map-visual">
+                    <div class="map-dot" style="top:38%;left:18%"><div class="map-pulse-ring"></div>WEST</div>
+                    <div class="map-dot" style="top:28%;left:45%"><div class="map-pulse-ring"></div>MIDWEST</div>
+                    <div class="map-dot" style="top:32%;left:72%"><div class="map-pulse-ring"></div>NORTHEAST</div>
+                    <div class="map-dot" style="top:62%;left:58%"><div class="map-pulse-ring"></div>SOUTH</div>
+                    <div class="map-dot" style="top:55%;left:28%"><div class="map-pulse-ring"></div>SOUTHWEST</div>
+                    <svg class="map-lines" viewBox="0 0 400 250" fill="none">
+                        <line x1="72" y1="95" x2="180" y2="70" stroke="#1a6b7c" stroke-width="1" stroke-dasharray="4 4" opacity="0.6"/>
+                        <line x1="180" y1="70" x2="288" y2="80" stroke="#1a6b7c" stroke-width="1" stroke-dasharray="4 4" opacity="0.6"/>
+                        <line x1="72" y1="95" x2="112" y2="137" stroke="#1a6b7c" stroke-width="1" stroke-dasharray="4 4" opacity="0.6"/>
+                        <line x1="112" y1="137" x2="232" y2="155" stroke="#1a6b7c" stroke-width="1" stroke-dasharray="4 4" opacity="0.6"/>
+                        <line x1="180" y1="70" x2="232" y2="155" stroke="#1a6b7c" stroke-width="1" stroke-dasharray="4 4" opacity="0.4"/>
+                        <line x1="288" y1="80" x2="232" y2="155" stroke="#1a6b7c" stroke-width="1" stroke-dasharray="4 4" opacity="0.4"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════ -->
+    <!-- CTA / CONTACT                               -->
+    <!-- ═══════════════════════════════════════════ -->
+    <section class="cta-section" id="contact">
+        <div class="cta-road-bg">
+            <div class="cta-road-line"></div>
+        </div>
+        <div class="cta-inner">
+            <div class="cta-header">
+                <p class="section-label">GET MOVING</p>
+                <h2 class="reveal-up">Ready to move<br>your freight?</h2>
+                <p class="cta-sub reveal-fade">Tell us what you're hauling and where it needs to go. We'll take it from there.</p>
+            </div>
+            <form class="cta-form" id="ctaForm" action="https://formspree.io/f/your-form-id" method="POST">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Company Name</label>
+                        <input type="text" name="company" placeholder="Your company" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Contact Name</label>
+                        <input type="text" name="name" placeholder="Your name" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" name="email" placeholder="email@company.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Phone</label>
+                        <input type="tel" name="phone" placeholder="(000) 000-0000">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Origin</label>
+                        <input type="text" name="origin" placeholder="City, State">
+                    </div>
+                    <div class="form-group">
+                        <label>Destination</label>
+                        <input type="text" name="destination" placeholder="City, State">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group full">
+                        <label>Service Type</label>
+                        <select name="service">
+                            <option value="" disabled selected>Select a service</option>
+                            <option>Full Truckload (FTL)</option>
+                            <option>Less Than Truckload (LTL)</option>
+                            <option>Expedited Shipping</option>
+                            <option>Flatbed / Heavy Haul</option>
+                            <option>Last Mile Delivery</option>
+                            <option>Logistics Coordination</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group full">
+                        <label>Details</label>
+                        <textarea name="details" placeholder="Freight type, weight, dimensions, timeline — anything that helps us understand your load." rows="3"></textarea>
+                    </div>
+                </div>
+                <button type="submit" class="btn-submit">
+                    <span>SUBMIT REQUEST</span>
+                    <div class="btn-arrow">→</div>
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <div class="footer-logo">KOG LOGISTICAL SUPPORT</div>
+                <p>A Keystone Operations Group Company</p>
+            </div>
+            <div class="footer-links">
+                <a href="#services">Services</a>
+                <a href="#network">Network</a>
+                <a href="#why">Why Us</a>
+                <a href="#contact">Get a Quote</a>
+            </div>
+            <div class="footer-contact">
+                <p>ops@keystoneoperationsgroup.net</p>
+                <p>Dispatch available 24/7</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 Keystone Operations Group. All rights reserved.</p>
+            <p>DOT Compliant &nbsp;·&nbsp; Fully Insured &nbsp;·&nbsp; Licensed & Bonded</p>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>

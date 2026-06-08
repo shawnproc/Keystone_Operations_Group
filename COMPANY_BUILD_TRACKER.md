@@ -121,10 +121,16 @@ Last Updated: June 2026
   - ✅ All à la carte add-ons
 
 ### Client Portal
-- ⬜ GHL client portal enabled
-- ⬜ Portal branded with Keystone colors/logo
+- ✅ GHL client portal enabled
+- ✅ Portal branded with Keystone colors/logo
+- ✅ Portal custom domain set (portal.keystoneoperationsgroup.net)
+- ✅ App Permissions configured (Billing, Contracts, Shared Files enabled)
+- ✅ Email notifications enabled (Invoice Created, Contract Created)
+- ✅ Chat widget configured
+- ✅ Copyright set
 - ⬜ "My Flows" page built in portal
-- ⬜ "Request a Flow" form built and connected
+- ✅ "Request a Flow" form built (Sites → Forms)
+- ⬜ "Request a Flow" form connected to portal
 
 ### Master Template
 - ⬜ Master client sub-account template built
@@ -133,14 +139,15 @@ Last Updated: June 2026
 - ⬜ Template tested and ready to clone
 
 ### Automation Flows (Internal — Keystone Operations)
-- ⬜ New lead → instant auto-reply email
-- ⬜ No response 24hr → follow-up email
-- ⬜ No response 48hr → final follow-up email
-- ⬜ Payment confirmed → intake form sent
-- ⬜ Intake form submitted → internal notification + client confirmation
-- ⬜ Flow request submitted → internal task + client confirmation
+- ✅ New lead → instant auto-reply SMS + email + 24hr/48hr follow-up
+- ✅ Payment confirmed → intake form sent (SMS + email)
+- ✅ Intake form submitted → internal notification + client confirmation
+- ✅ Flow request submitted → internal task + client confirmation
 - ⬜ Flow activated → client notification email
 - ⬜ Cancellation → flows off + confirmation email
+
+### Pre-Launch Checklist
+- ⬜ Full end-to-end spot check of entire business before go-live — every workflow, every form, every email, every page, top to bottom
 
 ---
 

@@ -133,9 +133,9 @@ Last Updated: June 2026
 - ⬜ "Request a Flow" form connected to portal
 
 ### Master Template
-- ⬜ Master client sub-account template built
-- ⬜ Template includes default pipeline stages
-- ⬜ Template includes default tags
+- ✅ Master client sub-account template built (Keystone Client Pipeline)
+- ✅ Template includes default pipeline stages (New Lead → Contacted → Proposal Sent → Payment Received → Onboarding → Active Client → Cancelled)
+- ✅ Template includes default tags (new-lead, contacted, proposal-sent, payment-received, onboarding, active-client, flow-activated, cancelled, starter-plan, growth-plan, enterprise-plan, follow-up-needed)
 - ⬜ Template tested and ready to clone
 
 ### Automation Flows (Internal — Keystone Operations)

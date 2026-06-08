@@ -101,7 +101,7 @@ Last Updated: June 2026
 ### Intake Form
 - 🔄 Intake form built (fields complete)
 - 🔒 Payment section — blocked: Stripe must be in live mode; blocked by Amex business checking account approval
-- ⬜ SMS consent placeholders replaced (after A2P approved)
+- ⬜ SMS consent placeholders replaced (after A2P approved) — intake form currently shows [BUSINESS NAME] and [USE_CASE_FROM_CAMPAIGN_DESCRIPTION] in the consent checkboxes; replace with "Keystone Operations Group" and actual use case description once A2P is approved
 - ⬜ Duplicate form for Growth and Enterprise plans
 
 ### Stripe & Billing

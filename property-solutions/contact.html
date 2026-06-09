@@ -40,7 +40,7 @@
     <div class="container">
       <span class="section-label light">Free Assessment</span>
       <h1>Let's Talk About Your <span class="gradient-text-light">Community</span></h1>
-      <p>Tell us a little about your HOA and we'll put together a free, no-obligation management proposal — usually within 48 hours.</p>
+      <p>Whether your community needs HOA management or needs an HOA built from scratch — we'll put together a free, no-obligation proposal within 48 hours.</p>
     </div>
   </div>
 
@@ -52,7 +52,7 @@
         <!-- Info Column -->
         <div class="contact-info">
           <h3>What to Expect</h3>
-          <p>We keep this simple. Fill out the form, and a member of our team will reach out within 48 hours to schedule a free community assessment call. No pressure, no sales pitch — just an honest conversation about whether we're a good fit.</p>
+          <p>We keep this simple. Fill out the form and a member of our team will reach out within 48 hours. Whether you need HOA management or want us to set one up for your community — we handle both, and we'll figure out which fits your situation on the call.</p>
 
           <div class="contact-detail">
             <div class="contact-icon">📧</div>
@@ -124,7 +124,19 @@
             </div>
 
             <div class="form-group">
-              <label for="role">Your Role on the Board *</label>
+              <label for="situation">What Best Describes Your Situation? *</label>
+              <select id="situation" name="situation" required>
+                <option value="" disabled selected>Select one</option>
+                <option value="Need management company">We have an HOA board and need a management company</option>
+                <option value="Need HOA created">Our community has no HOA — we need one set up</option>
+                <option value="Self-managed need help">We're self-managed and need professional help</option>
+                <option value="Looking to switch">We're unhappy with our current management company</option>
+                <option value="Other">Other / Not sure yet</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="role">Your Role *</label>
               <select id="role" name="role" required>
                 <option value="" disabled selected>Select your role</option>
                 <option value="President">Board President</option>
@@ -132,45 +144,47 @@
                 <option value="Treasurer">Treasurer</option>
                 <option value="Secretary">Secretary</option>
                 <option value="Director">Board Director / Member</option>
-                <option value="Property Manager">Property Manager</option>
-                <option value="Homeowner">Homeowner (Not on Board)</option>
+                <option value="Homeowner">Homeowner</option>
+                <option value="Developer">Developer / Builder</option>
+                <option value="Community Organizer">Community Organizer</option>
                 <option value="Other">Other</option>
               </select>
             </div>
 
             <div class="form-group">
-              <label for="community-name">Community / HOA Name *</label>
-              <input type="text" id="community-name" name="community_name" required placeholder="Sunset Ridge HOA" />
+              <label for="community-name">Community / Neighborhood Name *</label>
+              <input type="text" id="community-name" name="community_name" required placeholder="Sunset Ridge, Maple Creek Estates..." />
             </div>
 
             <div class="form-row">
               <div class="form-group">
-                <label for="unit-count">Approximate Number of Units *</label>
+                <label for="unit-count">Approximate Number of Homes *</label>
                 <select id="unit-count" name="unit_count" required>
                   <option value="" disabled selected>Select range</option>
-                  <option value="1-25">1 – 25 units</option>
-                  <option value="26-50">26 – 50 units</option>
-                  <option value="51-100">51 – 100 units</option>
-                  <option value="101-200">101 – 200 units</option>
-                  <option value="200+">200+ units</option>
+                  <option value="1-25">1 – 25 homes</option>
+                  <option value="26-50">26 – 50 homes</option>
+                  <option value="51-100">51 – 100 homes</option>
+                  <option value="101-200">101 – 200 homes</option>
+                  <option value="200+">200+ homes</option>
                 </select>
               </div>
               <div class="form-group">
-                <label for="currently-managed">Currently Self-Managed or Managed?</label>
-                <select id="currently-managed" name="currently_managed">
+                <label for="timeline">When Are You Looking to Get Started?</label>
+                <select id="timeline" name="timeline">
                   <option value="" disabled selected>Select one</option>
-                  <option value="Self-managed">Self-managed by board</option>
-                  <option value="Current management company">Current management company</option>
-                  <option value="Looking to switch">Looking to switch companies</option>
-                  <option value="New HOA">New HOA — no management yet</option>
+                  <option value="ASAP">As soon as possible</option>
+                  <option value="1-3 months">Within 1–3 months</option>
+                  <option value="3-6 months">Within 3–6 months</option>
+                  <option value="Just exploring">Just exploring options</option>
                 </select>
               </div>
             </div>
 
             <div class="form-group">
-              <label for="biggest-challenge">What's Your Biggest Management Challenge Right Now?</label>
+              <label for="biggest-challenge">What's Your Biggest Challenge Right Now?</label>
               <select id="biggest-challenge" name="biggest_challenge">
                 <option value="" disabled selected>Select one (optional)</option>
+                <option value="No HOA exists">No HOA structure exists yet</option>
                 <option value="Financial transparency">Lack of financial transparency</option>
                 <option value="Resident communication">Poor resident communication</option>
                 <option value="Vendor management">Vendor reliability issues</option>
@@ -185,7 +199,7 @@
 
             <div class="form-group">
               <label for="message">Anything Else You'd Like Us to Know?</label>
-              <textarea id="message" name="message" placeholder="Share any additional context about your community or what you're looking for in a management company..."></textarea>
+              <textarea id="message" name="message" placeholder="Tell us more about your community or what you're hoping to accomplish..."></textarea>
             </div>
 
             <button type="submit" class="btn-primary full-width large" style="margin-top: 8px;">

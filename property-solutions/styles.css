@@ -380,6 +380,9 @@ body {
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
 }
+.services-grid .service-card:first-child {
+  grid-column: span 1;
+}
 .service-card {
   background: var(--white);
   border-radius: var(--radius-lg);

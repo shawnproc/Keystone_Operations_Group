@@ -188,10 +188,10 @@ Clients can add any flow outside their plan:
 - Complex Flow (multi-step, conditional, multi-channel) — $99
 
 ## À La Carte — Add-Ons
-- Software / Tool Integration — $199
-- Custom Reporting Dashboard — $149
-- Review Generation Campaign — $79
-- Re-engagement Campaign — $79
+- Re-engagement Campaign — $99
+- Review Request Automation — $29
+- Missed Call Text Back — $49
+- CRM Setup & Cleanup — $199
 
 ---
 

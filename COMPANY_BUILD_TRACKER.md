@@ -73,7 +73,7 @@ Last Updated: June 2026
 - ✅ Founding Member banner on pricing
 - ⬜ Demo videos embedded on pricing page (1 per tier)
 - ✅ AI chat widget installed (GHL powered)
-- 🔒 Checkout / payment flow connected (GHL + Stripe) — blocked: Stripe must be switched to live mode; blocked by Amex business checking account approval
+- ✅ Checkout / payment flow connected (GHL + Stripe) — Get Started buttons live on website, payment links wired, Payment Received trigger active
 - ✅ Client portal link added to navigation
 
 ### Content Still Needed
@@ -108,7 +108,7 @@ Last Updated: June 2026
 - ✅ Stripe account created
 - ✅ Stripe connected to GHL
 - ✅ All products created in Stripe (test mode)
-- 🔒 Recreate products in live mode — blocked by Amex business checking account approval
+- ✅ Recreate products in live mode — all 13 products and payment links created
   - ✅ Starter setup fee ($99)
   - ✅ Growth setup fee ($159)
   - ✅ Enterprise setup fee ($209)

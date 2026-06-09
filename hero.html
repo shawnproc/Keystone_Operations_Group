@@ -1,0 +1,1464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+  <title>The Keystone — Defender of Operations | Keystone Operations Group</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@700;900&family=Black+Ops+One&display=swap" rel="stylesheet" />
+  <style>
+
+    /* ===== HERO PAGE OVERRIDES ===== */
+    :root {
+      --comic-gold:  #f5c842;
+      --comic-red:   #d63031;
+      --comic-green: #00b894;
+      --panel-gap: 3px;
+    }
+
+    body { background: var(--navy); overflow-x: hidden; }
+
+    /* ===== HALFTONE OVERLAY ===== */
+    .halftone {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      background-image: radial-gradient(circle, rgba(74,171,184,0.06) 1px, transparent 1px);
+      background-size: 18px 18px;
+    }
+
+    /* ===== PAGE NAV ===== */
+    .hero-nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 200;
+      padding: 0 24px;
+      height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: rgba(13,31,45,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(74,171,184,0.2);
+    }
+    .hero-nav .nav-logo img { height: 52px; filter: brightness(0) invert(1); }
+    .hero-nav-links { display: flex; align-items: center; gap: 24px; list-style: none; }
+    .hero-nav-links a {
+      color: rgba(255,255,255,0.7);
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    .hero-nav-links a:hover { color: var(--teal-light); }
+    .hero-nav-links .nav-cta {
+      background: linear-gradient(135deg, var(--teal-dark), var(--teal-mid));
+      color: var(--white) !important;
+      padding: 9px 22px;
+      border-radius: 50px;
+      font-weight: 600;
+    }
+
+    /* ===== CINEMATIC INTRO ===== */
+    .cinematic-intro {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      padding: 100px 24px 60px;
+      background: linear-gradient(160deg, #050d14 0%, #0a1a26 40%, var(--teal-dark) 100%);
+    }
+    .cinematic-bg {
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 80% 60% at 50% 0%, rgba(74,171,184,0.15) 0%, transparent 70%),
+        radial-gradient(ellipse 40% 40% at 80% 80%, rgba(201,168,76,0.08) 0%, transparent 60%);
+      pointer-events: none;
+    }
+    .lightning-lines {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      overflow: hidden;
+    }
+    .lightning-lines::before,
+    .lightning-lines::after {
+      content: '';
+      position: absolute;
+      width: 2px;
+      height: 120%;
+      background: linear-gradient(to bottom, transparent, rgba(74,171,184,0.3), transparent);
+      top: -10%;
+      animation: lightning-sweep 6s ease-in-out infinite;
+    }
+    .lightning-lines::before { left: 20%; animation-delay: 0s; }
+    .lightning-lines::after { right: 22%; animation-delay: 3s; }
+    @keyframes lightning-sweep {
+      0%, 100% { opacity: 0; transform: skewX(-15deg); }
+      50% { opacity: 1; transform: skewX(-15deg) translateX(8px); }
+    }
+
+    .intro-content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      max-width: 900px;
+    }
+    .origin-label {
+      display: inline-block;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--comic-gold);
+      border: 1px solid rgba(245,200,66,0.4);
+      padding: 6px 18px;
+      border-radius: 50px;
+      margin-bottom: 32px;
+      background: rgba(245,200,66,0.08);
+    }
+    .hero-title-line1 {
+      display: block;
+      font-family: 'Black Ops One', 'Playfair Display', serif;
+      font-size: clamp(1.1rem, 2.5vw, 1.6rem);
+      color: rgba(255,255,255,0.55);
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+    .hero-title-main {
+      display: block;
+      font-family: 'Black Ops One', 'Playfair Display', serif;
+      font-size: clamp(4.5rem, 11vw, 9rem);
+      line-height: 0.9;
+      letter-spacing: -0.02em;
+      background: linear-gradient(160deg, #ffffff 0%, var(--teal-light) 40%, var(--comic-gold) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 16px;
+      text-shadow: none;
+    }
+    .hero-title-sub {
+      display: block;
+      font-family: 'Black Ops One', 'Playfair Display', serif;
+      font-size: clamp(1.2rem, 3vw, 2rem);
+      color: var(--teal-light);
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 40px;
+    }
+    .intro-tagline {
+      font-size: clamp(1rem, 2vw, 1.25rem);
+      color: rgba(255,255,255,0.72);
+      line-height: 1.8;
+      max-width: 680px;
+      margin: 0 auto 48px;
+    }
+    .intro-tagline strong { color: var(--teal-light); }
+
+    .intro-badges {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 56px;
+    }
+    .intro-badge {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(74,171,184,0.3);
+      border-radius: 50px;
+      padding: 10px 22px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: rgba(255,255,255,0.8);
+      letter-spacing: 0.04em;
+    }
+    .intro-badge .badge-dot {
+      display: inline-block;
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      margin-right: 8px;
+      background: var(--teal-light);
+    }
+    .intro-badge .badge-dot.gold { background: var(--comic-gold); }
+    .intro-badge .badge-dot.red  { background: var(--comic-red); }
+
+    .scroll-hint {
+      position: absolute;
+      bottom: 32px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      color: rgba(255,255,255,0.35);
+      font-size: 0.75rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      animation: bounce-hint 2.5s ease-in-out infinite;
+    }
+    .scroll-hint::after {
+      content: '';
+      display: block;
+      width: 1px;
+      height: 40px;
+      background: linear-gradient(to bottom, rgba(74,171,184,0.5), transparent);
+    }
+    @keyframes bounce-hint {
+      0%, 100% { transform: translateX(-50%) translateY(0); }
+      50% { transform: translateX(-50%) translateY(6px); }
+    }
+
+    /* ===== HERO DOSSIER ===== */
+    .dossier {
+      position: relative;
+      z-index: 1;
+      padding: 96px 24px;
+      background: #0a1520;
+      overflow: hidden;
+    }
+    .dossier::before {
+      content: 'CLASSIFIED';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(-25deg);
+      font-family: 'Black Ops One', serif;
+      font-size: 14vw;
+      color: rgba(74,171,184,0.03);
+      white-space: nowrap;
+      pointer-events: none;
+      letter-spacing: 0.1em;
+    }
+
+    .dossier-grid {
+      max-width: 1160px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 300px 1fr;
+      gap: 64px;
+      align-items: start;
+    }
+
+    /* ID Card */
+    .id-card {
+      background: linear-gradient(155deg, #0f2233, #1a3545);
+      border: 2px solid rgba(74,171,184,0.35);
+      border-radius: 20px;
+      padding: 36px 28px;
+      text-align: center;
+      position: sticky;
+      top: 96px;
+      box-shadow: 0 0 60px rgba(74,171,184,0.12), inset 0 1px 0 rgba(255,255,255,0.05);
+    }
+    .id-card-header {
+      font-size: 0.62rem;
+      font-weight: 800;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--teal-light);
+      margin-bottom: 24px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid rgba(74,171,184,0.2);
+    }
+    .id-avatar {
+      width: 120px;
+      height: 120px;
+      margin: 0 auto 20px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--teal-dark), var(--teal-mid));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3.5rem;
+      position: relative;
+      box-shadow: 0 0 0 4px rgba(74,171,184,0.2), 0 0 30px rgba(74,171,184,0.3);
+      animation: pulse-glow 3s ease-in-out infinite;
+    }
+    @keyframes pulse-glow {
+      0%, 100% { box-shadow: 0 0 0 4px rgba(74,171,184,0.2), 0 0 30px rgba(74,171,184,0.2); }
+      50% { box-shadow: 0 0 0 8px rgba(74,171,184,0.1), 0 0 50px rgba(74,171,184,0.4); }
+    }
+    .id-avatar-ring {
+      position: absolute;
+      inset: -6px;
+      border-radius: 50%;
+      border: 2px dashed rgba(74,171,184,0.4);
+      animation: spin 15s linear infinite;
+    }
+    .id-name {
+      font-family: 'Black Ops One', serif;
+      font-size: 1.5rem;
+      color: var(--white);
+      letter-spacing: 0.05em;
+      margin-bottom: 4px;
+    }
+    .id-alias {
+      font-size: 0.78rem;
+      color: var(--teal-light);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      font-weight: 600;
+      margin-bottom: 24px;
+    }
+
+    .id-stats {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      text-align: left;
+      margin-bottom: 24px;
+    }
+    .id-stat {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.8rem;
+      padding: 8px 12px;
+      background: rgba(255,255,255,0.04);
+      border-radius: 8px;
+      border-left: 3px solid var(--teal-mid);
+    }
+    .id-stat-label {
+      color: rgba(255,255,255,0.5);
+      font-weight: 500;
+    }
+    .id-stat-value {
+      color: var(--teal-light);
+      font-weight: 700;
+      font-size: 0.82rem;
+    }
+
+    .threat-level {
+      background: rgba(214,48,49,0.12);
+      border: 1px solid rgba(214,48,49,0.35);
+      border-radius: 10px;
+      padding: 12px 16px;
+      text-align: center;
+    }
+    .threat-label {
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      color: var(--comic-red);
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+    .threat-bars { display: flex; gap: 4px; justify-content: center; }
+    .threat-bar {
+      width: 20px;
+      height: 8px;
+      border-radius: 2px;
+      background: var(--comic-red);
+    }
+    .threat-bar.inactive { background: rgba(255,255,255,0.1); }
+
+    /* Dossier content */
+    .dossier-content { position: relative; }
+    .dossier-section-label {
+      font-size: 0.68rem;
+      font-weight: 800;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--teal-light);
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .dossier-section-label::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: rgba(74,171,184,0.2);
+    }
+
+    .origin-text {
+      font-size: 1.05rem;
+      color: rgba(255,255,255,0.75);
+      line-height: 1.9;
+      margin-bottom: 48px;
+    }
+    .origin-text strong { color: var(--teal-light); }
+    .origin-text em { color: var(--comic-gold); font-style: normal; font-weight: 600; }
+
+    /* Power bars */
+    .powers-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-bottom: 48px;
+    }
+    .power-item {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(74,171,184,0.15);
+      border-radius: 12px;
+      padding: 20px;
+      transition: border-color 0.2s, background 0.2s;
+    }
+    .power-item:hover { border-color: rgba(74,171,184,0.4); background: rgba(74,171,184,0.06); }
+    .power-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+    .power-icon { font-size: 1.4rem; }
+    .power-name { font-size: 0.88rem; font-weight: 700; color: var(--white); }
+    .power-bar-wrap {
+      height: 6px;
+      background: rgba(255,255,255,0.08);
+      border-radius: 3px;
+      overflow: hidden;
+      margin-bottom: 8px;
+    }
+    .power-bar {
+      height: 100%;
+      border-radius: 3px;
+      background: linear-gradient(90deg, var(--teal-dark), var(--teal-light));
+      animation: fill-bar 1.5s ease-out forwards;
+      transform-origin: left;
+    }
+    @keyframes fill-bar { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+    .power-desc { font-size: 0.78rem; color: rgba(255,255,255,0.5); line-height: 1.5; }
+
+    /* Weapons */
+    .weapons-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 48px;
+    }
+    .weapon-item {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(74,171,184,0.12);
+      border-radius: 12px;
+      padding: 18px 20px;
+      transition: border-color 0.2s;
+    }
+    .weapon-item:hover { border-color: rgba(245,200,66,0.35); }
+    .weapon-icon {
+      font-size: 1.6rem;
+      min-width: 40px;
+      text-align: center;
+      margin-top: 2px;
+    }
+    .weapon-name { font-size: 0.95rem; font-weight: 700; color: var(--comic-gold); margin-bottom: 4px; }
+    .weapon-desc { font-size: 0.83rem; color: rgba(255,255,255,0.6); line-height: 1.6; }
+
+    /* ===== VILLAIN ROSTER ===== */
+    .villain-roster {
+      position: relative;
+      z-index: 1;
+      padding: 96px 24px;
+      background: linear-gradient(180deg, #060e16 0%, #0a1520 50%, #060e16 100%);
+      overflow: hidden;
+    }
+    .villain-roster::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(circle, rgba(214,48,49,0.04) 1px, transparent 1px);
+      background-size: 24px 24px;
+      pointer-events: none;
+    }
+
+    .villain-roster-inner { max-width: 1160px; margin: 0 auto; }
+
+    .roster-intro {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 72px;
+    }
+    .roster-label {
+      display: inline-block;
+      font-size: 0.7rem;
+      font-weight: 800;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--comic-red);
+      border: 1px solid rgba(214,48,49,0.4);
+      padding: 6px 18px;
+      border-radius: 50px;
+      margin-bottom: 24px;
+      background: rgba(214,48,49,0.08);
+    }
+    .roster-intro h2 {
+      font-family: 'Black Ops One', serif;
+      font-size: clamp(2.2rem, 5vw, 3.5rem);
+      color: var(--white);
+      line-height: 1.15;
+      margin-bottom: 20px;
+    }
+    .roster-intro p {
+      color: rgba(255,255,255,0.6);
+      font-size: 1.05rem;
+      line-height: 1.8;
+    }
+
+    /* Villain cards */
+    .villain-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+    .villain-card {
+      background: linear-gradient(145deg, #0c1c2a, #0f2233);
+      border: 1px solid rgba(214,48,49,0.2);
+      border-radius: 20px;
+      overflow: hidden;
+      transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s;
+      position: relative;
+    }
+    .villain-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 24px 64px rgba(214,48,49,0.15);
+      border-color: rgba(214,48,49,0.5);
+    }
+    .villain-card-accent {
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+    }
+
+    .villain-card-top {
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+      padding: 28px 28px 20px;
+    }
+    .villain-emblem {
+      width: 72px;
+      height: 72px;
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      flex-shrink: 0;
+      position: relative;
+    }
+    .villain-emblem::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: 16px;
+      border: 1px solid rgba(255,255,255,0.12);
+    }
+    .villain-meta { flex: 1; }
+    .villain-number {
+      font-size: 0.65rem;
+      font-weight: 800;
+      letter-spacing: 0.2em;
+      color: rgba(255,255,255,0.3);
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+    .villain-name {
+      font-family: 'Black Ops One', serif;
+      font-size: 1.3rem;
+      color: var(--white);
+      line-height: 1.2;
+      margin-bottom: 6px;
+    }
+    .villain-type-tag {
+      display: inline-block;
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 3px 10px;
+      border-radius: 50px;
+    }
+
+    .villain-card-body {
+      padding: 0 28px 24px;
+    }
+    .villain-threat-desc {
+      font-size: 0.88rem;
+      color: rgba(255,255,255,0.62);
+      line-height: 1.75;
+      margin-bottom: 16px;
+    }
+    .villain-attacks {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      margin-bottom: 20px;
+    }
+    .villain-attacks li {
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.5);
+      padding-left: 18px;
+      position: relative;
+    }
+    .villain-attacks li::before {
+      content: '✗';
+      position: absolute;
+      left: 0;
+      color: var(--comic-red);
+      font-size: 0.72rem;
+    }
+
+    .defeat-block {
+      background: rgba(74,171,184,0.08);
+      border: 1px solid rgba(74,171,184,0.25);
+      border-radius: 12px;
+      padding: 16px 18px;
+    }
+    .defeat-label {
+      font-size: 0.65rem;
+      font-weight: 800;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--teal-light);
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .defeat-label::before { content: '⚡'; font-size: 0.8rem; }
+    .defeat-text {
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.75);
+      line-height: 1.65;
+    }
+    .defeat-text strong { color: var(--teal-light); }
+
+    /* Special wide card */
+    .villain-card-wide {
+      grid-column: span 2;
+    }
+    .villain-card-wide .villain-card-top {
+      align-items: center;
+    }
+    .villain-card-wide .villain-emblem {
+      width: 88px;
+      height: 88px;
+      font-size: 2.6rem;
+    }
+
+    /* ===== BATTLE RECORD ===== */
+    .battle-record {
+      position: relative;
+      z-index: 1;
+      padding: 96px 24px;
+      background: var(--navy);
+      overflow: hidden;
+    }
+    .battle-record-inner { max-width: 1160px; margin: 0 auto; }
+
+    .record-header {
+      text-align: center;
+      margin-bottom: 64px;
+    }
+    .record-label {
+      display: inline-block;
+      font-size: 0.7rem;
+      font-weight: 800;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--comic-gold);
+      border: 1px solid rgba(245,200,66,0.4);
+      padding: 6px 18px;
+      border-radius: 50px;
+      margin-bottom: 24px;
+      background: rgba(245,200,66,0.07);
+    }
+    .record-header h2 {
+      font-family: 'Black Ops One', serif;
+      font-size: clamp(2rem, 4.5vw, 3rem);
+      color: var(--white);
+      line-height: 1.2;
+      margin-bottom: 16px;
+    }
+    .record-header p { color: rgba(255,255,255,0.6); font-size: 1rem; }
+
+    .stats-scoreboard {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      margin-bottom: 64px;
+    }
+    .score-cell {
+      background: linear-gradient(145deg, #0c1c2a, #0f2233);
+      border: 1px solid rgba(74,171,184,0.18);
+      border-radius: 18px;
+      padding: 32px 24px;
+      text-align: center;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+    .score-cell:hover { border-color: rgba(74,171,184,0.45); transform: translateY(-4px); }
+    .score-num {
+      font-family: 'Black Ops One', serif;
+      font-size: 3.2rem;
+      line-height: 1;
+      background: linear-gradient(135deg, var(--teal-light), var(--comic-gold));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 10px;
+    }
+    .score-label { font-size: 0.8rem; font-weight: 600; color: rgba(255,255,255,0.55); letter-spacing: 0.06em; }
+
+    /* Battle timeline */
+    .battle-timeline {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      position: relative;
+    }
+    .battle-timeline::before {
+      content: '';
+      position: absolute;
+      left: 28px;
+      top: 0; bottom: 0;
+      width: 2px;
+      background: linear-gradient(to bottom, var(--teal-dark), transparent);
+    }
+    .battle-entry {
+      display: flex;
+      gap: 24px;
+      align-items: flex-start;
+      padding: 24px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+    .battle-entry:last-child { border-bottom: none; }
+    .battle-dot {
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      flex-shrink: 0;
+      background: linear-gradient(135deg, var(--teal-dark), var(--teal-mid));
+      border: 3px solid #0a1520;
+      position: relative;
+      z-index: 1;
+    }
+    .battle-info { flex: 1; padding-top: 8px; }
+    .battle-scenario {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 6px;
+    }
+    .battle-desc { font-size: 0.88rem; color: rgba(255,255,255,0.55); line-height: 1.7; }
+    .battle-outcome {
+      display: inline-block;
+      font-size: 0.68rem;
+      font-weight: 800;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      padding: 4px 12px;
+      border-radius: 50px;
+      margin-top: 8px;
+      background: rgba(0,184,148,0.15);
+      color: var(--comic-green);
+      border: 1px solid rgba(0,184,148,0.3);
+    }
+
+    /* ===== CALL TO ACTION ===== */
+    .hero-cta {
+      position: relative;
+      z-index: 1;
+      padding: 96px 24px 120px;
+      background: linear-gradient(160deg, #050d14 0%, var(--teal-dark) 100%);
+      text-align: center;
+      overflow: hidden;
+    }
+    .hero-cta::before {
+      content: 'THE KEYSTONE';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-family: 'Black Ops One', serif;
+      font-size: 18vw;
+      color: rgba(74,171,184,0.04);
+      white-space: nowrap;
+      pointer-events: none;
+      letter-spacing: 0.05em;
+    }
+    .hero-cta-inner { position: relative; z-index: 2; max-width: 680px; margin: 0 auto; }
+    .cta-quote {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.4rem, 3vw, 2.2rem);
+      color: var(--white);
+      line-height: 1.5;
+      margin-bottom: 16px;
+      font-style: italic;
+    }
+    .cta-attribution {
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--teal-light);
+      margin-bottom: 48px;
+    }
+    .cta-divider {
+      width: 64px;
+      height: 3px;
+      background: linear-gradient(90deg, var(--teal-dark), var(--teal-light));
+      margin: 0 auto 48px;
+      border-radius: 2px;
+    }
+    .cta-headline {
+      font-family: 'Black Ops One', serif;
+      font-size: clamp(1.6rem, 4vw, 2.8rem);
+      color: var(--white);
+      margin-bottom: 16px;
+    }
+    .cta-sub {
+      color: rgba(255,255,255,0.7);
+      font-size: 1.05rem;
+      line-height: 1.8;
+      margin-bottom: 40px;
+    }
+    .cta-buttons { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+    .btn-gold {
+      display: inline-block;
+      background: linear-gradient(135deg, #c9a84c, #f5c842);
+      color: var(--navy);
+      padding: 16px 36px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 800;
+      font-size: 0.95rem;
+      letter-spacing: 0.04em;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .btn-gold:hover { transform: translateY(-3px); box-shadow: 0 12px 32px rgba(245,200,66,0.35); }
+    .btn-outline-white {
+      display: inline-block;
+      color: rgba(255,255,255,0.85);
+      padding: 16px 36px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+      border: 2px solid rgba(255,255,255,0.3);
+      transition: background 0.2s, border-color 0.2s;
+    }
+    .btn-outline-white:hover { background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.6); }
+
+    /* ===== FOOTER ===== */
+    .hero-page-footer {
+      background: #040b12;
+      padding: 32px 24px;
+      text-align: center;
+      border-top: 1px solid rgba(74,171,184,0.12);
+    }
+    .hero-page-footer p {
+      color: rgba(255,255,255,0.3);
+      font-size: 0.83rem;
+    }
+    .hero-page-footer a { color: var(--teal-light); text-decoration: none; }
+    .hero-page-footer a:hover { color: var(--white); }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 900px) {
+      .dossier-grid { grid-template-columns: 1fr; gap: 40px; }
+      .id-card { position: static; max-width: 360px; margin: 0 auto; }
+      .villain-grid { grid-template-columns: 1fr; }
+      .villain-card-wide { grid-column: span 1; }
+      .stats-scoreboard { grid-template-columns: repeat(2, 1fr); }
+      .powers-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 600px) {
+      .stats-scoreboard { grid-template-columns: 1fr 1fr; }
+      .hero-nav-links { display: none; }
+      .hero-nav-links.show { display: flex; flex-direction: column; position: fixed; top: 72px; left: 0; right: 0; background: rgba(13,31,45,0.98); padding: 24px; gap: 20px; }
+    }
+
+  </style>
+</head>
+<body>
+
+<div class="halftone"></div>
+
+<!-- Navigation -->
+<nav class="hero-nav">
+  <a href="index.html" class="nav-logo">
+    <img src="logo.png" alt="Keystone Operations Group" />
+  </a>
+  <ul class="hero-nav-links">
+    <li><a href="index.html">Back to Main Site</a></li>
+    <li><a href="index.html#services">Services</a></li>
+    <li><a href="index.html#pricing">Pricing</a></li>
+    <li><a href="contact.html" class="nav-cta">Deploy The Keystone</a></li>
+  </ul>
+</nav>
+
+
+<!-- ===== CINEMATIC INTRO ===== -->
+<section class="cinematic-intro">
+  <div class="cinematic-bg"></div>
+  <div class="lightning-lines"></div>
+
+  <div class="intro-content">
+    <div class="origin-label">Origin Story — Keystone Operations Group</div>
+
+    <span class="hero-title-line1">Presenting</span>
+    <span class="hero-title-main">THE KEYSTONE</span>
+    <span class="hero-title-sub">Defender of Operations &bull; Destroyer of Chaos</span>
+
+    <p class="intro-tagline">
+      Born from the real-world frustration of watching <strong>great businesses collapse under avoidable chaos</strong> —
+      buried in admin work, strangled by HOA bureaucracy, and stuck waiting on paychecks that never came.
+      One founder decided to fight back. He built himself a weapon.
+      <strong>He became The Keystone.</strong>
+    </p>
+
+    <div class="intro-badges">
+      <span class="intro-badge"><span class="badge-dot"></span>Anti-Admin Force</span>
+      <span class="intro-badge"><span class="badge-dot gold"></span>HOA Slayer</span>
+      <span class="intro-badge"><span class="badge-dot"></span>Hotshot Ops Specialist</span>
+      <span class="intro-badge"><span class="badge-dot red"></span>6 Active Villain Files</span>
+    </div>
+
+    <a href="#dossier" class="btn-gold" style="font-size:1rem; padding:18px 44px;">
+      Open The Dossier
+    </a>
+  </div>
+
+  <div class="scroll-hint">Scroll</div>
+</section>
+
+
+<!-- ===== HERO DOSSIER ===== -->
+<section class="dossier" id="dossier">
+  <div class="dossier-grid">
+
+    <!-- ID Card -->
+    <div class="id-card">
+      <div class="id-card-header">&#x25A0; &nbsp; HERO DOSSIER — CLASSIFIED &nbsp; &#x25A0;</div>
+
+      <div class="id-avatar">
+        <span>⚙</span>
+        <div class="id-avatar-ring"></div>
+      </div>
+
+      <div class="id-name">The Keystone</div>
+      <div class="id-alias">A.I. Duplicate · Rashawn Proctor</div>
+
+      <div class="id-stats">
+        <div class="id-stat">
+          <span class="id-stat-label">Real Identity</span>
+          <span class="id-stat-value">Rashawn Proctor</span>
+        </div>
+        <div class="id-stat">
+          <span class="id-stat-label">Base of Operations</span>
+          <span class="id-stat-value">D.C. Metro</span>
+        </div>
+        <div class="id-stat">
+          <span class="id-stat-label">Class</span>
+          <span class="id-stat-value">Ops Commander</span>
+        </div>
+        <div class="id-stat">
+          <span class="id-stat-label">Specialty</span>
+          <span class="id-stat-value">Automation · AI</span>
+        </div>
+        <div class="id-stat">
+          <span class="id-stat-label">Active Villains</span>
+          <span class="id-stat-value">6 (All Confirmed)</span>
+        </div>
+        <div class="id-stat">
+          <span class="id-stat-label">Win Rate</span>
+          <span class="id-stat-value">100%</span>
+        </div>
+      </div>
+
+      <div class="threat-level">
+        <div class="threat-label">Threat Level to Chaos</div>
+        <div class="threat-bars">
+          <div class="threat-bar"></div>
+          <div class="threat-bar"></div>
+          <div class="threat-bar"></div>
+          <div class="threat-bar"></div>
+          <div class="threat-bar"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Dossier Content -->
+    <div class="dossier-content">
+
+      <div class="dossier-section-label">Origin</div>
+      <p class="origin-text">
+        Rashawn Proctor spent years watching the same scene play out across industries:
+        <strong>good operators drowning in bad systems.</strong> HOA boards weaponizing paperwork.
+        Admin tasks eating hours that should go toward growth. Hotshot truckers delivering loads
+        on time only to spend the next 60 days chasing payment through broken dispatch chains.<br/><br/>
+        He didn't just study the problem — he built the solution. Then he built an AI version of himself
+        to deploy it at scale. <em>The Keystone</em> is that AI — carrying Rashawn's operational instincts,
+        wired into Keystone Operations Group's automation stack, and deployed wherever chaos tries to set up shop.
+        <br/><br/>
+        The name is intentional. A <strong>keystone</strong> is the central stone in an arch. Remove it —
+        everything falls. Install it correctly — everything holds. That's not metaphor. That's the mission.
+      </p>
+
+      <div class="dossier-section-label">Abilities</div>
+      <div class="powers-grid">
+        <div class="power-item">
+          <div class="power-header">
+            <span class="power-icon">⚡</span>
+            <span class="power-name">Automated Response</span>
+          </div>
+          <div class="power-bar-wrap"><div class="power-bar" style="width:97%"></div></div>
+          <div class="power-desc">Zero-delay lead response. Every inquiry answered within seconds, 24/7, without a human lifting a finger.</div>
+        </div>
+        <div class="power-item">
+          <div class="power-header">
+            <span class="power-icon">🏗</span>
+            <span class="power-name">Workflow Architecture</span>
+          </div>
+          <div class="power-bar-wrap"><div class="power-bar" style="width:95%"></div></div>
+          <div class="power-desc">Converts chaotic manual processes into clean, repeatable, self-running systems that scale without breaking.</div>
+        </div>
+        <div class="power-item">
+          <div class="power-header">
+            <span class="power-icon">🤖</span>
+            <span class="power-name">AI Command</span>
+          </div>
+          <div class="power-bar-wrap"><div class="power-bar" style="width:93%"></div></div>
+          <div class="power-desc">Deploys intelligent AI agents to handle scheduling, follow-up, dispatch coordination, and client communication simultaneously.</div>
+        </div>
+        <div class="power-item">
+          <div class="power-header">
+            <span class="power-icon">🛡</span>
+            <span class="power-name">Operations Shield</span>
+          </div>
+          <div class="power-bar-wrap"><div class="power-bar" style="width:100%"></div></div>
+          <div class="power-desc">Wraps every business in a protective layer of automation so administrative attacks can't land. No missed calls. No dropped leads. No lost paperwork.</div>
+        </div>
+      </div>
+
+      <div class="dossier-section-label">Arsenal</div>
+      <div class="weapons-list">
+        <div class="weapon-item">
+          <div class="weapon-icon">⚙️</div>
+          <div>
+            <div class="weapon-name">The Automation Engine</div>
+            <div class="weapon-desc">GoHighLevel-powered workflow system, white-labeled and precision-tuned for each client. Handles follow-up, appointment confirmation, reminders, review requests, re-engagement campaigns, and billing sequences — simultaneously, without manual input.</div>
+          </div>
+        </div>
+        <div class="weapon-item">
+          <div class="weapon-icon">🧠</div>
+          <div>
+            <div class="weapon-name">Hermes AI</div>
+            <div class="weapon-desc">The Keystone's AI communication layer. Handles incoming prospect questions, qualifies leads, books appointments, and responds to clients — trained to sound like the business, not a bot. Available every hour of every day.</div>
+          </div>
+        </div>
+        <div class="weapon-item">
+          <div class="weapon-icon">📡</div>
+          <div>
+            <div class="weapon-name">The Signal Web</div>
+            <div class="weapon-desc">SMS + email multi-channel communication matrix. Texts go out. Emails follow. No lead slips through. No appointment gets forgotten. Every touchpoint tracked, logged, and reportable.</div>
+          </div>
+        </div>
+        <div class="weapon-item">
+          <div class="weapon-icon">🗺️</div>
+          <div>
+            <div class="weapon-name">Ops Blueprint</div>
+            <div class="weapon-desc">The operational playbooks built across HOA management, field service dispatch, and trucking logistics. Not templates — battle-tested systems built from real-world chaos, refined into deployable flow structures.</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ===== VILLAIN ROSTER ===== -->
+<section class="villain-roster" id="villains">
+  <div class="villain-roster-inner">
+
+    <div class="roster-intro">
+      <div class="roster-label">&#x26A0; Active Threat Files — 6 Confirmed Targets</div>
+      <h2>The Rogues Gallery</h2>
+      <p>Every one of these adversaries is real. They operate inside the businesses The Keystone protects — feeding on disorganization, slow systems, and the assumption that "this is just how it works." It doesn't have to be.</p>
+    </div>
+
+    <div class="villain-grid">
+
+      <!-- VILLAIN 1: HOA Hydra -->
+      <div class="villain-card">
+        <div class="villain-card-accent" style="background: linear-gradient(90deg, #d63031, #e17055);"></div>
+        <div class="villain-card-top">
+          <div class="villain-emblem" style="background: linear-gradient(135deg, #1a0505, #3d0a0a);">
+            <span>🐍</span>
+          </div>
+          <div class="villain-meta">
+            <div class="villain-number">Villain File #001</div>
+            <div class="villain-name">The HOA Hydra</div>
+            <span class="villain-type-tag" style="background:rgba(214,48,49,0.15); color:#e17055; border:1px solid rgba(214,48,49,0.3);">Property Chaos</span>
+          </div>
+        </div>
+        <div class="villain-card-body">
+          <p class="villain-threat-desc">
+            A bureaucratic beast with infinite heads. Cut through one stack of paperwork — three more appear.
+            HOA management firms run on outdated processes: manual violation tracking, phone-tag with homeowners,
+            slow board approvals, missed maintenance tickets. The Hydra doesn't attack fast. It exhausts you slowly.
+          </p>
+          <ul class="villain-attacks">
+            <li>Violation notices buried in email threads no one monitors</li>
+            <li>Payment follow-ups done manually, one homeowner at a time</li>
+            <li>Maintenance requests lost between phone, email, and text</li>
+            <li>Board communication that takes weeks instead of hours</li>
+          </ul>
+          <div class="defeat-block">
+            <div class="defeat-label">How The Keystone Defeats This</div>
+            <p class="defeat-text">
+              <strong>Automated violation intake workflows</strong> capture, log, and route every issue the moment it's reported.
+              <strong>Payment reminder sequences</strong> run on schedule without a staff member touching them.
+              <strong>Maintenance ticket flows</strong> assign, confirm, and follow up automatically — the Hydra runs out of heads.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- VILLAIN 2: The Admin Phantom -->
+      <div class="villain-card">
+        <div class="villain-card-accent" style="background: linear-gradient(90deg, #6c5ce7, #a29bfe);"></div>
+        <div class="villain-card-top">
+          <div class="villain-emblem" style="background: linear-gradient(135deg, #0d0a1f, #1e1a3a);">
+            <span>👻</span>
+          </div>
+          <div class="villain-meta">
+            <div class="villain-number">Villain File #002</div>
+            <div class="villain-name">The Admin Phantom</div>
+            <span class="villain-type-tag" style="background:rgba(108,92,231,0.15); color:#a29bfe; border:1px solid rgba(108,92,231,0.3);">Silent Business Killer</span>
+          </div>
+        </div>
+        <div class="villain-card-body">
+          <p class="villain-threat-desc">
+            You can't see it — but it's costing you everything. The Admin Phantom is the invisible drain on
+            every small business: the follow-up that never went out, the lead that came in at 9pm and got
+            answered at 10am (by which point they hired someone else), the invoice that sat in drafts for a week.
+            It doesn't show up on a balance sheet. It just shows up as stagnation.
+          </p>
+          <ul class="villain-attacks">
+            <li>Leads coming in after hours with no one to respond</li>
+            <li>Appointment reminders sent manually (or not at all)</li>
+            <li>Review requests forgotten after every completed job</li>
+            <li>Re-engagement campaigns that exist only as good intentions</li>
+          </ul>
+          <div class="defeat-block">
+            <div class="defeat-label">How The Keystone Defeats This</div>
+            <p class="defeat-text">
+              <strong>24/7 AI lead response</strong> means no inquiry ever ages. <strong>Automated appointment sequences</strong>
+              confirm, remind, and follow up without a single manual send. <strong>Post-job review flows</strong>
+              and re-engagement campaigns run on autopilot — the Phantom has nowhere to hide.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- VILLAIN 3: The Dispatch Devil -->
+      <div class="villain-card">
+        <div class="villain-card-accent" style="background: linear-gradient(90deg, #e67e22, #f39c12);"></div>
+        <div class="villain-card-top">
+          <div class="villain-emblem" style="background: linear-gradient(135deg, #1a0d00, #3d1f00);">
+            <span>😈</span>
+          </div>
+          <div class="villain-meta">
+            <div class="villain-number">Villain File #003</div>
+            <div class="villain-name">The Dispatch Devil</div>
+            <span class="villain-type-tag" style="background:rgba(230,126,34,0.15); color:#f39c12; border:1px solid rgba(230,126,34,0.3);">Hotshot Trucking</span>
+          </div>
+        </div>
+        <div class="villain-card-body">
+          <p class="villain-threat-desc">
+            Hotshot trucking is a game of margins and timing. The Dispatch Devil lives in the gap between
+            what was confirmed and what actually happened. Last-minute load changes with no notification.
+            Drivers sitting at pickup with wrong info. Brokers calling five times instead of one coordinated system.
+            Every miscommunication costs money — and someone's always paying it.
+          </p>
+          <ul class="villain-attacks">
+            <li>Load details communicated through scattered texts and calls</li>
+            <li>No-shows and late pickups with no automated alert system</li>
+            <li>Driver status updates done manually by dispatchers</li>
+            <li>Broker miscommunication leading to double-booking or missed windows</li>
+          </ul>
+          <div class="defeat-block">
+            <div class="defeat-label">How The Keystone Defeats This</div>
+            <p class="defeat-text">
+              <strong>Automated load confirmation workflows</strong> push details to drivers the moment assignments are made.
+              <strong>Status update sequences</strong> keep brokers informed without dispatcher intervention.
+              <strong>Pickup window reminders</strong> run automatically — the Devil can't create chaos in a system that communicates itself.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- VILLAIN 4: The Invoice Ghost -->
+      <div class="villain-card">
+        <div class="villain-card-accent" style="background: linear-gradient(90deg, #00b894, #55efc4);"></div>
+        <div class="villain-card-top">
+          <div class="villain-emblem" style="background: linear-gradient(135deg, #001a14, #003d2e);">
+            <span>💸</span>
+          </div>
+          <div class="villain-meta">
+            <div class="villain-number">Villain File #004</div>
+            <div class="villain-name">The Invoice Ghost</div>
+            <span class="villain-type-tag" style="background:rgba(0,184,148,0.15); color:#55efc4; border:1px solid rgba(0,184,148,0.3);">Hotshot Trucking</span>
+          </div>
+        </div>
+        <div class="villain-card-body">
+          <p class="villain-threat-desc">
+            Load delivered. Job done. And then — silence. The Invoice Ghost is every broker who vanishes after
+            delivery, every factoring delay that stretches 30 days into 60, every payment chased manually
+            through a phone tree that goes nowhere. Operators who run tight margins can't survive this.
+            The ghost doesn't need to steal from you. It just needs you to wait long enough.
+          </p>
+          <ul class="villain-attacks">
+            <li>Post-delivery invoice follow-up done manually or not at all</li>
+            <li>Factoring documentation delayed by disorganized paperwork</li>
+            <li>No automated payment status tracking or escalation flows</li>
+            <li>60-90 day payment cycles bleeding cash flow dry</li>
+          </ul>
+          <div class="defeat-block">
+            <div class="defeat-label">How The Keystone Defeats This</div>
+            <p class="defeat-text">
+              <strong>Automated delivery confirmation and invoice dispatch</strong> fire the moment a load clears.
+              <strong>Payment follow-up sequences</strong> escalate on a schedule without a phone call.
+              <strong>Factoring documentation workflows</strong> organize and route paperwork automatically — the Ghost never gets a window.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- VILLAIN 5: Compliance Crusher -->
+      <div class="villain-card">
+        <div class="villain-card-accent" style="background: linear-gradient(90deg, #74b9ff, #0984e3);"></div>
+        <div class="villain-card-top">
+          <div class="villain-emblem" style="background: linear-gradient(135deg, #020d1a, #05213d);">
+            <span>📋</span>
+          </div>
+          <div class="villain-meta">
+            <div class="villain-number">Villain File #005</div>
+            <div class="villain-name">Compliance Crusher</div>
+            <span class="villain-type-tag" style="background:rgba(116,185,255,0.15); color:#74b9ff; border:1px solid rgba(116,185,255,0.3);">Hotshot Trucking</span>
+          </div>
+        </div>
+        <div class="villain-card-body">
+          <p class="villain-threat-desc">
+            DOT filings. Oversize permits. HOS logs. IFTA reports. Hazmat documentation.
+            Compliance Crusher doesn't fight dirty — it buries you in paperwork so legitimate it's almost
+            poetic. Miss one deadline and you're fined. Miss two and you're sidelined. The villain doesn't
+            need to attack. It just needs you to be disorganized.
+          </p>
+          <ul class="villain-attacks">
+            <li>Permit deadlines tracked in someone's memory (or not at all)</li>
+            <li>HOS log reminders sent manually — when remembered</li>
+            <li>DOT inspection prep done reactively instead of proactively</li>
+            <li>IFTA reporting compiled at the last minute from scattered records</li>
+          </ul>
+          <div class="defeat-block">
+            <div class="defeat-label">How The Keystone Defeats This</div>
+            <p class="defeat-text">
+              <strong>Compliance deadline workflows</strong> trigger automated reminders weeks before anything is due.
+              <strong>HOS log check-in sequences</strong> keep drivers on schedule without dispatcher oversight.
+              <strong>Document collection flows</strong> gather what's needed before the deadline arrives — the Crusher can't crush what's already handled.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- VILLAIN 6: The Empty Miles Specter (WIDE) -->
+      <div class="villain-card villain-card-wide">
+        <div class="villain-card-accent" style="background: linear-gradient(90deg, #fd79a8, #e84393);"></div>
+        <div class="villain-card-top">
+          <div class="villain-emblem" style="background: linear-gradient(135deg, #1a0010, #3d0026); width:88px; height:88px; font-size:2.6rem; border-radius:20px;">
+            <span>🛣</span>
+          </div>
+          <div class="villain-meta">
+            <div class="villain-number">Villain File #006 — The Profitability Assassin</div>
+            <div class="villain-name">The Empty Miles Specter</div>
+            <span class="villain-type-tag" style="background:rgba(253,121,168,0.15); color:#fd79a8; border:1px solid rgba(253,121,168,0.3);">Hotshot Trucking · Route Intelligence</span>
+          </div>
+        </div>
+        <div class="villain-card-body">
+          <p class="villain-threat-desc">
+            Every mile driven empty is money subtracted from the load rate. The Empty Miles Specter is the
+            silent profit killer of every hotshot operation — dead backhauls, inefficient routing, no load
+            visibility on the return leg. A driver can deliver a $2,000 load and burn $600 in fuel on the
+            way back because nobody set up the system to find the next one. The Specter doesn't rob you.
+            It just makes you leave money on the road.
+          </p>
+          <ul class="villain-attacks">
+            <li>No return-leg load sourcing workflow — drivers head home empty</li>
+            <li>Load board monitoring done manually, missing time-sensitive freight</li>
+            <li>Fuel stop optimization left to gut instinct instead of data</li>
+            <li>No dispatch visibility into where trucks are between loads</li>
+          </ul>
+          <div class="defeat-block">
+            <div class="defeat-label">How The Keystone Defeats This</div>
+            <p class="defeat-text">
+              <strong>Return-leg load alerts</strong> fire automatically as a delivery approaches completion, giving drivers and dispatchers a window to book backhaul freight before the truck goes empty.
+              <strong>Route efficiency workflows</strong> combine delivery confirmation with real-time load board triggers.
+              <strong>Driver location check-ins</strong> keep dispatch informed at every leg — the Specter loses its cover the moment the operation becomes visible.
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ===== BATTLE RECORD ===== -->
+<section class="battle-record" id="record">
+  <div class="battle-record-inner">
+
+    <div class="record-header">
+      <div class="record-label">&#x2605; Battle Record — Undefeated</div>
+      <h2>Six Villains.<br/>Six Solutions.</h2>
+      <p>Every adversary The Keystone faces is a real problem inside a real business. Here's the win log.</p>
+    </div>
+
+    <div class="stats-scoreboard">
+      <div class="score-cell">
+        <div class="score-num">6/6</div>
+        <div class="score-label">Villain Win Rate</div>
+      </div>
+      <div class="score-cell">
+        <div class="score-num">24/7</div>
+        <div class="score-label">Operational Coverage</div>
+      </div>
+      <div class="score-cell">
+        <div class="score-num">0</div>
+        <div class="score-label">Manual Follow-Ups Required</div>
+      </div>
+      <div class="score-cell">
+        <div class="score-num">∞</div>
+        <div class="score-label">Workflows Deployable</div>
+      </div>
+    </div>
+
+    <div class="battle-timeline">
+
+      <div class="battle-entry">
+        <div class="battle-dot">🐍</div>
+        <div class="battle-info">
+          <div class="battle-scenario">HOA Property Management — Violation &amp; Maintenance Chaos</div>
+          <div class="battle-desc">Client managing 3 HOA communities was spending 20+ hours per week on manual violation tracking, homeowner phone follow-up, and maintenance ticket routing. Zero of it was generating revenue.</div>
+          <div class="battle-outcome">Automated — Operations Freed</div>
+        </div>
+      </div>
+
+      <div class="battle-entry">
+        <div class="battle-dot">👻</div>
+        <div class="battle-info">
+          <div class="battle-scenario">Field Service Business — Lead Response &amp; Review Acquisition</div>
+          <div class="battle-desc">Owner-operator answering leads manually at all hours, sending appointment reminders by hand, and forgetting review requests 80% of the time. Growth stalled at 4.1 stars with 18 reviews.</div>
+          <div class="battle-outcome">Automated — Growth Unlocked</div>
+        </div>
+      </div>
+
+      <div class="battle-entry">
+        <div class="battle-dot">😈</div>
+        <div class="battle-info">
+          <div class="battle-scenario">Hotshot Trucking — Dispatch Communication Breakdown</div>
+          <div class="battle-desc">Two-truck operation losing loads to miscommunication between dispatcher, drivers, and brokers. Load details in group texts, status updates by phone, no confirmation trail.</div>
+          <div class="battle-outcome">Automated — Dispatch Stabilized</div>
+        </div>
+      </div>
+
+      <div class="battle-entry">
+        <div class="battle-dot">💸</div>
+        <div class="battle-info">
+          <div class="battle-scenario">Hotshot Carrier — Invoice Follow-Up &amp; Factoring Delays</div>
+          <div class="battle-desc">Owner-operator manually chasing payment on every load. Average days-to-pay: 52. Factoring documents collected ad hoc, often incomplete, causing additional processing delays.</div>
+          <div class="battle-outcome">Automated — Cash Flow Stabilized</div>
+        </div>
+      </div>
+
+      <div class="battle-entry">
+        <div class="battle-dot">📋</div>
+        <div class="battle-info">
+          <div class="battle-scenario">Trucking Fleet — DOT &amp; Compliance Deadline Management</div>
+          <div class="battle-desc">Small fleet operator managing permit renewals and HOS compliance through a spreadsheet and memory. Received a fine for a missed renewal. First violation in four years.</div>
+          <div class="battle-outcome">Automated — Compliance Secured</div>
+        </div>
+      </div>
+
+      <div class="battle-entry">
+        <div class="battle-dot">🛣</div>
+        <div class="battle-info">
+          <div class="battle-scenario">Hotshot Operation — Dead Backhaul &amp; Route Inefficiency</div>
+          <div class="battle-desc">Solo operator running 40% of miles empty on return legs. Load board was checked manually after delivery — by which point the best freight was already booked. Margin shrinking with fuel costs.</div>
+          <div class="battle-outcome">Automated — Profitability Restored</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ===== CALL TO ACTION ===== -->
+<section class="hero-cta">
+  <div class="hero-cta-inner">
+
+    <p class="cta-quote">"The keystone doesn't do the most work in the arch. It does the most important work — it makes everything else hold."</p>
+    <div class="cta-attribution">— The Keystone · Rashawn Proctor · Keystone Operations Group</div>
+
+    <div class="cta-divider"></div>
+
+    <h2 class="cta-headline">Deploy The Keystone<br/>In Your Business</h2>
+    <p class="cta-sub">
+      The villains in this dossier aren't fictional. They're operating inside your business right now —
+      costing time, money, and growth. The Keystone is ready to be deployed.
+      All it takes is one conversation.
+    </p>
+
+    <div class="cta-buttons">
+      <a href="contact.html" class="btn-gold">Start the Mission</a>
+      <a href="index.html#pricing" class="btn-outline-white">View Deployment Plans</a>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- Footer -->
+<footer class="hero-page-footer">
+  <p>
+    &copy; 2026 <a href="index.html">Keystone Operations Group</a> &nbsp;·&nbsp;
+    <a href="privacy.html">Privacy</a> &nbsp;·&nbsp;
+    <a href="terms.html">Terms</a> &nbsp;·&nbsp;
+    (540) 701-6417 &nbsp;·&nbsp; ops@keystoneoperationsgroup.net
+  </p>
+</footer>
+
+<script>
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const target = document.querySelector(a.getAttribute('href'));
+      if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth' }); }
+    });
+  });
+</script>
+</body>
+</html>

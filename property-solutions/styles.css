@@ -1224,3 +1224,9 @@ body {
   .form-row { grid-template-columns: 1fr; }
   .contact-form-wrap { padding: 24px; }
 }
+
+/* ===== GHL FORM OVERRIDE ===== */
+.ghl-form-wrap {
+  padding: 0;
+  overflow: hidden;
+}

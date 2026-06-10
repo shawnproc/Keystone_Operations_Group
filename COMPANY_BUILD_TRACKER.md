@@ -131,7 +131,7 @@ Last Updated: June 2026
 - ✅ Copyright set
 - ⬜ "My Flows" page built in portal
 - ✅ "Request a Flow" form built (Sites → Forms)
-- ⬜ "Request a Flow" form connected to portal
+- ✅ "Request a Flow" form link shared via welcome email (https://api.keystoneoperationsgroup.net/widget/form/FhEVJ2UO2nu9s2B1Wvjw)
 
 ### Master Template
 - ✅ Master client sub-account template built (Keystone Client Pipeline)

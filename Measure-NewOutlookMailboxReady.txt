@@ -1,0 +1,76 @@
+[CmdletBinding()]
+param(
+    [int]$TimeoutSec  = 300,   # give up after this many seconds
+    [int]$StablePolls = 3,     # consecutive unchanged polls = "done rendering"
+    [int]$PollMs      = 1000    # time between UI checks
+)
+
+Add-Type -AssemblyName UIAutomationClient
+Add-Type -AssemblyName UIAutomationTypes
+
+# --- Find New Outlook's launch ID (AUMID) ---
+$pkg = Get-AppxPackage *OutlookForWindows* | Select-Object -First 1
+if (-not $pkg) { throw "New Outlook (olk.exe) package not found." }
+$appId = (Get-AppxPackageManifest $pkg).Package.Applications.Application.Id | Select-Object -First 1
+$aumid = "$($pkg.PackageFamilyName)!$appId"
+
+# --- Clean start: close any running New Outlook ---
+if (Get-Process olk -ErrorAction SilentlyContinue) {
+    Write-Host "Closing running New Outlook for a clean measurement..." -ForegroundColor Yellow
+    Get-Process olk | ForEach-Object { $_.CloseMainWindow() | Out-Null }
+    Start-Sleep -Seconds 3
+    Get-Process olk -ErrorAction SilentlyContinue | Stop-Process -Force -ErrorAction SilentlyContinue
+    Start-Sleep -Seconds 2
+}
+
+$sw = [System.Diagnostics.Stopwatch]::StartNew()
+Start-Process "shell:AppsFolder\$aumid" | Out-Null
+
+# --- Wait for the main window to appear ---
+$win = $null
+while ($sw.Elapsed.TotalSeconds -lt $TimeoutSec) {
+    $p = Get-Process olk -ErrorAction SilentlyContinue |
+         Where-Object { $_.MainWindowHandle -ne 0 -and $_.MainWindowTitle } |
+         Select-Object -First 1
+    if ($p) {
+        $win = [System.Windows.Automation.AutomationElement]::FromHandle($p.MainWindowHandle)
+        if ($win) { break }
+    }
+    Start-Sleep -Milliseconds 200
+}
+if (-not $win) { Write-Error "New Outlook window never appeared within $TimeoutSec s."; exit 1 }
+$windowReady = [math]::Round($sw.Elapsed.TotalSeconds, 2)
+
+# --- Wait until the visible content (message list) stops changing ---
+$cond = New-Object System.Windows.Automation.PropertyCondition(
+    [System.Windows.Automation.AutomationElement]::ControlTypeProperty,
+    [System.Windows.Automation.ControlType]::ListItem)
+
+$prevCount  = -1
+$stableHits = 0
+while ($sw.Elapsed.TotalSeconds -lt $TimeoutSec) {
+    try   { $count = $win.FindAll([System.Windows.Automation.TreeScope]::Descendants, $cond).Count }
+    catch { $count = 0 }
+
+    if ($count -gt 0 -and $count -eq $prevCount) { $stableHits++ } else { $stableHits = 0 }
+    if ($stableHits -ge $StablePolls) { break }
+
+    $prevCount = $count
+    Start-Sleep -Milliseconds $PollMs
+}
+$sw.Stop()
+
+# Subtract the settle window so the time reflects when rendering actually finished
+$mailboxReady = [math]::Round($sw.Elapsed.TotalSeconds - ($StablePolls * $PollMs / 1000), 2)
+
+[PSCustomObject]@{
+    Timestamp           = (Get-Date).ToString('s')
+    Machine             = $env:COMPUTERNAME
+    User                = $env:USERNAME
+    Outlook             = "New Outlook (olk.exe)"
+    WindowReadySeconds  = $windowReady
+    MailboxReadySeconds = $mailboxReady
+    Note                = "MailboxReady is approximate (UI-render based)"
+} | Format-List
+
+Write-Host ("New Outlook mailbox rendered in ~{0} seconds" -f $mailboxReady) -ForegroundColor Green

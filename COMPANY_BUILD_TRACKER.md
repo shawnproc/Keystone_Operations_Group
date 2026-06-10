@@ -92,17 +92,17 @@ Last Updated: June 2026
 - ✅ Agency domain connected (app.keystoneoperationsgroup.net)
 
 ### A2P & SMS Compliance
-- 🔒 A2P Brand registration — blocked: GHL support manual verification in progress (newly formed LLC not yet in carrier identity databases)
-- ⬜ A2P Campaign registration — blocked until Brand is approved
+- ✅ A2P Brand registration — approved
+- ✅ A2P Campaign registration — approved
 - 🔄 CNAM registration — In Review
-- 🔄 SHAKEN/STIR registration — Rejected, pending Brand approval before resubmit
+- 🔄 SHAKEN/STIR registration — In Review
 - 🔄 Voice Integrity registration — submitted, pending review
 
 ### Intake Form
-- 🔄 Intake form built (fields complete)
-- 🔒 Payment section — blocked: Stripe must be in live mode; blocked by Amex business checking account approval
-- ⬜ SMS consent placeholders replaced (after A2P approved) — intake form currently shows [BUSINESS NAME] and [USE_CASE_FROM_CAMPAIGN_DESCRIPTION] in the consent checkboxes; replace with "Keystone Operations Group" and actual use case description once A2P is approved
-- ⬜ Duplicate form for Growth and Enterprise plans
+- ✅ Intake form built (fields complete)
+- ✅ Payment section live (Stripe live mode active)
+- ✅ SMS consent placeholders replaced with correct business name and use case
+- ✅ Single intake form covers all plans (Plan dropdown captures Starter/Growth/Enterprise)
 
 ### Stripe & Billing
 - ✅ Stripe account created

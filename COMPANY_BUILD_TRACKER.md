@@ -119,6 +119,7 @@ Last Updated: June 2026
   - ✅ Medium flow ($79)
   - ✅ Complex flow ($99)
   - ✅ All à la carte add-ons
+- ✅ À la carte products added to GHL Payments (for direct client invoicing)
 
 ### Client Portal
 - ✅ GHL client portal enabled

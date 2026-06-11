@@ -140,12 +140,17 @@ Last Updated: June 2026
 - ✅ Template snapshot created (Keystone Client Template v1) — ready to apply to new sub-accounts
 
 ### Automation Flows (Internal — Keystone Operations)
-- ✅ New lead → instant auto-reply SMS + email + 24hr/48hr follow-up
-- ✅ Payment confirmed → intake form sent (SMS + email)
+- ✅ Payment confirmed → intake form sent (SMS + email) — confirmed working via GHL payment links
 - ✅ Intake form submitted → internal notification + client confirmation
 - ✅ Flow request submitted → internal task + client confirmation
 - ✅ Flow activated → client notification email
 - ✅ Cancellation → flows off + confirmation email
+- 🔄 New lead → instant auto-reply SMS + email + 24hr/48hr follow-up — SMS blocked pending A2P full clearance
+- ⬜ Chat widget → automated lead nurture workflow — needs rebuild; current workflows not triggering from Live Chat widget; goal is chatbot → email capture → payment link
+
+### Payment Links
+- ⬜ Recreate all 6 plan payment links inside GHL Payments (required for Payment Received trigger to fire)
+- ✅ $1 test GHL payment link confirmed working — Payment Received trigger fires correctly
 
 ### Pre-Launch Checklist
 - ⬜ Full end-to-end spot check of entire business before go-live — every workflow, every form, every email, every page, top to bottom
@@ -162,11 +167,12 @@ Last Updated: June 2026
 - ⬜ Hermes tested on common client questions
 
 ### GHL Chat Widget (Client-Facing AI)
-- ⬜ GHL AI chat widget installed on website
-- ⬜ Trained on all SOPs and service docs
-- ⬜ Trained on full Q&A list from CLIENT_ONBOARDING_SOP.md
-- ⬜ Fallback set up (unanswered → email notification)
-- ⬜ Tested across all common prospect questions
+- ✅ GHL AI chat widget installed on website (Live Chat widget — id: 6a28bf4a7b092d06b912a842)
+- ✅ AI bot trained on services, pricing, objection handling, FAQs
+- ✅ AI bot responding correctly to prospect questions
+- ✅ Bot set to Auto-Pilot on all channels
+- ⬜ Chat → automated email follow-up workflow — needs rebuild from scratch
+- ⬜ Chat → payment link flow (goal: bot qualifies lead → sends GHL payment link directly in chat)
 
 ---
 

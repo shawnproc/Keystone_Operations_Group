@@ -2,7 +2,8 @@
 param(
     [int]$TimeoutSec  = 300,   # give up after this many seconds
     [int]$StablePolls = 3,     # consecutive unchanged polls = "done rendering"
-    [int]$PollMs      = 1000    # time between UI checks
+    [int]$PollMs      = 1000,   # time between UI checks
+    [string]$CsvPath  = "$env:USERPROFILE\Desktop\OutlookStartupLog.csv"  # results log
 )
 
 Add-Type -AssemblyName UIAutomationClient
@@ -63,7 +64,7 @@ $sw.Stop()
 # Subtract the settle window so the time reflects when rendering actually finished
 $mailboxReady = [math]::Round($sw.Elapsed.TotalSeconds - ($StablePolls * $PollMs / 1000), 2)
 
-[PSCustomObject]@{
+$result = [PSCustomObject]@{
     Timestamp           = (Get-Date).ToString('s')
     Machine             = $env:COMPUTERNAME
     User                = $env:USERNAME
@@ -71,6 +72,16 @@ $mailboxReady = [math]::Round($sw.Elapsed.TotalSeconds - ($StablePolls * $PollMs
     WindowReadySeconds  = $windowReady
     MailboxReadySeconds = $mailboxReady
     Note                = "MailboxReady is approximate (UI-render based)"
-} | Format-List
+}
+
+$result | Format-List
+
+# --- Append this run to the CSV log (creates the file with headers on first run) ---
+try {
+    $result | Export-Csv -Path $CsvPath -NoTypeInformation -Append
+    Write-Host ("Logged to {0}" -f $CsvPath) -ForegroundColor Cyan
+} catch {
+    Write-Warning "Could not write CSV log: $($_.Exception.Message)"
+}
 
 Write-Host ("New Outlook mailbox rendered in ~{0} seconds" -f $mailboxReady) -ForegroundColor Green

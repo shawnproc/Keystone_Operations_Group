@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wedding Planning Guide — Tropical Destination</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  :root {
+    --teal:   #0D6B6E;
+    --coral:  #E8745A;
+    --sand:   #F5EDD6;
+    --ocean:  #C4DFE0;
+    --cream:  #FDFAF4;
+    --warm:   #F0E8D4;
+    --ink:    #1A3535;
+    --mist:   #6B9E9F;
+  }
+  body { background: #D4E8E8; font-family: 'Montserrat', sans-serif; color: var(--ink); }
+  .page { width: 794px; min-height: 1123px; margin: 32px auto; background: var(--cream); position: relative; overflow: hidden; box-shadow: 0 4px 40px rgba(0,0,0,0.12); }
+  .cover { width: 100%; height: 1123px; background: var(--teal); display: flex; flex-direction: column; align-items: center; justify-content: center; position: relative; overflow: hidden; }
+  .palm-left { position: absolute; left: -20px; bottom: 80px; opacity: 0.15; }
+  .palm-right { position: absolute; right: -20px; top: 80px; opacity: 0.15; transform: scaleX(-1) rotate(15deg); }
+  .cover-sun { position: absolute; top: -80px; right: -80px; width: 280px; height: 280px; border-radius: 50%; background: radial-gradient(circle, rgba(232,116,90,0.3) 0%, transparent 70%); }
+  .cover-wave { position: absolute; bottom: 0; left: 0; right: 0; height: 120px; opacity: 0.1; }
+  .cover-border { position: absolute; inset: 28px; border: 1px solid rgba(196,223,224,0.4); pointer-events: none; }
+  .cover-label { font-size: 9px; letter-spacing: 5px; text-transform: uppercase; color: var(--ocean); margin-bottom: 24px; position: relative; }
+  .cover-title { font-family: 'Cormorant Garamond', serif; font-weight: 300; font-size: 62px; line-height: 1.1; color: #fff; text-align: center; position: relative; }
+  .cover-title em { font-style: italic; color: #F9C4B8; }
+  .cover-divider { width: 60px; height: 1px; background: var(--coral); margin: 28px auto; position: relative; }
+  .cover-sub { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: rgba(196,223,224,0.7); text-align: center; line-height: 2; position: relative; }
+  .cover-footer { position: absolute; bottom: 48px; font-size: 9px; letter-spacing: 3px; text-transform: uppercase; color: rgba(196,223,224,0.35); }
+  .inner { padding: 70px 80px; min-height: 1123px; position: relative; }
+  .top-accent { position: absolute; top: 0; left: 0; right: 0; height: 5px; background: linear-gradient(to right, var(--teal), var(--coral), var(--teal)); opacity: 0.7; }
+  .page-label { font-size: 9px; letter-spacing: 4px; text-transform: uppercase; color: var(--coral); margin-bottom: 8px; }
+  .section-title { font-family: 'Cormorant Garamond', serif; font-weight: 300; font-size: 40px; line-height: 1.1; color: var(--ink); margin-bottom: 6px; }
+  .section-title em { font-style: italic; color: var(--teal); }
+  .section-rule { width: 100%; height: 1px; background: linear-gradient(to right, var(--teal), var(--coral) 40%, transparent); margin: 18px 0 26px; }
+  .intro-text { font-size: 13px; line-height: 1.9; color: #3a5a5a; font-weight: 300; max-width: 560px; margin-bottom: 32px; }
+  .timeline { margin-bottom: 36px; }
+  .timeline-item { display: grid; grid-template-columns: 90px 1fr; gap: 0 20px; position: relative; }
+  .timeline-item:not(:last-child)::after { content: ''; position: absolute; left: 89px; top: 26px; bottom: -1px; width: 1px; background: var(--ocean); opacity: 0.7; }
+  .timeline-when { padding: 16px 0 16px 0; text-align: right; font-size: 9px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--mist); font-weight: 600; padding-top: 18px; }
+  .timeline-body { padding: 14px 0 14px 20px; border-left: 1.5px solid var(--ocean); position: relative; }
+  .timeline-body::before { content: ''; position: absolute; left: -5px; top: 20px; width: 8px; height: 8px; border-radius: 50%; background: var(--coral); border: 2px solid var(--cream); }
+  .timeline-task { font-family: 'Cormorant Garamond', serif; font-size: 16px; color: var(--ink); margin-bottom: 4px; font-weight: 600; }
+  .timeline-detail { font-size: 12px; line-height: 1.6; color: #4a7272; font-weight: 300; }
+  .checklist-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px 36px; margin-bottom: 28px; }
+  .check-item { display: flex; align-items: flex-start; gap: 10px; padding: 9px 0; border-bottom: 1px solid rgba(13,107,110,0.12); }
+  .check-box { width: 15px; height: 15px; border: 1.5px solid var(--teal); border-radius: 50%; flex-shrink: 0; margin-top: 1px; }
+  .check-label { font-size: 12px; line-height: 1.5; color: var(--ink); font-weight: 400; }
+  .check-sub { font-size: 10px; color: var(--mist); font-weight: 300; }
+  .budget-table { width: 100%; border-collapse: collapse; margin-bottom: 28px; }
+  .budget-table th { font-size: 9px; letter-spacing: 2px; text-transform: uppercase; color: var(--teal); font-weight: 600; padding: 9px 12px; text-align: left; border-bottom: 2px solid var(--ocean); }
+  .budget-table td { padding: 10px 12px; font-size: 12.5px; color: var(--ink); border-bottom: 1px solid rgba(196,223,224,0.4); font-weight: 300; }
+  .budget-table tr:nth-child(even) td { background: var(--warm); }
+  .budget-table .total td { font-weight: 600; border-top: 2px solid var(--ocean); border-bottom: none; }
+  .budget-input { display: inline-block; width: 80px; border-bottom: 1px solid var(--ocean); height: 16px; }
+  .vendor-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 28px; }
+  .vendor-card { background: var(--warm); border: 1px solid rgba(13,107,110,0.15); padding: 16px 18px; border-top: 3px solid var(--teal); }
+  .vendor-type { font-size: 8px; letter-spacing: 3px; text-transform: uppercase; color: var(--coral); margin-bottom: 8px; }
+  .vendor-name-line { font-family: 'Cormorant Garamond', serif; font-size: 15px; color: var(--ink); border-bottom: 1px solid rgba(13,107,110,0.2); padding-bottom: 8px; margin-bottom: 10px; }
+  .vendor-field { display: flex; gap: 8px; margin-bottom: 6px; align-items: center; }
+  .vendor-field-label { font-size: 9px; letter-spacing: 1px; text-transform: uppercase; color: var(--mist); width: 52px; flex-shrink: 0; }
+  .vendor-field-line { flex: 1; border-bottom: 1px solid rgba(13,107,110,0.2); height: 14px; }
+  .quote-block { background: linear-gradient(135deg, var(--teal), #0A5557); padding: 28px 36px; margin: 28px 0; position: relative; overflow: hidden; }
+  .quote-block::before { content: '"'; position: absolute; top: -20px; left: 20px; font-family: 'Cormorant Garamond', serif; font-size: 120px; color: rgba(232,116,90,0.2); line-height: 1; }
+  .quote-text { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 19px; line-height: 1.6; color: #fff; position: relative; }
+  .quote-attr { margin-top: 10px; font-size: 9px; letter-spacing: 2.5px; text-transform: uppercase; color: rgba(196,223,224,0.7); }
+  .notes-area { margin-top: 20px; }
+  .notes-title { font-size: 9px; letter-spacing: 3px; text-transform: uppercase; color: var(--teal); margin-bottom: 10px; }
+  .notes-line { border-bottom: 1px solid rgba(13,107,110,0.15); height: 30px; }
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 0 44px; }
+  .col-title { font-family: 'Cormorant Garamond', serif; font-size: 17px; color: var(--ink); margin-bottom: 14px; padding-bottom: 10px; border-bottom: 1px solid var(--ocean); }
+  .tip-item { display: flex; gap: 10px; margin-bottom: 12px; align-items: flex-start; }
+  .tip-num { font-family: 'Cormorant Garamond', serif; font-size: 20px; color: var(--coral); line-height: 1; flex-shrink: 0; width: 22px; }
+  .tip-text { font-size: 12px; line-height: 1.6; color: #3a5a5a; font-weight: 300; padding-top: 3px; }
+  .page-footer { position: absolute; bottom: 28px; left: 80px; right: 80px; display: flex; justify-content: space-between; align-items: center; }
+  .footer-brand { font-size: 9px; letter-spacing: 2px; text-transform: uppercase; color: var(--mist); opacity: 0.5; }
+  .footer-num { font-family: 'Cormorant Garamond', serif; font-size: 13px; color: var(--mist); opacity: 0.5; }
+  @media print { body { background: white; } .page { margin: 0; box-shadow: none; } }
+</style>
+</head>
+<body>
+
+<div class="page">
+  <div class="cover">
+    <div class="cover-sun"></div>
+    <svg class="palm-left" width="140" height="300" viewBox="0 0 140 300" fill="none">
+      <path d="M70 300 Q65 200 60 150" stroke="white" stroke-width="3" fill="none"/>
+      <path d="M60 150 Q20 120 0 80" stroke="white" stroke-width="2" fill="none"/>
+      <path d="M60 150 Q40 100 50 60" stroke="white" stroke-width="2" fill="none"/>
+      <path d="M62 155 Q90 130 120 100" stroke="white" stroke-width="2" fill="none"/>
+      <ellipse cx="30" cy="100" rx="20" ry="8" transform="rotate(-30 30 100)" fill="white" opacity="0.6"/>
+      <ellipse cx="55" cy="75" rx="18" ry="7" transform="rotate(-50 55 75)" fill="white" opacity="0.6"/>
+      <ellipse cx="110" cy="110" rx="18" ry="7" transform="rotate(20 110 110)" fill="white" opacity="0.6"/>
+    </svg>
+    <svg class="palm-right" width="140" height="300" viewBox="0 0 140 300" fill="none">
+      <path d="M70 300 Q65 200 60 150" stroke="white" stroke-width="3" fill="none"/>
+      <path d="M60 150 Q20 120 0 80" stroke="white" stroke-width="2" fill="none"/>
+      <path d="M60 150 Q40 100 50 60" stroke="white" stroke-width="2" fill="none"/>
+      <path d="M62 155 Q90 130 120 100" stroke="white" stroke-width="2" fill="none"/>
+      <ellipse cx="30" cy="100" rx="20" ry="8" transform="rotate(-30 30 100)" fill="white" opacity="0.6"/>
+      <ellipse cx="55" cy="75" rx="18" ry="7" transform="rotate(-50 55 75)" fill="white" opacity="0.6"/>
+      <ellipse cx="110" cy="110" rx="18" ry="7" transform="rotate(20 110 110)" fill="white" opacity="0.6"/>
+    </svg>
+    <div class="cover-border"></div>
+    <div class="cover-label">A Complete Guide to</div>
+    <div class="cover-title">Your <em>Destination</em><br>Wedding</div>
+    <div class="cover-divider"></div>
+    <div class="cover-sub">Timelines &nbsp;·&nbsp; Budget Tracker<br>Checklists &nbsp;·&nbsp; Vendor Contacts &nbsp;·&nbsp; Notes</div>
+    <div class="cover-footer">Digital Planning Guide &nbsp;·&nbsp; Print at Home</div>
+  </div>
+</div>
+
+<div class="page">
+  <div class="inner">
+    <div class="top-accent"></div>
+    <div class="page-label">Getting Started</div>
+    <div class="section-title">Your Wedding<br><em>Timeline</em></div>
+    <div class="section-rule"></div>
+    <p class="intro-text">A destination wedding takes a little extra runway — travel logistics, guest accommodations, and local vendor research all need more lead time. Use this guide to stay organized and keep the magic front and center.</p>
+    <div class="timeline">
+      <div class="timeline-item"><div class="timeline-when">12+ Months</div><div class="timeline-body"><div class="timeline-task">Set Your Vision & Budget</div><div class="timeline-detail">Choose your destination and define your budget — destination weddings range widely. Begin researching local venues and destination wedding planners.</div></div></div>
+      <div class="timeline-item"><div class="timeline-when">10–12 Months</div><div class="timeline-body"><div class="timeline-task">Book Venue & Local Vendors</div><div class="timeline-detail">Secure your venue and local coordinator first. Book your photographer early — many destination photographers fill up 12–18 months out.</div></div></div>
+      <div class="timeline-item"><div class="timeline-when">8–10 Months</div><div class="timeline-body"><div class="timeline-task">Send Save-the-Dates</div><div class="timeline-detail">Guests need extra notice for travel planning. Send save-the-dates with flight information, hotel blocks, and your wedding website.</div></div></div>
+      <div class="timeline-item"><div class="timeline-when">6–8 Months</div><div class="timeline-body"><div class="timeline-task">Attire, Registry & Invitations</div><div class="timeline-detail">Begin attire shopping. Create your registry. Send formal invitations with detailed travel and accommodation instructions.</div></div></div>
+      <div class="timeline-item"><div class="timeline-when">4–6 Months</div><div class="timeline-body"><div class="timeline-task">Travel & Logistics</div><div class="timeline-detail">Book group travel if applicable. Arrange airport transfers and shuttles. Confirm all local vendor details and review destination-specific contracts.</div></div></div>
+      <div class="timeline-item"><div class="timeline-when">1–3 Months</div><div class="timeline-body"><div class="timeline-task">Final Confirmations</div><div class="timeline-detail">Confirm guest RSVP counts. Finalize seating, menu, and ceremony script. Prepare final vendor payments and gratuity.</div></div></div>
+      <div class="timeline-item"><div class="timeline-when">1 Week Before</div><div class="timeline-body"><div class="timeline-task">Travel & Rehearsal</div><div class="timeline-detail">Arrive early to handle any last-minute logistics. Hold your rehearsal dinner. Soak in the destination and breathe.</div></div></div>
+    </div>
+    <div class="page-footer"><div class="footer-brand">Wedding Planning Guide</div><div class="footer-num">02</div></div>
+  </div>
+</div>
+
+<div class="page">
+  <div class="inner">
+    <div class="top-accent"></div>
+    <div class="page-label">Financial Planning</div>
+    <div class="section-title">Budget <em>Tracker</em></div>
+    <div class="section-rule"></div>
+    <p class="intro-text">Destination weddings can be surprisingly budget-friendly with the right planning — a smaller, intimate guest list often offsets the travel costs. Track every dollar here.</p>
+    <table class="budget-table">
+      <thead><tr><th>Category</th><th>Estimated</th><th>Actual</th><th>Deposit</th><th>Balance Due</th></tr></thead>
+      <tbody>
+        <tr><td>Venue</td><td><div class="budget-input"></div></td><td><div class="budget-input"></div></td><td><div class="budget-input"></div></td><td><div class="budget-input"></div></td></tr>
+        <tr><td>Catering & Bar</td><td><div class="budget-input"></div></td><td><div class="budget-input"></div></td><td><div class="budget-input"></div></td><td><div class="budget-input"></div></td></tr>
+        <tr><td>Photography</td><td><div class="budget-input"></div></td><td><div class="budget-input"></div></td><td><div class="budget-input"></div></td><td><div class="budget-input"></div></td></tr>
+        <tr><td>Videography</td><td><div class="budget-input"></div></td><td><div class="budget-input"></div></td><td><div class="budget-input"></div></td><td><div class="budget-input"></div></td></tr>
+        <tr><td>Floral & Décor</td><td><div class="budget-input"></div></td><td><div class="budget-input"></div></td><td><div class="budget-input"></div></td><td><div class="budget-input"></div></td></tr>
+        <tr><td>Music / DJ / Band</td><td><div class="budget-input"></div></td><td><div class="budget-input"></div></td><td><div class="budget-input"></div></td><td><div class="budget-input"></div></td></tr>
+        <tr><td>Wedding Attire</td><td><div class="budget-input"></div></td><td><div class="budget-input"></div></td><td><div class="budget-input"></div></td><td><div class="budget-input"></div></td></tr>
+        <tr><td>Hair & Makeup</td><td><div class="budget-input"></div></td><td><div class="budget-input"></div></td><td><div class="budget-input"></div></td><td><div class="budget-input"></div></td></tr>
+        <tr><td>Travel & Flights</td><td><div class="budget-input"></div></td><td><div class="budget-input"></div></td><td><div class="budget-input"></div></td><td><div class="budget-input"></div></td></tr>
+        <tr><td>Guest Transportation</td><td><div class="budget-input"></div></td><td><div class="budget-input"></div></td><td><div class="budget-input"></div></td><td><div class="budget-input"></div></td></tr>
+        <tr><td>Hotel / Accommodations</td><td><div class="budget-input"></div></td><td><div class="budget-input"></div></td><td><div class="budget-input"></div></td><td><div class="budget-input"></div></td></tr>
+        <tr><td>Invitations & Paper</td><td><div class="budget-input"></div></td><td><div class="budget-input"></div></td><td><div class="budget-input"></div></td><td><div class="budget-input"></div></td></tr>
+        <tr><td>Cake & Desserts</td><td><div class="budget-input"></div></td><td><div class="budget-input"></div></td><td><div class="budget-input"></div></td><td><div class="budget-input"></div></td></tr>
+        <tr><td>Miscellaneous</td><td><div class="budget-input"></div></td><td><div class="budget-input"></div></td><td><div class="budget-input"></div></td><td><div class="budget-input"></div></td></tr>
+        <tr class="total"><td><strong>Total</strong></td><td><div class="budget-input"></div></td><td><div class="budget-input"></div></td><td><div class="budget-input"></div></td><td><div class="budget-input"></div></td></tr>
+      </tbody>
+    </table>
+    <div class="notes-area"><div class="notes-title">Budget Notes</div><div class="notes-line"></div><div class="notes-line"></div><div class="notes-line"></div></div>
+    <div class="page-footer"><div class="footer-brand">Wedding Planning Guide</div><div class="footer-num">03</div></div>
+  </div>
+</div>
+
+<div class="page">
+  <div class="inner">
+    <div class="top-accent"></div>
+    <div class="page-label">Task Management</div>
+    <div class="section-title">Master <em>Checklist</em></div>
+    <div class="section-rule"></div>
+    <div class="checklist-grid">
+      <div>
+        <div class="check-item"><div class="check-box"></div><div><div class="check-label">Choose destination & venue</div><div class="check-sub">Research local marriage requirements</div></div></div>
+        <div class="check-item"><div class="check-box"></div><div><div class="check-label">Set total wedding budget</div><div class="check-sub">Include 10–15% buffer</div></div></div>
+        <div class="check-item"><div class="check-box"></div><div><div class="check-label">Hire local wedding coordinator</div></div></div>
+        <div class="check-item"><div class="check-box"></div><div><div class="check-label">Finalize guest list</div><div class="check-sub">Destination = smaller, intimate lists</div></div></div>
+        <div class="check-item"><div class="check-box"></div><div><div class="check-label">Book photographer</div><div class="check-sub">Consider destination specialists</div></div></div>
+        <div class="check-item"><div class="check-box"></div><div><div class="check-label">Book caterer / resort catering</div></div></div>
+        <div class="check-item"><div class="check-box"></div><div><div class="check-label">Reserve hotel room block</div></div></div>
+        <div class="check-item"><div class="check-box"></div><div><div class="check-label">Create wedding website</div><div class="check-sub">Include travel & local info</div></div></div>
+        <div class="check-item"><div class="check-box"></div><div><div class="check-label">Send save-the-dates early</div><div class="check-sub">12 months out minimum</div></div></div>
+        <div class="check-item"><div class="check-box"></div><div><div class="check-label">Book florist</div></div></div>
+        <div class="check-item"><div class="check-box"></div><div><div class="check-label">Hire DJ or live music</div></div></div>
+        <div class="check-item"><div class="check-box"></div><div><div class="check-label">Start dress / attire shopping</div></div></div>
+      </div>
+      <div>
+        <div class="check-item"><div class="check-box"></div><div><div class="check-label">Research marriage license requirements</div><div class="check-sub">May require local documents</div></div></div>
+        <div class="check-item"><div class="check-box"></div><div><div class="check-label">Book hair & makeup</div></div></div>
+        <div class="check-item"><div class="check-box"></div><div><div class="check-label">Plan group airport transfers</div></div></div>
+        <div class="check-item"><div class="check-box"></div><div><div class="check-label">Create gift registry</div></div></div>
+        <div class="check-item"><div class="check-box"></div><div><div class="check-label">Send formal invitations</div><div class="check-sub">6–8 weeks before</div></div></div>
+        <div class="check-item"><div class="check-box"></div><div><div class="check-label">Arrange welcome bags for guests</div></div></div>
+        <div class="check-item"><div class="check-box"></div><div><div class="check-label">Book rehearsal dinner venue</div></div></div>
+        <div class="check-item"><div class="check-box"></div><div><div class="check-label">Finalize seating chart</div></div></div>
+        <div class="check-item"><div class="check-box"></div><div><div class="check-label">Write vows</div></div></div>
+        <div class="check-item"><div class="check-box"></div><div><div class="check-label">Purchase wedding rings</div></div></div>
+        <div class="check-item"><div class="check-box"></div><div><div class="check-label">Confirm travel insurance</div></div></div>
+        <div class="check-item"><div class="check-box"></div><div><div class="check-label">Apply for marriage license</div><div class="check-sub">Check destination requirements</div></div></div>
+      </div>
+    </div>
+    <div class="quote-block">
+      <div class="quote-text">There's no more beautiful backdrop for forever than the place that took your breath away.</div>
+      <div class="quote-attr">— A reminder to choose what moves you</div>
+    </div>
+    <div class="page-footer"><div class="footer-brand">Wedding Planning Guide</div><div class="footer-num">04</div></div>
+  </div>
+</div>
+
+<div class="page">
+  <div class="inner">
+    <div class="top-accent"></div>
+    <div class="page-label">Vendor Management</div>
+    <div class="section-title">Vendor <em>Contact Sheet</em></div>
+    <div class="section-rule"></div>
+    <div class="vendor-grid">
+      <div class="vendor-card"><div class="vendor-type">Venue / Resort</div><div class="vendor-name-line">Name / Company</div><div class="vendor-field"><div class="vendor-field-label">Contact</div><div class="vendor-field-line"></div></div><div class="vendor-field"><div class="vendor-field-label">Phone</div><div class="vendor-field-line"></div></div><div class="vendor-field"><div class="vendor-field-label">Email</div><div class="vendor-field-line"></div></div><div class="vendor-field"><div class="vendor-field-label">Contract</div><div class="vendor-field-line"></div></div><div class="vendor-field"><div class="vendor-field-label">Balance</div><div class="vendor-field-line"></div></div></div>
+      <div class="vendor-card"><div class="vendor-type">Photographer</div><div class="vendor-name-line">Name / Company</div><div class="vendor-field"><div class="vendor-field-label">Contact</div><div class="vendor-field-line"></div></div><div class="vendor-field"><div class="vendor-field-label">Phone</div><div class="vendor-field-line"></div></div><div class="vendor-field"><div class="vendor-field-label">Email</div><div class="vendor-field-line"></div></div><div class="vendor-field"><div class="vendor-field-label">Contract</div><div class="vendor-field-line"></div></div><div class="vendor-field"><div class="vendor-field-label">Balance</div><div class="vendor-field-line"></div></div></div>
+      <div class="vendor-card"><div class="vendor-type">Local Coordinator</div><div class="vendor-name-line">Name / Company</div><div class="vendor-field"><div class="vendor-field-label">Contact</div><div class="vendor-field-line"></div></div><div class="vendor-field"><div class="vendor-field-label">Phone</div><div class="vendor-field-line"></div></div><div class="vendor-field"><div class="vendor-field-label">Email</div><div class="vendor-field-line"></div></div><div class="vendor-field"><div class="vendor-field-label">Contract</div><div class="vendor-field-line"></div></div><div class="vendor-field"><div class="vendor-field-label">Balance</div><div class="vendor-field-line"></div></div></div>
+      <div class="vendor-card"><div class="vendor-type">Florist</div><div class="vendor-name-line">Name / Company</div><div class="vendor-field"><div class="vendor-field-label">Contact</div><div class="vendor-field-line"></div></div><div class="vendor-field"><div class="vendor-field-label">Phone</div><div class="vendor-field-line"></div></div><div class="vendor-field"><div class="vendor-field-label">Email</div><div class="vendor-field-line"></div></div><div class="vendor-field"><div class="vendor-field-label">Contract</div><div class="vendor-field-line"></div></div><div class="vendor-field"><div class="vendor-field-label">Balance</div><div class="vendor-field-line"></div></div></div>
+      <div class="vendor-card"><div class="vendor-type">DJ / Band</div><div class="vendor-name-line">Name / Company</div><div class="vendor-field"><div class="vendor-field-label">Contact</div><div class="vendor-field-line"></div></div><div class="vendor-field"><div class="vendor-field-label">Phone</div><div class="vendor-field-line"></div></div><div class="vendor-field"><div class="vendor-field-label">Email</div><div class="vendor-field-line"></div></div><div class="vendor-field"><div class="vendor-field-label">Contract</div><div class="vendor-field-line"></div></div><div class="vendor-field"><div class="vendor-field-label">Balance</div><div class="vendor-field-line"></div></div></div>
+      <div class="vendor-card"><div class="vendor-type">Hair & Makeup</div><div class="vendor-name-line">Name / Company</div><div class="vendor-field"><div class="vendor-field-label">Contact</div><div class="vendor-field-line"></div></div><div class="vendor-field"><div class="vendor-field-label">Phone</div><div class="vendor-field-line"></div></div><div class="vendor-field"><div class="vendor-field-label">Email</div><div class="vendor-field-line"></div></div><div class="vendor-field"><div class="vendor-field-label">Contract</div><div class="vendor-field-line"></div></div><div class="vendor-field"><div class="vendor-field-label">Balance</div><div class="vendor-field-line"></div></div></div>
+    </div>
+    <div class="page-footer"><div class="footer-brand">Wedding Planning Guide</div><div class="footer-num">05</div></div>
+  </div>
+</div>
+
+<div class="page">
+  <div class="inner">
+    <div class="top-accent"></div>
+    <div class="page-label">Insider Advice</div>
+    <div class="section-title">Pro Tips & <em>Notes</em></div>
+    <div class="section-rule"></div>
+    <div class="two-col">
+      <div>
+        <div class="col-title">Destination Wedding Secrets</div>
+        <div class="tip-item"><div class="tip-num">1</div><div class="tip-text">Hire a local coordinator — they know the vendors, the weather patterns, and the logistical quirks of your venue that you never could from afar.</div></div>
+        <div class="tip-item"><div class="tip-num">2</div><div class="tip-text">Build in a buffer day before the wedding. Travel delays happen — arriving a day early protects the whole event.</div></div>
+        <div class="tip-item"><div class="tip-num">3</div><div class="tip-text">Check local marriage license requirements well in advance — some destinations require documents 3+ months ahead of time.</div></div>
+        <div class="tip-item"><div class="tip-num">4</div><div class="tip-text">Plan welcome activities for guests who arrive early — a group dinner or excursion makes the destination feel like an event, not just a ceremony.</div></div>
+        <div class="tip-item"><div class="tip-num">5</div><div class="tip-text">Get travel insurance for yourself and encourage guests to do the same. Flight cancellations, hurricanes, and the unexpected are real risks.</div></div>
+        <div class="tip-item"><div class="tip-num">6</div><div class="tip-text">Your photographer MUST visit (or have previously worked at) the venue — golden hour and shade locations change everything in unfamiliar settings.</div></div>
+      </div>
+      <div>
+        <div class="col-title">Questions to Ask Every Vendor</div>
+        <div class="tip-item"><div class="tip-num">→</div><div class="tip-text">Are you available on our date, and are you the person who will actually be there?</div></div>
+        <div class="tip-item"><div class="tip-num">→</div><div class="tip-text">What is your cancellation and refund policy — especially for weather events?</div></div>
+        <div class="tip-item"><div class="tip-num">→</div><div class="tip-text">Do you carry liability insurance?</div></div>
+        <div class="tip-item"><div class="tip-num">→</div><div class="tip-text">What happens if you have an emergency and cannot make it?</div></div>
+        <div class="tip-item"><div class="tip-num">→</div><div class="tip-text">Can we see references from destination couples you have worked with?</div></div>
+        <div class="tip-item"><div class="tip-num">→</div><div class="tip-text">What is included vs. what costs extra? Are travel fees included?</div></div>
+        <div class="tip-item"><div class="tip-num">→</div><div class="tip-text">Do you have a rain or weather backup plan built into the contract?</div></div>
+      </div>
+    </div>
+    <div class="section-rule" style="margin-top:28px;"></div>
+    <div class="notes-area">
+      <div class="notes-title">My Notes</div>
+      <div class="notes-line"></div><div class="notes-line"></div><div class="notes-line"></div>
+      <div class="notes-line"></div><div class="notes-line"></div><div class="notes-line"></div>
+      <div class="notes-line"></div><div class="notes-line"></div><div class="notes-line"></div>
+    </div>
+    <div class="page-footer"><div class="footer-brand">Wedding Planning Guide</div><div class="footer-num">06</div></div>
+  </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wedding Planning Guide — Rustic Farmhouse</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #C8B090; font-family: 'Jost', sans-serif; }
+  .page { width: 794px; min-height: 1123px; margin: 32px auto; position: relative; overflow: hidden; box-shadow: 0 6px 40px rgba(30,15,5,0.35); }
+
+  /* COVER */
+  .cover { background: #F5EDD6; min-height: 1123px; display: flex; flex-direction: column; align-items: center; justify-content: center; color: #3C2415; text-align: center; padding: 80px 70px; position: relative; }
+  /* plaid/crosshatch texture at top and bottom */
+  .plaid-strip-top { position: absolute; top: 0; left: 0; right: 0; height: 60px; }
+  .plaid-strip-bottom { position: absolute; bottom: 0; left: 0; right: 0; height: 60px; }
+  .cover-badge { font-size: 9px; letter-spacing: 6px; text-transform: uppercase; color: #8A5A35; margin-bottom: 30px; font-weight: 500; }
+  .cover h1 { font-family: 'Playfair Display', serif; font-size: 62px; font-weight: 700; line-height: 1.1; color: #3C2415; }
+  .cover h2 { font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 400; font-style: italic; color: #8A5A35; margin: 16px 0 40px; }
+  .rustic-divider { display: flex; align-items: center; gap: 12px; width: 260px; margin: 0 auto 40px; }
+  .rustic-line { flex: 1; height: 2px; background: #8A5A35; border-radius: 1px; }
+  .rustic-star { color: #8A5A35; font-size: 16px; }
+  .cover-names { font-family: 'Playfair Display', serif; font-size: 36px; font-weight: 400; color: #3C2415; }
+  .cover-date { font-size: 11px; letter-spacing: 5px; text-transform: uppercase; color: #8A5A35; margin-top: 14px; font-weight: 500; }
+
+  /* INTERIOR */
+  .interior { background: #F5EDD6; min-height: 1123px; padding: 60px 68px; position: relative; }
+  /* plaid strip as page divider element */
+  .plaid-divider { height: 16px; margin: 18px 0 30px; overflow: hidden; position: relative; }
+  .section-label { font-size: 9px; letter-spacing: 5px; text-transform: uppercase; color: #8A5A35; margin-bottom: 6px; font-weight: 500; }
+  .section-title { font-family: 'Playfair Display', serif; font-size: 44px; font-weight: 700; color: #3C2415; line-height: 1.1; }
+  .section-title em { font-style: italic; color: #8A5A35; }
+
+  /* TIMELINE */
+  .timeline { position: relative; padding-left: 32px; }
+  .timeline::before { content: ''; position: absolute; left: 8px; top: 6px; bottom: 6px; width: 2px; background: repeating-linear-gradient(180deg, #8A5A35 0px, #8A5A35 4px, #C8A870 4px, #C8A870 8px); }
+  .tl-item { margin-bottom: 21px; position: relative; }
+  .tl-dot { position: absolute; left: -26px; top: 4px; width: 12px; height: 12px; background: #8A5A35; border-radius: 2px; transform: rotate(45deg); }
+  .tl-month { font-family: 'Playfair Display', serif; font-size: 17px; font-weight: 700; color: #3C2415; }
+  .tl-tasks { font-size: 12.5px; color: #5A3A1A; line-height: 1.7; margin-top: 3px; }
+
+  /* BUDGET */
+  .budget-table { width: 100%; border-collapse: collapse; font-size: 12.5px; }
+  .budget-table thead tr { background: #3C2415; }
+  .budget-table thead th { padding: 10px 12px; text-align: left; color: #F5EDD6; font-size: 9px; letter-spacing: 2px; text-transform: uppercase; font-weight: 500; }
+  .budget-table tbody tr:nth-child(even) { background: #EDE0C0; }
+  .budget-table tbody tr:nth-child(odd) { background: #F5EDD6; }
+  .budget-table td { padding: 9px 12px; color: #3C2415; border-bottom: 1px solid #D4C090; }
+  .budget-table tfoot td { padding: 11px 12px; background: #8A5A35; color: #F5EDD6; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; font-size: 12px; }
+  .fill-line { border-bottom: 1px solid #C8A870; display: inline-block; min-width: 70px; }
+
+  /* CHECKLIST */
+  .checklist-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 13px 36px; }
+  .check-item { display: flex; align-items: flex-start; gap: 10px; font-size: 13px; color: #3C2415; line-height: 1.4; }
+  .check-box { width: 15px; height: 15px; border: 1.5px solid #8A5A35; border-radius: 2px; flex-shrink: 0; margin-top: 1px; background: #F5EDD6; }
+
+  /* VENDOR */
+  .vendor-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+  .vendor-card { border: 1px solid #D4C090; padding: 16px; background: #EDE0C0; }
+  .vendor-card-title { font-family: 'Playfair Display', serif; font-size: 16px; font-weight: 700; color: #3C2415; margin-bottom: 12px; padding-bottom: 6px; border-bottom: 2px solid #8A5A35; }
+  .vendor-field { margin-bottom: 8px; }
+  .vendor-field label { font-size: 8px; letter-spacing: 2px; text-transform: uppercase; color: #8A5A35; display: block; margin-bottom: 2px; font-weight: 500; }
+  .vendor-field .field-line { border-bottom: 1px solid #C8A870; height: 20px; }
+
+  /* TIPS */
+  .tips-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+  .tips-column h3 { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 700; color: #3C2415; margin-bottom: 16px; }
+  .tip-item { font-size: 12.5px; color: #5A3A1A; line-height: 1.65; margin-bottom: 10px; padding-left: 16px; position: relative; }
+  .tip-item::before { content: '★'; position: absolute; left: 0; color: #8A5A35; font-size: 9px; top: 3px; }
+  .notes-section { margin-top: 28px; }
+  .notes-label { font-size: 9px; letter-spacing: 4px; text-transform: uppercase; color: #8A5A35; margin-bottom: 14px; font-weight: 500; }
+  .ruled-line { border-bottom: 1px solid #D4C090; height: 30px; margin-bottom: 4px; }
+  .page-num { position: absolute; bottom: 22px; right: 32px; font-family: 'Playfair Display', serif; font-size: 13px; font-style: italic; color: #8A5A35; }
+</style>
+</head>
+<body>
+
+<!-- PAGE 1: COVER -->
+<div class="page cover">
+  <svg class="plaid-strip-top" viewBox="0 0 794 60" preserveAspectRatio="none">
+    <rect width="794" height="60" fill="#8A5A35"/>
+    <line x1="0" y1="0" x2="794" y2="60" stroke="#C8A870" stroke-width="1.5" opacity="0.4"/>
+    <line x1="0" y1="60" x2="794" y2="0" stroke="#C8A870" stroke-width="1.5" opacity="0.4"/>
+    <line x1="0" y1="20" x2="794" y2="20" stroke="#F5EDD6" stroke-width="0.8" opacity="0.3"/>
+    <line x1="0" y1="40" x2="794" y2="40" stroke="#F5EDD6" stroke-width="0.8" opacity="0.3"/>
+    <line x1="198" y1="0" x2="198" y2="60" stroke="#F5EDD6" stroke-width="0.8" opacity="0.3"/>
+    <line x1="397" y1="0" x2="397" y2="60" stroke="#F5EDD6" stroke-width="0.8" opacity="0.3"/>
+    <line x1="596" y1="0" x2="596" y2="60" stroke="#F5EDD6" stroke-width="0.8" opacity="0.3"/>
+  </svg>
+  <div class="cover-badge">Rustic Farmhouse Collection</div>
+  <h1>Wedding<br>Planning<br>Guide</h1>
+  <h2>Where Love Grows Wild &amp; Free</h2>
+  <div class="rustic-divider">
+    <div class="rustic-line"></div>
+    <span class="rustic-star">✦</span>
+    <div class="rustic-line"></div>
+  </div>
+  <div class="cover-names">[YOUR NAMES]</div>
+  <div class="cover-date">[YOUR WEDDING DATE]</div>
+  <svg class="plaid-strip-bottom" viewBox="0 0 794 60" preserveAspectRatio="none">
+    <rect width="794" height="60" fill="#8A5A35"/>
+    <line x1="0" y1="0" x2="794" y2="60" stroke="#C8A870" stroke-width="1.5" opacity="0.4"/>
+    <line x1="0" y1="60" x2="794" y2="0" stroke="#C8A870" stroke-width="1.5" opacity="0.4"/>
+    <line x1="0" y1="20" x2="794" y2="20" stroke="#F5EDD6" stroke-width="0.8" opacity="0.3"/>
+    <line x1="0" y1="40" x2="794" y2="40" stroke="#F5EDD6" stroke-width="0.8" opacity="0.3"/>
+  </svg>
+</div>
+
+<!-- PAGE 2: TIMELINE -->
+<div class="page interior">
+  <div class="section-label">Section One</div>
+  <div class="section-title">Wedding <em>Timeline</em></div>
+  <svg class="plaid-divider" width="660" height="16" viewBox="0 0 660 16">
+    <rect width="660" height="16" fill="#8A5A35" rx="2"/>
+    <line x1="0" y1="0" x2="660" y2="16" stroke="#C8A870" stroke-width="1" opacity="0.5"/>
+    <line x1="0" y1="16" x2="660" y2="0" stroke="#C8A870" stroke-width="1" opacity="0.5"/>
+    <line x1="0" y1="8" x2="660" y2="8" stroke="#F5EDD6" stroke-width="0.6" opacity="0.4"/>
+    <line x1="110" y1="0" x2="110" y2="16" stroke="#F5EDD6" stroke-width="0.6" opacity="0.4"/>
+    <line x1="220" y1="0" x2="220" y2="16" stroke="#F5EDD6" stroke-width="0.6" opacity="0.4"/>
+    <line x1="330" y1="0" x2="330" y2="16" stroke="#F5EDD6" stroke-width="0.6" opacity="0.4"/>
+    <line x1="440" y1="0" x2="440" y2="16" stroke="#F5EDD6" stroke-width="0.6" opacity="0.4"/>
+    <line x1="550" y1="0" x2="550" y2="16" stroke="#F5EDD6" stroke-width="0.6" opacity="0.4"/>
+  </svg>
+  <div class="timeline">
+    <div class="tl-item"><div class="tl-dot"></div><div class="tl-month">12+ Months Before</div><div class="tl-tasks">Set your total budget · Choose your wedding date · Research and book venue · Announce engagement · Begin engagement photos</div></div>
+    <div class="tl-item"><div class="tl-dot"></div><div class="tl-month">10–12 Months Before</div><div class="tl-tasks">Hire wedding planner · Define wedding style · Book photographer and videographer · Start dress shopping · Create guest list</div></div>
+    <div class="tl-item"><div class="tl-dot"></div><div class="tl-month">8–10 Months Before</div><div class="tl-tasks">Book caterer · Book florist · Book officiant · Choose wedding party attire · Book hair and makeup · Launch wedding website</div></div>
+    <div class="tl-item"><div class="tl-dot"></div><div class="tl-month">6–8 Months Before</div><div class="tl-tasks">Book DJ or band · Order invitations · Reserve hotel room block · Book transportation · Plan honeymoon · Book cake baker</div></div>
+    <div class="tl-item"><div class="tl-dot"></div><div class="tl-month">4–6 Months Before</div><div class="tl-tasks">Send save-the-dates · Schedule cake tasting · Order wedding rings · Buy accessories · Plan ceremony · Research rehearsal dinner venues</div></div>
+    <div class="tl-item"><div class="tl-dot"></div><div class="tl-month">2–4 Months Before</div><div class="tl-tasks">Mail invitations · Finalize guest list · Confirm vendor details · Dress fittings · Plan rehearsal dinner · Write vow drafts</div></div>
+    <div class="tl-item"><div class="tl-dot"></div><div class="tl-month">1–2 Months Before</div><div class="tl-tasks">Final fitting · Create seating chart · Confirm vendor timelines · Submit headcount · Pick up rings · Prepare vendor tips</div></div>
+    <div class="tl-item"><div class="tl-dot"></div><div class="tl-month">1–2 Weeks Before</div><div class="tl-tasks">Final payments · Confirm arrival times · Hold rehearsal · Delegate day-of tasks · Prepare emergency kit</div></div>
+    <div class="tl-item"><div class="tl-dot"></div><div class="tl-month">The Day Before</div><div class="tl-tasks">Rest · Final vendor check-ins · Rehearsal dinner · Prepare venue items</div></div>
+    <div class="tl-item"><div class="tl-dot"></div><div class="tl-month">Wedding Day</div><div class="tl-tasks">Breathe · Be present · Trust your team · Celebrate your love</div></div>
+  </div>
+  <div class="page-num">02</div>
+</div>
+
+<!-- PAGE 3: BUDGET -->
+<div class="page interior">
+  <div class="section-label">Section Two</div>
+  <div class="section-title">Budget <em>Tracker</em></div>
+  <svg class="plaid-divider" width="660" height="16" viewBox="0 0 660 16">
+    <rect width="660" height="16" fill="#8A5A35" rx="2"/>
+    <line x1="0" y1="0" x2="660" y2="16" stroke="#C8A870" stroke-width="1" opacity="0.5"/>
+    <line x1="0" y1="16" x2="660" y2="0" stroke="#C8A870" stroke-width="1" opacity="0.5"/>
+    <line x1="0" y1="8" x2="660" y2="8" stroke="#F5EDD6" stroke-width="0.6" opacity="0.4"/>
+    <line x1="110" y1="0" x2="110" y2="16" stroke="#F5EDD6" stroke-width="0.6" opacity="0.4"/>
+    <line x1="220" y1="0" x2="220" y2="16" stroke="#F5EDD6" stroke-width="0.6" opacity="0.4"/>
+  </svg>
+  <table class="budget-table">
+    <thead><tr><th>Category</th><th>Estimated</th><th>Actual</th><th>Deposit</th><th>Balance Due</th></tr></thead>
+    <tbody>
+      <tr><td>Venue &amp; Rental Fees</td><td><span class="fill-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td><span class="fill-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td><span class="fill-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td><span class="fill-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td></tr>
+      <tr><td>Catering &amp; Bar Service</td><td><span class="fill-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td><span class="fill-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td><span class="fill-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td><span class="fill-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td></tr>
+      <tr><td>Photography</td><td><span class="fill-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td><span class="fill-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td><span class="fill-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td><span class="fill-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td></tr>
+      <tr><td>Videography</td><td><span class="fill-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td><span class="fill-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td><span class="fill-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td><span class="fill-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td></tr>
+      <tr><td>Floral &amp; Decor</td><td><span class="fill-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td><span class="fill-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td><span class="fill-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td><span class="fill-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td></tr>
+      <tr><td>Music / DJ / Band</td><td><span class="fill-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td><span class="fill-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td><span class="fill-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td><span class="fill-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td></tr>
+      <tr><td>Wedding Attire</td><td><span class="fill-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td><span class="fill-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td><span class="fill-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td><span class="fill-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td></tr>
+      <tr><td>Hair &amp; Makeup</td><td><span class="fill-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td><span class="fill-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td><span class="fill-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td><span class="fill-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td></tr>
+      <tr><td>Invitations &amp; Stationery</td><td><span class="fill-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td><span class="fill-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td><span class="fill-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td><span class="fill-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td></tr>
+      <tr><td>Transportation</td><td><span class="fill-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td><span class="fill-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td><span class="fill-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td><span class="fill-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td></tr>
+      <tr><td>Wedding Cake &amp; Desserts</td><td><span class="fill-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td><span class="fill-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td><span class="fill-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td><span class="fill-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td></tr>
+      <tr><td>Favors &amp; Gifts</td><td><span class="fill-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td><span class="fill-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td><span class="fill-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td><span class="fill-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td></tr>
+      <tr><td>Honeymoon</td><td><span class="fill-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td><span class="fill-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td><span class="fill-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td><span class="fill-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td></tr>
+      <tr><td>Miscellaneous / Contingency</td><td><span class="fill-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td><span class="fill-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td><span class="fill-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td><span class="fill-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td></tr>
+    </tbody>
+    <tfoot><tr><td>TOTAL</td><td><span class="fill-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td><span class="fill-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td><span class="fill-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td><span class="fill-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td></tr></tfoot>
+  </table>
+  <div class="page-num">03</div>
+</div>
+
+<!-- PAGE 4: CHECKLIST -->
+<div class="page interior">
+  <div class="section-label">Section Three</div>
+  <div class="section-title">Master <em>Checklist</em></div>
+  <svg class="plaid-divider" width="660" height="16" viewBox="0 0 660 16">
+    <rect width="660" height="16" fill="#8A5A35" rx="2"/>
+    <line x1="0" y1="0" x2="660" y2="16" stroke="#C8A870" stroke-width="1" opacity="0.5"/>
+    <line x1="0" y1="16" x2="660" y2="0" stroke="#C8A870" stroke-width="1" opacity="0.5"/>
+    <line x1="0" y1="8" x2="660" y2="8" stroke="#F5EDD6" stroke-width="0.6" opacity="0.4"/>
+  </svg>
+  <div class="checklist-grid">
+    <div class="check-item"><div class="check-box"></div>Set overall wedding budget</div>
+    <div class="check-item"><div class="check-box"></div>Book ceremony and reception venue</div>
+    <div class="check-item"><div class="check-box"></div>Choose and confirm wedding date</div>
+    <div class="check-item"><div class="check-box"></div>Hire wedding photographer</div>
+    <div class="check-item"><div class="check-box"></div>Compile initial guest list</div>
+    <div class="check-item"><div class="check-box"></div>Hire wedding videographer</div>
+    <div class="check-item"><div class="check-box"></div>Select and invite wedding party</div>
+    <div class="check-item"><div class="check-box"></div>Book florist and confirm design</div>
+    <div class="check-item"><div class="check-box"></div>Create and launch wedding website</div>
+    <div class="check-item"><div class="check-box"></div>Hire caterer and finalize menu</div>
+    <div class="check-item"><div class="check-box"></div>Send save-the-date cards</div>
+    <div class="check-item"><div class="check-box"></div>Book DJ or live band</div>
+    <div class="check-item"><div class="check-box"></div>Purchase and order wedding dress</div>
+    <div class="check-item"><div class="check-box"></div>Order and mail wedding invitations</div>
+    <div class="check-item"><div class="check-box"></div>Book officiant for ceremony</div>
+    <div class="check-item"><div class="check-box"></div>Arrange guest hotel room block</div>
+    <div class="check-item"><div class="check-box"></div>Book hair and makeup artist</div>
+    <div class="check-item"><div class="check-box"></div>Plan and book honeymoon travel</div>
+    <div class="check-item"><div class="check-box"></div>Order wedding cake and desserts</div>
+    <div class="check-item"><div class="check-box"></div>Purchase wedding rings</div>
+    <div class="check-item"><div class="check-box"></div>Arrange wedding day transportation</div>
+    <div class="check-item"><div class="check-box"></div>Finalize reception seating chart</div>
+    <div class="check-item"><div class="check-box"></div>Confirm all vendor contracts and payments</div>
+    <div class="check-item"><div class="check-box"></div>Write and rehearse personal vows</div>
+  </div>
+  <div class="page-num">04</div>
+</div>
+
+<!-- PAGE 5: VENDOR CONTACTS -->
+<div class="page interior">
+  <div class="section-label">Section Four</div>
+  <div class="section-title">Vendor <em>Contacts</em></div>
+  <svg class="plaid-divider" width="660" height="16" viewBox="0 0 660 16">
+    <rect width="660" height="16" fill="#8A5A35" rx="2"/>
+    <line x1="0" y1="0" x2="660" y2="16" stroke="#C8A870" stroke-width="1" opacity="0.5"/>
+    <line x1="0" y1="16" x2="660" y2="0" stroke="#C8A870" stroke-width="1" opacity="0.5"/>
+  </svg>
+  <div class="vendor-grid">
+    <div class="vendor-card"><div class="vendor-card-title">Venue</div><div class="vendor-field"><label>Venue Name</label><div class="field-line"></div></div><div class="vendor-field"><label>Contact Person</label><div class="field-line"></div></div><div class="vendor-field"><label>Phone</label><div class="field-line"></div></div><div class="vendor-field"><label>Email</label><div class="field-line"></div></div><div class="vendor-field"><label>Contract Signed</label><div class="field-line"></div></div><div class="vendor-field"><label>Balance Due</label><div class="field-line"></div></div></div>
+    <div class="vendor-card"><div class="vendor-card-title">Photographer</div><div class="vendor-field"><label>Studio / Name</label><div class="field-line"></div></div><div class="vendor-field"><label>Contact Person</label><div class="field-line"></div></div><div class="vendor-field"><label>Phone</label><div class="field-line"></div></div><div class="vendor-field"><label>Email</label><div class="field-line"></div></div><div class="vendor-field"><label>Contract Signed</label><div class="field-line"></div></div><div class="vendor-field"><label>Balance Due</label><div class="field-line"></div></div></div>
+    <div class="vendor-card"><div class="vendor-card-title">Caterer</div><div class="vendor-field"><label>Company Name</label><div class="field-line"></div></div><div class="vendor-field"><label>Contact Person</label><div class="field-line"></div></div><div class="vendor-field"><label>Phone</label><div class="field-line"></div></div><div class="vendor-field"><label>Email</label><div class="field-line"></div></div><div class="vendor-field"><label>Contract Signed</label><div class="field-line"></div></div><div class="vendor-field"><label>Balance Due</label><div class="field-line"></div></div></div>
+    <div class="vendor-card"><div class="vendor-card-title">Florist</div><div class="vendor-field"><label>Shop / Name</label><div class="field-line"></div></div><div class="vendor-field"><label>Contact Person</label><div class="field-line"></div></div><div class="vendor-field"><label>Phone</label><div class="field-line"></div></div><div class="vendor-field"><label>Email</label><div class="field-line"></div></div><div class="vendor-field"><label>Contract Signed</label><div class="field-line"></div></div><div class="vendor-field"><label>Balance Due</label><div class="field-line"></div></div></div>
+    <div class="vendor-card"><div class="vendor-card-title">DJ / Band</div><div class="vendor-field"><label>Name / Group</label><div class="field-line"></div></div><div class="vendor-field"><label>Contact Person</label><div class="field-line"></div></div><div class="vendor-field"><label>Phone</label><div class="field-line"></div></div><div class="vendor-field"><label>Email</label><div class="field-line"></div></div><div class="vendor-field"><label>Contract Signed</label><div class="field-line"></div></div><div class="vendor-field"><label>Balance Due</label><div class="field-line"></div></div></div>
+    <div class="vendor-card"><div class="vendor-card-title">Hair &amp; Makeup</div><div class="vendor-field"><label>Artist / Salon</label><div class="field-line"></div></div><div class="vendor-field"><label>Contact Person</label><div class="field-line"></div></div><div class="vendor-field"><label>Phone</label><div class="field-line"></div></div><div class="vendor-field"><label>Email</label><div class="field-line"></div></div><div class="vendor-field"><label>Contract Signed</label><div class="field-line"></div></div><div class="vendor-field"><label>Balance Due</label><div class="field-line"></div></div></div>
+  </div>
+  <div class="page-num">05</div>
+</div>
+
+<!-- PAGE 6: PRO TIPS -->
+<div class="page interior">
+  <div class="section-label">Section Five</div>
+  <div class="section-title">Pro Tips <em>&amp; Notes</em></div>
+  <svg class="plaid-divider" width="660" height="16" viewBox="0 0 660 16">
+    <rect width="660" height="16" fill="#8A5A35" rx="2"/>
+    <line x1="0" y1="0" x2="660" y2="16" stroke="#C8A870" stroke-width="1" opacity="0.5"/>
+    <line x1="0" y1="16" x2="660" y2="0" stroke="#C8A870" stroke-width="1" opacity="0.5"/>
+  </svg>
+  <div class="tips-grid">
+    <div class="tips-column">
+      <h3>Things Nobody Tells You</h3>
+      <div class="tip-item">Book venue and photographer before everything else — their calendars drive every other booking.</div>
+      <div class="tip-item">Set aside 5–10% of your budget as a hidden contingency fund.</div>
+      <div class="tip-item">Catering per-head quotes exclude service fees and gratuity — get the real all-in number.</div>
+      <div class="tip-item">Build a 30-minute buffer into every photography block — you will always run behind.</div>
+      <div class="tip-item">Mail invitations 8 weeks out; 10–12 for destination events.</div>
+      <div class="tip-item">Eat a real meal on your wedding morning — you will be too busy otherwise.</div>
+      <div class="tip-item">Assign a non-wedding-party friend to manage day-of logistics.</div>
+      <div class="tip-item">Start your vow writing much earlier than feels necessary.</div>
+    </div>
+    <div class="tips-column">
+      <h3>Questions for Every Vendor</h3>
+      <div class="tip-item">Are you available on [YOUR WEDDING DATE]?</div>
+      <div class="tip-item">How many weddings do you work per weekend?</div>
+      <div class="tip-item">What is your emergency backup plan?</div>
+      <div class="tip-item">May we see a complete portfolio?</div>
+      <div class="tip-item">What is included in your package?</div>
+      <div class="tip-item">What are your overtime rates?</div>
+      <div class="tip-item">What is your cancellation and refund policy?</div>
+      <div class="tip-item">Do you require a vendor meal at the reception?</div>
+      <div class="tip-item">Who specifically will be at our wedding?</div>
+    </div>
+  </div>
+  <div class="notes-section">
+    <div class="notes-label">Notes &amp; Ideas</div>
+    <div class="ruled-line"></div><div class="ruled-line"></div><div class="ruled-line"></div>
+    <div class="ruled-line"></div><div class="ruled-line"></div><div class="ruled-line"></div>
+    <div class="ruled-line"></div><div class="ruled-line"></div>
+  </div>
+  <div class="page-num">06</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wedding Invitation – Dusty Blue Romance</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Raleway:wght@200;300;400&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: #D8E2EC;
+      font-family: 'Raleway', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 40px;
+      padding: 60px 20px;
+      min-height: 100vh;
+    }
+
+    .invitation-card {
+      width: 500px;
+      height: 700px;
+      background: #EEF2F7;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 60px 56px;
+      box-shadow: 0 8px 40px rgba(80,110,140,0.18);
+    }
+
+    /* Silver shimmer via layered gradients */
+    .shimmer {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(255,255,255,0.40) 0%, transparent 50%, rgba(200,215,230,0.20) 100%);
+      pointer-events: none;
+    }
+
+    .wash {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(40px);
+      pointer-events: none;
+    }
+    .wash-1 { width: 280px; height: 220px; background: radial-gradient(ellipse, rgba(123,155,181,0.25) 0%, transparent 70%); top: -50px; left: -40px; }
+    .wash-2 { width: 240px; height: 200px; background: radial-gradient(ellipse, rgba(180,200,220,0.22) 0%, transparent 70%); bottom: -30px; right: -30px; }
+
+    /* Lace-like double border */
+    .border-outer {
+      position: absolute;
+      inset: 16px;
+      border: 1.5px solid rgba(123,155,181,0.45);
+      pointer-events: none;
+    }
+    .border-inner {
+      position: absolute;
+      inset: 22px;
+      border: 0.5px solid rgba(123,155,181,0.25);
+      pointer-events: none;
+    }
+
+    /* Lace SVG corners */
+    .corner-svg {
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      pointer-events: none;
+    }
+    .corner-tl { top: 8px; left: 8px; }
+    .corner-tr { top: 8px; right: 8px; transform: scaleX(-1); }
+    .corner-bl { bottom: 8px; left: 8px; transform: scaleY(-1); }
+    .corner-br { bottom: 8px; right: 8px; transform: scale(-1,-1); }
+
+    .content { position: relative; z-index: 2; width: 100%; }
+
+    .together-text {
+      font-family: 'Raleway', sans-serif;
+      font-weight: 200;
+      font-size: 8.5px;
+      letter-spacing: 0.38em;
+      text-transform: uppercase;
+      color: #7B9BB5;
+      margin-bottom: 22px;
+    }
+
+    .names {
+      font-family: 'EB Garamond', serif;
+      font-weight: 400;
+      font-size: 46px;
+      line-height: 1.12;
+      color: #3A5068;
+      font-style: italic;
+    }
+    .ampersand {
+      font-size: 54px;
+      color: #8EB0CC;
+      display: block;
+      line-height: 1;
+      margin: 4px 0;
+    }
+
+    .divider {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin: 18px auto;
+      width: 68%;
+    }
+    .divider-line { flex: 1; height: 1px; background: rgba(123,155,181,0.40); }
+    .divider-dot { width: 4px; height: 4px; border-radius: 50%; background: #8EB0CC; flex-shrink: 0; }
+    .divider-dash { width: 12px; height: 1px; background: rgba(123,155,181,0.50); flex-shrink: 0; }
+
+    .request-text {
+      font-family: 'Raleway', sans-serif;
+      font-weight: 200;
+      font-size: 9.5px;
+      letter-spacing: 0.20em;
+      color: #5C7A92;
+      margin-bottom: 20px;
+      line-height: 2.0;
+    }
+
+    .date-text {
+      font-family: 'EB Garamond', serif;
+      font-size: 20px;
+      font-weight: 500;
+      color: #3A5068;
+      line-height: 1.6;
+    }
+    .year-text {
+      font-family: 'EB Garamond', serif;
+      font-size: 16px;
+      font-weight: 400;
+      font-style: italic;
+      color: #7B9BB5;
+      margin-top: 4px;
+      letter-spacing: 0.10em;
+    }
+    .time-text {
+      font-family: 'Raleway', sans-serif;
+      font-weight: 200;
+      font-size: 9px;
+      letter-spacing: 0.26em;
+      text-transform: uppercase;
+      color: #5C7A92;
+      margin-top: 12px;
+    }
+
+    .venue-name {
+      font-family: 'EB Garamond', serif;
+      font-size: 18px;
+      font-weight: 500;
+      color: #3A5068;
+      margin-top: 18px;
+    }
+    .venue-address {
+      font-family: 'Raleway', sans-serif;
+      font-weight: 200;
+      font-size: 8.5px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #7B9BB5;
+      margin-top: 5px;
+      line-height: 1.9;
+    }
+
+    /* ── RSVP CARD ── */
+    .rsvp-card {
+      width: 420px;
+      height: 280px;
+      background: #EEF2F7;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 36px 48px;
+      box-shadow: 0 6px 28px rgba(80,110,140,0.15);
+    }
+    .rsvp-card .shimmer { inset: 0; }
+    .rsvp-card .wash-r { position: absolute; width: 180px; height: 140px; background: radial-gradient(ellipse, rgba(123,155,181,0.20) 0%, transparent 70%); top: -20px; right: -20px; filter: blur(32px); }
+    .rsvp-card .border-outer { inset: 14px; border-color: rgba(123,155,181,0.42); }
+    .rsvp-card .border-inner { inset: 20px; border-color: rgba(123,155,181,0.18); }
+
+    .rsvp-title {
+      font-family: 'Raleway', sans-serif;
+      font-weight: 200;
+      font-size: 8.5px;
+      letter-spacing: 0.40em;
+      text-transform: uppercase;
+      color: #7B9BB5;
+      margin-bottom: 10px;
+      position: relative; z-index: 2;
+    }
+    .rsvp-heading {
+      font-family: 'EB Garamond', serif;
+      font-size: 28px;
+      font-style: italic;
+      font-weight: 400;
+      color: #3A5068;
+      margin-bottom: 14px;
+      position: relative; z-index: 2;
+    }
+    .rsvp-body {
+      font-family: 'Raleway', sans-serif;
+      font-weight: 200;
+      font-size: 9px;
+      letter-spacing: 0.12em;
+      color: #5C7A92;
+      line-height: 2.1;
+      position: relative; z-index: 2;
+    }
+    .rsvp-body strong { font-weight: 400; color: #3A5068; }
+
+    /* ── DETAILS CARD ── */
+    .details-card {
+      width: 420px;
+      background: #EEF2F7;
+      position: relative;
+      overflow: hidden;
+      padding: 40px 48px;
+      box-shadow: 0 6px 28px rgba(80,110,140,0.15);
+    }
+    .details-card .shimmer { inset: 0; }
+    .details-card .wash-d { position: absolute; width: 200px; height: 160px; background: radial-gradient(ellipse, rgba(123,155,181,0.18) 0%, transparent 70%); bottom: 0; right: 0; filter: blur(36px); }
+    .details-card .border-outer { inset: 14px; border-color: rgba(123,155,181,0.42); }
+    .details-card .border-inner { inset: 20px; border-color: rgba(123,155,181,0.18); }
+
+    .details-section { position: relative; z-index: 2; margin-bottom: 28px; }
+    .details-section:last-child { margin-bottom: 0; }
+    .details-label {
+      font-family: 'Raleway', sans-serif;
+      font-weight: 300;
+      font-size: 7.5px;
+      letter-spacing: 0.38em;
+      text-transform: uppercase;
+      color: #7B9BB5;
+      margin-bottom: 8px;
+    }
+    .details-text {
+      font-family: 'EB Garamond', serif;
+      font-size: 15px;
+      font-weight: 400;
+      color: #3A5068;
+      line-height: 1.8;
+    }
+    .details-note {
+      font-family: 'Raleway', sans-serif;
+      font-size: 8px;
+      font-weight: 200;
+      color: #8EB0CC;
+      letter-spacing: 0.10em;
+      margin-top: 4px;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ══ MAIN INVITATION CARD ══ -->
+  <div class="invitation-card">
+    <div class="shimmer"></div>
+    <div class="wash wash-1"></div>
+    <div class="wash wash-2"></div>
+    <div class="border-outer"></div>
+    <div class="border-inner"></div>
+
+    <!-- Lace-like SVG corner pattern -->
+    <svg class="corner-svg corner-tl" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M10 90 L10 10 L90 10" stroke="rgba(123,155,181,0.35)" stroke-width="0.8" fill="none"/>
+      <path d="M18 90 L18 18 L90 18" stroke="rgba(123,155,181,0.18)" stroke-width="0.5" fill="none"/>
+      <!-- lace dots along top -->
+      <circle cx="25" cy="10" r="2" fill="none" stroke="rgba(123,155,181,0.45)" stroke-width="0.8"/>
+      <circle cx="38" cy="10" r="2" fill="none" stroke="rgba(123,155,181,0.45)" stroke-width="0.8"/>
+      <circle cx="51" cy="10" r="2" fill="none" stroke="rgba(123,155,181,0.35)" stroke-width="0.7"/>
+      <!-- lace dots along left -->
+      <circle cx="10" cy="25" r="2" fill="none" stroke="rgba(123,155,181,0.45)" stroke-width="0.8"/>
+      <circle cx="10" cy="38" r="2" fill="none" stroke="rgba(123,155,181,0.45)" stroke-width="0.8"/>
+      <circle cx="10" cy="51" r="2" fill="none" stroke="rgba(123,155,181,0.35)" stroke-width="0.7"/>
+      <!-- corner motif -->
+      <circle cx="10" cy="10" r="5" fill="none" stroke="rgba(123,155,181,0.55)" stroke-width="0.8"/>
+      <circle cx="10" cy="10" r="2" fill="rgba(123,155,181,0.40)"/>
+      <!-- small arc flourishes -->
+      <path d="M20 10 Q14 14 10 20" stroke="rgba(123,155,181,0.30)" stroke-width="0.7" fill="none"/>
+      <path d="M28 10 Q16 18 10 28" stroke="rgba(123,155,181,0.20)" stroke-width="0.6" fill="none"/>
+    </svg>
+    <svg class="corner-svg corner-tr" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M10 90 L10 10 L90 10" stroke="rgba(123,155,181,0.35)" stroke-width="0.8" fill="none"/>
+      <path d="M18 90 L18 18 L90 18" stroke="rgba(123,155,181,0.18)" stroke-width="0.5" fill="none"/>
+      <circle cx="25" cy="10" r="2" fill="none" stroke="rgba(123,155,181,0.45)" stroke-width="0.8"/>
+      <circle cx="38" cy="10" r="2" fill="none" stroke="rgba(123,155,181,0.45)" stroke-width="0.8"/>
+      <circle cx="10" cy="25" r="2" fill="none" stroke="rgba(123,155,181,0.45)" stroke-width="0.8"/>
+      <circle cx="10" cy="38" r="2" fill="none" stroke="rgba(123,155,181,0.45)" stroke-width="0.8"/>
+      <circle cx="10" cy="10" r="5" fill="none" stroke="rgba(123,155,181,0.55)" stroke-width="0.8"/>
+      <circle cx="10" cy="10" r="2" fill="rgba(123,155,181,0.40)"/>
+      <path d="M20 10 Q14 14 10 20" stroke="rgba(123,155,181,0.30)" stroke-width="0.7" fill="none"/>
+    </svg>
+    <svg class="corner-svg corner-bl" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M10 90 L10 10 L90 10" stroke="rgba(123,155,181,0.35)" stroke-width="0.8" fill="none"/>
+      <path d="M18 90 L18 18 L90 18" stroke="rgba(123,155,181,0.18)" stroke-width="0.5" fill="none"/>
+      <circle cx="25" cy="10" r="2" fill="none" stroke="rgba(123,155,181,0.45)" stroke-width="0.8"/>
+      <circle cx="10" cy="25" r="2" fill="none" stroke="rgba(123,155,181,0.45)" stroke-width="0.8"/>
+      <circle cx="10" cy="10" r="5" fill="none" stroke="rgba(123,155,181,0.55)" stroke-width="0.8"/>
+      <circle cx="10" cy="10" r="2" fill="rgba(123,155,181,0.40)"/>
+    </svg>
+    <svg class="corner-svg corner-br" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M10 90 L10 10 L90 10" stroke="rgba(123,155,181,0.35)" stroke-width="0.8" fill="none"/>
+      <path d="M18 90 L18 18 L90 18" stroke="rgba(123,155,181,0.18)" stroke-width="0.5" fill="none"/>
+      <circle cx="25" cy="10" r="2" fill="none" stroke="rgba(123,155,181,0.45)" stroke-width="0.8"/>
+      <circle cx="10" cy="25" r="2" fill="none" stroke="rgba(123,155,181,0.45)" stroke-width="0.8"/>
+      <circle cx="10" cy="10" r="5" fill="none" stroke="rgba(123,155,181,0.55)" stroke-width="0.8"/>
+      <circle cx="10" cy="10" r="2" fill="rgba(123,155,181,0.40)"/>
+    </svg>
+
+    <div class="content">
+      <p class="together-text">Together with their families</p>
+      <div class="names">
+        [BRIDE'S NAME]
+        <span class="ampersand">&amp;</span>
+        [GROOM'S NAME]
+      </div>
+      <div class="divider"><div class="divider-line"></div><div class="divider-dot"></div><div class="divider-dash"></div><div class="divider-dot"></div><div class="divider-line"></div></div>
+      <p class="request-text">
+        request the honour of your presence<br>
+        at the celebration of their marriage
+      </p>
+      <p class="date-text">[WEDDING DATE]</p>
+      <p class="year-text">[YEAR]</p>
+      <p class="time-text">[CEREMONY TIME]</p>
+      <div class="divider" style="margin-top:20px;"><div class="divider-line"></div><div class="divider-dot"></div><div class="divider-dash"></div><div class="divider-dot"></div><div class="divider-line"></div></div>
+      <p class="venue-name">[VENUE NAME]</p>
+      <p class="venue-address">[VENUE ADDRESS]<br>[CITY, STATE ZIP]</p>
+    </div>
+  </div>
+
+  <!-- ══ RSVP CARD ══ -->
+  <div class="rsvp-card">
+    <div class="shimmer"></div>
+    <div class="wash-r"></div>
+    <div class="border-outer"></div>
+    <div class="border-inner"></div>
+    <p class="rsvp-title">Kindly reply by</p>
+    <p class="rsvp-heading">[RSVP DATE]</p>
+    <p class="rsvp-body">
+      Please respond to<br>
+      <strong>[RSVP EMAIL OR PHONE]</strong><br><br>
+      ___ Joyfully accepts &nbsp;&nbsp;&nbsp; ___ Regretfully declines<br>
+      Number of guests: _______________
+    </p>
+  </div>
+
+  <!-- ══ DETAILS CARD ══ -->
+  <div class="details-card">
+    <div class="shimmer"></div>
+    <div class="wash-d"></div>
+    <div class="border-outer"></div>
+    <div class="border-inner"></div>
+    <div class="details-section">
+      <p class="details-label">Accommodations</p>
+      <p class="details-text">Your room block details here</p>
+      <p class="details-note">Include hotel name, booking code, and cut-off date.</p>
+    </div>
+    <div class="details-section">
+      <p class="details-label">Directions &amp; Parking</p>
+      <p class="details-text">Directions &amp; Parking details here</p>
+      <p class="details-note">Note any parking fees, shuttle times, or valet information.</p>
+    </div>
+    <div class="details-section">
+      <p class="details-label">Registry</p>
+      <p class="details-text">Registry information here</p>
+      <p class="details-note">List store names or website URLs where you are registered.</p>
+    </div>
+  </div>
+
+</body>
+</html>

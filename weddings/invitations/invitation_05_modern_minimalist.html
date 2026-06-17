@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wedding Invitation – Modern Minimalist</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,700;0,800;1,200;1,300&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: #F0F0F0;
+      font-family: 'Jost', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 32px;
+      padding: 60px 20px;
+      min-height: 100vh;
+    }
+
+    .invitation-card {
+      width: 500px;
+      height: 700px;
+      background: #FFFFFF;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 70px 64px;
+      box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+    }
+
+    /* Single hairline border — the only decoration */
+    .border-single {
+      position: absolute;
+      inset: 20px;
+      border: 0.5px solid #000000;
+      pointer-events: none;
+    }
+
+    .content { position: relative; z-index: 2; width: 100%; }
+
+    .together-text {
+      font-family: 'Jost', sans-serif;
+      font-weight: 100;
+      font-size: 8px;
+      letter-spacing: 0.45em;
+      text-transform: uppercase;
+      color: #888888;
+      margin-bottom: 32px;
+    }
+
+    .names {
+      font-family: 'Jost', sans-serif;
+      font-weight: 800;
+      font-size: 44px;
+      line-height: 1.05;
+      color: #000000;
+      letter-spacing: -0.01em;
+      text-transform: uppercase;
+    }
+    .ampersand {
+      font-weight: 100;
+      font-style: italic;
+      font-size: 48px;
+      color: #000000;
+      display: block;
+      line-height: 1.1;
+      margin: 6px 0;
+      letter-spacing: 0;
+      text-transform: none;
+    }
+
+    .divider {
+      width: 30px;
+      height: 0.5px;
+      background: #000000;
+      margin: 28px auto;
+    }
+
+    .request-text {
+      font-family: 'Jost', sans-serif;
+      font-weight: 200;
+      font-size: 9.5px;
+      letter-spacing: 0.22em;
+      color: #444444;
+      margin-bottom: 28px;
+      line-height: 2.0;
+      text-transform: uppercase;
+    }
+
+    .date-text {
+      font-family: 'Jost', sans-serif;
+      font-size: 16px;
+      font-weight: 300;
+      color: #000000;
+      line-height: 1.7;
+      letter-spacing: 0.05em;
+    }
+    .year-text {
+      font-family: 'Jost', sans-serif;
+      font-size: 13px;
+      font-weight: 100;
+      color: #888888;
+      letter-spacing: 0.20em;
+      margin-top: 4px;
+    }
+    .time-text {
+      font-family: 'Jost', sans-serif;
+      font-weight: 200;
+      font-size: 8.5px;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: #666666;
+      margin-top: 12px;
+    }
+
+    .venue-name {
+      font-family: 'Jost', sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      color: #000000;
+      margin-top: 22px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    .venue-address {
+      font-family: 'Jost', sans-serif;
+      font-weight: 100;
+      font-size: 9px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #888888;
+      margin-top: 6px;
+      line-height: 1.9;
+    }
+
+    /* ── RSVP CARD ── */
+    .rsvp-card {
+      width: 420px;
+      height: 280px;
+      background: #FFFFFF;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 36px 48px;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+    }
+    .rsvp-card .border-single { inset: 16px; }
+
+    .rsvp-title {
+      font-family: 'Jost', sans-serif;
+      font-weight: 100;
+      font-size: 8px;
+      letter-spacing: 0.45em;
+      text-transform: uppercase;
+      color: #888888;
+      margin-bottom: 12px;
+      position: relative; z-index: 2;
+    }
+    .rsvp-heading {
+      font-family: 'Jost', sans-serif;
+      font-size: 26px;
+      font-weight: 700;
+      color: #000000;
+      letter-spacing: -0.01em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+      position: relative; z-index: 2;
+    }
+    .rsvp-body {
+      font-family: 'Jost', sans-serif;
+      font-weight: 200;
+      font-size: 9px;
+      letter-spacing: 0.14em;
+      color: #555555;
+      line-height: 2.1;
+      position: relative; z-index: 2;
+      text-transform: uppercase;
+    }
+    .rsvp-body strong { font-weight: 700; color: #000000; }
+
+    /* ── DETAILS CARD ── */
+    .details-card {
+      width: 420px;
+      background: #FFFFFF;
+      position: relative;
+      padding: 40px 48px;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+    }
+    .details-card .border-single { inset: 16px; }
+
+    .details-section { position: relative; z-index: 2; margin-bottom: 28px; }
+    .details-section:last-child { margin-bottom: 0; }
+    .details-label {
+      font-family: 'Jost', sans-serif;
+      font-weight: 700;
+      font-size: 7.5px;
+      letter-spacing: 0.38em;
+      text-transform: uppercase;
+      color: #000000;
+      margin-bottom: 8px;
+    }
+    .details-text {
+      font-family: 'Jost', sans-serif;
+      font-size: 14px;
+      font-weight: 300;
+      color: #333333;
+      line-height: 1.8;
+    }
+    .details-note {
+      font-family: 'Jost', sans-serif;
+      font-size: 8px;
+      font-weight: 100;
+      color: #AAAAAA;
+      letter-spacing: 0.10em;
+      margin-top: 4px;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ══ MAIN INVITATION CARD ══ -->
+  <div class="invitation-card">
+    <div class="border-single"></div>
+    <div class="content">
+      <p class="together-text">Together with their families</p>
+      <div class="names">
+        [BRIDE'S NAME]
+        <span class="ampersand">&amp;</span>
+        [GROOM'S NAME]
+      </div>
+      <div class="divider"></div>
+      <p class="request-text">
+        request the honour of your presence<br>
+        at the celebration of their marriage
+      </p>
+      <p class="date-text">[WEDDING DATE]</p>
+      <p class="year-text">[YEAR]</p>
+      <p class="time-text">[CEREMONY TIME]</p>
+      <div class="divider" style="margin-top:22px;"></div>
+      <p class="venue-name">[VENUE NAME]</p>
+      <p class="venue-address">[VENUE ADDRESS]<br>[CITY, STATE ZIP]</p>
+    </div>
+  </div>
+
+  <!-- ══ RSVP CARD ══ -->
+  <div class="rsvp-card">
+    <div class="border-single"></div>
+    <p class="rsvp-title">Kindly reply by</p>
+    <p class="rsvp-heading">[RSVP DATE]</p>
+    <p class="rsvp-body">
+      Please respond to<br>
+      <strong>[RSVP EMAIL OR PHONE]</strong><br><br>
+      ___ Accepts &nbsp;&nbsp;&nbsp; ___ Declines<br>
+      Guests: _______________
+    </p>
+  </div>
+
+  <!-- ══ DETAILS CARD ══ -->
+  <div class="details-card">
+    <div class="border-single"></div>
+    <div class="details-section">
+      <p class="details-label">Accommodations</p>
+      <p class="details-text">Your room block details here</p>
+      <p class="details-note">Include hotel name, booking code, and cut-off date.</p>
+    </div>
+    <div class="details-section">
+      <p class="details-label">Directions &amp; Parking</p>
+      <p class="details-text">Directions &amp; Parking details here</p>
+      <p class="details-note">Note any parking fees, shuttle times, or valet information.</p>
+    </div>
+    <div class="details-section">
+      <p class="details-label">Registry</p>
+      <p class="details-text">Registry information here</p>
+      <p class="details-note">List store names or website URLs where you are registered.</p>
+    </div>
+  </div>
+
+</body>
+</html>

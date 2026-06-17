@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wedding Invitation – Art Deco Gatsby</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&family=Montserrat:wght@100;200;300;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: #0D0D0D;
+      font-family: 'Montserrat', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 40px;
+      padding: 60px 20px;
+      min-height: 100vh;
+    }
+
+    .invitation-card {
+      width: 500px;
+      height: 700px;
+      background: #0D0D0D;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 60px 56px;
+      box-shadow: 0 12px 60px rgba(212,175,55,0.15);
+    }
+
+    /* Art deco geometric SVG border */
+    .deco-border {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+    }
+
+    .content { position: relative; z-index: 2; width: 100%; }
+
+    .together-text {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 100;
+      font-size: 8px;
+      letter-spacing: 0.50em;
+      text-transform: uppercase;
+      color: rgba(212,175,55,0.65);
+      margin-bottom: 24px;
+    }
+
+    .names {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 300;
+      font-size: 48px;
+      line-height: 1.1;
+      color: #D4AF37;
+      font-style: italic;
+    }
+    .ampersand {
+      font-size: 56px;
+      color: #FFFFFF;
+      display: block;
+      line-height: 1;
+      margin: 2px 0;
+    }
+
+    .deco-divider {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0;
+      margin: 22px auto;
+      width: 80%;
+    }
+
+    .request-text {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 100;
+      font-size: 8.5px;
+      letter-spacing: 0.28em;
+      color: rgba(255,255,255,0.60);
+      margin-bottom: 22px;
+      line-height: 2.1;
+      text-transform: uppercase;
+    }
+
+    .date-text {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 20px;
+      font-weight: 400;
+      color: #FFFFFF;
+      line-height: 1.6;
+    }
+    .year-text {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 13px;
+      font-weight: 100;
+      color: #D4AF37;
+      letter-spacing: 0.30em;
+      margin-top: 6px;
+      text-transform: uppercase;
+    }
+    .time-text {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 100;
+      font-size: 8px;
+      letter-spacing: 0.30em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.50);
+      margin-top: 12px;
+    }
+
+    .venue-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 18px;
+      font-weight: 600;
+      color: #D4AF37;
+      margin-top: 20px;
+      letter-spacing: 0.05em;
+    }
+    .venue-address {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 100;
+      font-size: 8px;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.45);
+      margin-top: 6px;
+      line-height: 2.0;
+    }
+
+    /* ── RSVP CARD ── */
+    .rsvp-card {
+      width: 420px;
+      height: 280px;
+      background: #0D0D0D;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 36px 48px;
+      box-shadow: 0 8px 40px rgba(212,175,55,0.12);
+    }
+
+    .rsvp-title {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 100;
+      font-size: 8px;
+      letter-spacing: 0.48em;
+      text-transform: uppercase;
+      color: rgba(212,175,55,0.65);
+      margin-bottom: 10px;
+      position: relative; z-index: 2;
+    }
+    .rsvp-heading {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 28px;
+      font-style: italic;
+      font-weight: 300;
+      color: #D4AF37;
+      margin-bottom: 14px;
+      position: relative; z-index: 2;
+    }
+    .rsvp-body {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 100;
+      font-size: 8.5px;
+      letter-spacing: 0.14em;
+      color: rgba(255,255,255,0.55);
+      line-height: 2.1;
+      position: relative; z-index: 2;
+      text-transform: uppercase;
+    }
+    .rsvp-body strong { font-weight: 300; color: rgba(212,175,55,0.90); }
+
+    /* ── DETAILS CARD ── */
+    .details-card {
+      width: 420px;
+      background: #0D0D0D;
+      position: relative;
+      overflow: hidden;
+      padding: 40px 48px;
+      box-shadow: 0 8px 40px rgba(212,175,55,0.12);
+    }
+
+    .details-section { position: relative; z-index: 2; margin-bottom: 28px; }
+    .details-section:last-child { margin-bottom: 0; }
+    .details-label {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 300;
+      font-size: 7.5px;
+      letter-spacing: 0.45em;
+      text-transform: uppercase;
+      color: #D4AF37;
+      margin-bottom: 8px;
+    }
+    .details-text {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 16px;
+      font-weight: 400;
+      color: rgba(255,255,255,0.75);
+      line-height: 1.8;
+    }
+    .details-note {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 7.5px;
+      font-weight: 100;
+      color: rgba(255,255,255,0.35);
+      letter-spacing: 0.10em;
+      margin-top: 4px;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ══ MAIN INVITATION CARD ══ -->
+  <div class="invitation-card">
+    <!-- Art Deco geometric SVG border + corner fans -->
+    <svg class="deco-border" viewBox="0 0 500 700" xmlns="http://www.w3.org/2000/svg">
+      <!-- Outer rect -->
+      <rect x="14" y="14" width="472" height="672" fill="none" stroke="#D4AF37" stroke-width="1"/>
+      <!-- Inner rect -->
+      <rect x="22" y="22" width="456" height="656" fill="none" stroke="#D4AF37" stroke-width="0.5" opacity="0.50"/>
+      <!-- Mid rect -->
+      <rect x="18" y="18" width="464" height="664" fill="none" stroke="#D4AF37" stroke-width="0.3" opacity="0.30"/>
+
+      <!-- TL corner fan -->
+      <path d="M14 80 L14 14 L80 14" fill="none" stroke="#D4AF37" stroke-width="1"/>
+      <path d="M14 60 L14 14 L60 14" fill="none" stroke="#D4AF37" stroke-width="0.5" opacity="0.5"/>
+      <!-- Fan lines TL -->
+      <line x1="14" y1="14" x2="70" y2="60" stroke="#D4AF37" stroke-width="0.6" opacity="0.4"/>
+      <line x1="14" y1="14" x2="50" y2="70" stroke="#D4AF37" stroke-width="0.6" opacity="0.4"/>
+      <line x1="14" y1="14" x2="60" y2="14" stroke="#D4AF37" stroke-width="0.6" opacity="0.3"/>
+      <line x1="14" y1="14" x2="14" y2="60" stroke="#D4AF37" stroke-width="0.6" opacity="0.3"/>
+      <!-- Chevron accent TL -->
+      <polyline points="30,14 22,22 14,30" fill="none" stroke="#D4AF37" stroke-width="0.5" opacity="0.50"/>
+      <polyline points="46,14 22,38 14,46" fill="none" stroke="#D4AF37" stroke-width="0.4" opacity="0.35"/>
+
+      <!-- TR corner fan (mirror) -->
+      <path d="M486 80 L486 14 L420 14" fill="none" stroke="#D4AF37" stroke-width="1"/>
+      <path d="M486 60 L486 14 L440 14" fill="none" stroke="#D4AF37" stroke-width="0.5" opacity="0.5"/>
+      <line x1="486" y1="14" x2="430" y2="60" stroke="#D4AF37" stroke-width="0.6" opacity="0.4"/>
+      <line x1="486" y1="14" x2="450" y2="70" stroke="#D4AF37" stroke-width="0.6" opacity="0.4"/>
+      <polyline points="470,14 478,22 486,30" fill="none" stroke="#D4AF37" stroke-width="0.5" opacity="0.50"/>
+      <polyline points="454,14 478,38 486,46" fill="none" stroke="#D4AF37" stroke-width="0.4" opacity="0.35"/>
+
+      <!-- BL corner fan -->
+      <path d="M14 620 L14 686 L80 686" fill="none" stroke="#D4AF37" stroke-width="1"/>
+      <path d="M14 640 L14 686 L60 686" fill="none" stroke="#D4AF37" stroke-width="0.5" opacity="0.5"/>
+      <line x1="14" y1="686" x2="70" y2="640" stroke="#D4AF37" stroke-width="0.6" opacity="0.4"/>
+      <line x1="14" y1="686" x2="50" y2="630" stroke="#D4AF37" stroke-width="0.6" opacity="0.4"/>
+      <polyline points="30,686 22,678 14,670" fill="none" stroke="#D4AF37" stroke-width="0.5" opacity="0.50"/>
+
+      <!-- BR corner fan -->
+      <path d="M486 620 L486 686 L420 686" fill="none" stroke="#D4AF37" stroke-width="1"/>
+      <path d="M486 640 L486 686 L440 686" fill="none" stroke="#D4AF37" stroke-width="0.5" opacity="0.5"/>
+      <line x1="486" y1="686" x2="430" y2="640" stroke="#D4AF37" stroke-width="0.6" opacity="0.4"/>
+      <line x1="486" y1="686" x2="450" y2="630" stroke="#D4AF37" stroke-width="0.6" opacity="0.4"/>
+      <polyline points="470,686 478,678 486,670" fill="none" stroke="#D4AF37" stroke-width="0.5" opacity="0.50"/>
+
+      <!-- Center top/bottom angular dividers -->
+      <line x1="160" y1="14" x2="180" y2="22" stroke="#D4AF37" stroke-width="0.5" opacity="0.35"/>
+      <line x1="340" y1="14" x2="320" y2="22" stroke="#D4AF37" stroke-width="0.5" opacity="0.35"/>
+      <line x1="160" y1="686" x2="180" y2="678" stroke="#D4AF37" stroke-width="0.5" opacity="0.35"/>
+      <line x1="340" y1="686" x2="320" y2="678" stroke="#D4AF37" stroke-width="0.5" opacity="0.35"/>
+
+      <!-- Diamond center top/bottom -->
+      <polygon points="250,10 256,16 250,22 244,16" fill="#D4AF37" opacity="0.70"/>
+      <polygon points="250,678 256,684 250,690 244,684" fill="#D4AF37" opacity="0.70"/>
+    </svg>
+
+    <div class="content">
+      <p class="together-text">Together with their families</p>
+      <div class="names">
+        [BRIDE'S NAME]
+        <span class="ampersand">&amp;</span>
+        [GROOM'S NAME]
+      </div>
+
+      <!-- Art deco divider -->
+      <svg class="deco-divider" height="16" viewBox="0 0 340 16" xmlns="http://www.w3.org/2000/svg">
+        <line x1="0" y1="8" x2="120" y2="8" stroke="#D4AF37" stroke-width="0.5" opacity="0.5"/>
+        <line x1="0" y1="8" x2="100" y2="8" stroke="#D4AF37" stroke-width="1" opacity="0.4"/>
+        <polygon points="135,8 140,4 145,8 140,12" fill="#D4AF37" opacity="0.7"/>
+        <polygon points="152,8 157,5 162,8 157,11" fill="none" stroke="#D4AF37" stroke-width="0.7" opacity="0.5"/>
+        <polygon points="170,8 175,4 180,8 175,12" fill="#D4AF37" opacity="0.7"/>
+        <line x1="195" y1="8" x2="340" y2="8" stroke="#D4AF37" stroke-width="0.5" opacity="0.5"/>
+        <line x1="215" y1="8" x2="340" y2="8" stroke="#D4AF37" stroke-width="1" opacity="0.4"/>
+      </svg>
+
+      <p class="request-text">
+        request the honour of your presence<br>
+        at the celebration of their marriage
+      </p>
+      <p class="date-text">[WEDDING DATE]</p>
+      <p class="year-text">[YEAR]</p>
+      <p class="time-text">[CEREMONY TIME]</p>
+
+      <svg class="deco-divider" height="16" viewBox="0 0 340 16" xmlns="http://www.w3.org/2000/svg" style="margin-top:18px;">
+        <line x1="0" y1="8" x2="120" y2="8" stroke="#D4AF37" stroke-width="0.5" opacity="0.5"/>
+        <polygon points="135,8 140,4 145,8 140,12" fill="#D4AF37" opacity="0.7"/>
+        <polygon points="152,8 157,5 162,8 157,11" fill="none" stroke="#D4AF37" stroke-width="0.7" opacity="0.5"/>
+        <polygon points="170,8 175,4 180,8 175,12" fill="#D4AF37" opacity="0.7"/>
+        <line x1="195" y1="8" x2="340" y2="8" stroke="#D4AF37" stroke-width="0.5" opacity="0.5"/>
+      </svg>
+
+      <p class="venue-name">[VENUE NAME]</p>
+      <p class="venue-address">[VENUE ADDRESS]<br>[CITY, STATE ZIP]</p>
+    </div>
+  </div>
+
+  <!-- ══ RSVP CARD ══ -->
+  <div class="rsvp-card">
+    <svg style="position:absolute;inset:0;pointer-events:none;" viewBox="0 0 420 280" xmlns="http://www.w3.org/2000/svg">
+      <rect x="10" y="10" width="400" height="260" fill="none" stroke="#D4AF37" stroke-width="1"/>
+      <rect x="16" y="16" width="388" height="248" fill="none" stroke="#D4AF37" stroke-width="0.4" opacity="0.45"/>
+      <!-- Corner fans small -->
+      <path d="M10 40 L10 10 L40 10" fill="none" stroke="#D4AF37" stroke-width="0.8"/>
+      <path d="M410 40 L410 10 L380 10" fill="none" stroke="#D4AF37" stroke-width="0.8"/>
+      <path d="M10 240 L10 270 L40 270" fill="none" stroke="#D4AF37" stroke-width="0.8"/>
+      <path d="M410 240 L410 270 L380 270" fill="none" stroke="#D4AF37" stroke-width="0.8"/>
+      <polygon points="210,6 215,11 210,16 205,11" fill="#D4AF37" opacity="0.65"/>
+    </svg>
+    <p class="rsvp-title">Kindly reply by</p>
+    <p class="rsvp-heading">[RSVP DATE]</p>
+    <p class="rsvp-body">
+      Please respond to<br>
+      <strong>[RSVP EMAIL OR PHONE]</strong><br><br>
+      ___ Accepts &nbsp;&nbsp;&nbsp; ___ Declines<br>
+      Number of guests: _______________
+    </p>
+  </div>
+
+  <!-- ══ DETAILS CARD ══ -->
+  <div class="details-card">
+    <svg style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;" viewBox="0 0 420 220" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <rect x="10" y="10" width="400" height="200" fill="none" stroke="#D4AF37" stroke-width="1"/>
+      <rect x="16" y="16" width="388" height="188" fill="none" stroke="#D4AF37" stroke-width="0.4" opacity="0.45"/>
+      <path d="M10 40 L10 10 L40 10" fill="none" stroke="#D4AF37" stroke-width="0.8"/>
+      <path d="M410 40 L410 10 L380 10" fill="none" stroke="#D4AF37" stroke-width="0.8"/>
+    </svg>
+    <div class="details-section">
+      <p class="details-label">Accommodations</p>
+      <p class="details-text">Your room block details here</p>
+      <p class="details-note">Include hotel name, booking code, and cut-off date.</p>
+    </div>
+    <div class="details-section">
+      <p class="details-label">Directions &amp; Parking</p>
+      <p class="details-text">Directions &amp; Parking details here</p>
+      <p class="details-note">Note any parking fees, shuttle times, or valet information.</p>
+    </div>
+    <div class="details-section">
+      <p class="details-label">Registry</p>
+      <p class="details-text">Registry information here</p>
+      <p class="details-note">List store names or website URLs where you are registered.</p>
+    </div>
+  </div>
+
+</body>
+</html>

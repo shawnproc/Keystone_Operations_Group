@@ -849,6 +849,36 @@ body {
 .form-success { display: none; color: var(--teal-mid); font-size: 0.9rem; text-align: center; font-weight: 600; }
 .form-success.show { display: block; }
 
+/* ===== PRICING CONTACT ===== */
+.pricing-contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 80px;
+  align-items: start;
+}
+.pricing-contact-info h3 { font-size: 1.5rem; font-weight: 700; margin-bottom: 12px; }
+.pricing-contact-info p { color: var(--text-mid); line-height: 1.8; margin-bottom: 28px; }
+.pricing-contact-details { display: flex; flex-direction: column; gap: 16px; }
+.pricing-contact-details .contact-item a {
+  color: var(--teal-mid);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+.pricing-contact-details .contact-item a:hover { color: var(--teal-dark); }
+.pricing-form {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 40px;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+@media (max-width: 768px) {
+  .pricing-contact-grid { grid-template-columns: 1fr; gap: 40px; }
+}
+
 /* ===== FOOTER ===== */
 .footer { background: var(--navy); color: var(--white); padding: 64px 0 32px; }
 .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 48px; }

@@ -342,7 +342,7 @@
         <div class="pricing-contact-info">
           <span class="section-label">Book Now</span>
           <h3>Book a Delivery</h3>
-          <p>Tell us what you need moved and when — we&rsquo;ll take care of the rest and get you a quick quote.</p>
+          <p>Give us the pickup, the drop-off, and your preferred time — and we&rsquo;ll come back with an actual quote, not a round of phone tag.</p>
           <div class="pricing-contact-details">
             <div class="contact-item">
               <span class="contact-icon">&#128222;</span>
@@ -350,7 +350,7 @@
             </div>
             <div class="contact-item">
               <span class="contact-icon">&#128231;</span>
-              <a href="mailto:info@keystoneoperationsgroup.net">info@keystoneoperationsgroup.net</a>
+              <a href="mailto:ops@keystoneoperationsgroup.net">ops@keystoneoperationsgroup.net</a>
             </div>
             <div class="contact-item">
               <span class="contact-icon">&#128205;</span>
@@ -377,6 +377,32 @@
             <input type="email" id="log-email" name="email" placeholder="your@email.com" required />
           </div>
           <div class="form-group">
+            <label for="log-pickup">Pickup address</label>
+            <input type="text" id="log-pickup" name="pickup_address" placeholder="Street, city, ZIP" required />
+          </div>
+          <div class="form-group">
+            <label for="log-dropoff">Drop-off address</label>
+            <input type="text" id="log-dropoff" name="dropoff_address" placeholder="Street, city, ZIP" required />
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="log-date">Pickup date</label>
+              <input type="date" id="log-date" name="pickup_date" required />
+            </div>
+            <div class="form-group">
+              <label for="log-window">Preferred time</label>
+              <select id="log-window" name="time_window">
+                <option value="ASAP / Same-day">ASAP / Same-day</option>
+                <option value="Morning (7AM–10AM)">Morning (7AM–10AM)</option>
+                <option value="Midday (10AM–1PM)">Midday (10AM–1PM)</option>
+                <option value="Afternoon (1PM–4PM)">Afternoon (1PM–4PM)</option>
+                <option value="Late afternoon (4PM–6PM)">Late afternoon (4PM–6PM)</option>
+                <option value="After-hours (6PM+)">After-hours (6PM+)</option>
+                <option value="Recurring / not sure yet">Recurring / not sure yet</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
             <label for="log-service">What do you need delivered?</label>
             <select id="log-service" name="service">
               <option>Same-Day / Rush Courier</option>
@@ -389,9 +415,9 @@
           </div>
           <div class="form-group">
             <label for="log-message">Details</label>
-            <textarea id="log-message" name="message" rows="4" placeholder="What is it, pickup, drop-off, date and time…" required></textarea>
+            <textarea id="log-message" name="message" rows="3" placeholder="What are we moving? Size, weight, special handling, exact time…" required></textarea>
           </div>
-          <button type="submit" class="btn-primary full-width">Send Request</button>
+          <button type="submit" class="btn-primary full-width">Get My Quote</button>
         </form>
       </div>
     </div>
@@ -448,5 +474,12 @@
   </footer>
 
   <script src="main.js"></script>
+  <script>
+    // Prevent selecting a pickup date in the past
+    (function () {
+      var d = document.getElementById('log-date');
+      if (d) d.min = new Date().toISOString().split('T')[0];
+    })();
+  </script>
 </body>
 </html>

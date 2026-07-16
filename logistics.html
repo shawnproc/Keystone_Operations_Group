@@ -338,10 +338,24 @@
   <!-- Contact -->
   <section class="contact section" id="contact">
     <div class="container">
+      <div class="section-header">
+        <span class="section-label">Book Now</span>
+        <h2>Book a <span class="gradient-text">Delivery</span></h2>
+        <p>Pick an open time on our live calendar — or send your pickup and drop-off below for a custom quote.</p>
+      </div>
+
+      <!-- Live scheduling calendar (Cal.com) -->
+      <div class="booking-panel">
+        <h3 class="booking-heading">Schedule Online</h3>
+        <p class="booking-sub">Choose a time that works and lock it in instantly — no waiting on a callback.</p>
+        <div id="my-cal-inline" class="cal-embed"></div>
+      </div>
+
+      <div class="booking-divider"><span>Prefer a custom quote?</span></div>
+
       <div class="pricing-contact-grid">
         <div class="pricing-contact-info">
-          <span class="section-label">Book Now</span>
-          <h3>Book a Delivery</h3>
+          <h3>Send Your Details</h3>
           <p>Give us the pickup, the drop-off, and your preferred time — and we&rsquo;ll come back with an actual quote, not a round of phone tag.</p>
           <div class="pricing-contact-details">
             <div class="contact-item">
@@ -480,6 +494,22 @@
       var d = document.getElementById('log-date');
       if (d) d.min = new Date().toISOString().split('T')[0];
     })();
+  </script>
+
+  <!-- Cal.com inline embed -->
+  <script type="text/javascript">
+    (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if (typeof namespace === "string") { cal.ns[namespace] = cal.ns[namespace] || api; p(cal.ns[namespace], ar); p(cal, ["initNamespace", namespace]); } else p(cal, ar); return; } p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+    Cal("init", { origin: "https://cal.com" });
+    Cal("inline", {
+      elementOrSelector: "#my-cal-inline",
+      calLink: "keystone-operations-group-gxwd2o",
+      layout: "month_view"
+    });
+    Cal("ui", {
+      styles: { branding: { brandColor: "#1a6b7c" } },
+      hideEventTypeDetails: false,
+      layout: "month_view"
+    });
   </script>
 </body>
 </html>

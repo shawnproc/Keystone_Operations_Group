@@ -974,6 +974,29 @@ body {
 .pricing-card .btn-primary.full-width { margin-top: 8px; }
 .price-contact { font-size: 1.35rem; font-weight: 700; color: var(--teal-dark); line-height: 1.3; }
 
+/* Booking calendar (Cal.com embed) */
+.booking-panel {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  box-shadow: var(--shadow);
+  margin-bottom: 40px;
+}
+.booking-heading { font-size: 1.4rem; font-weight: 700; color: var(--navy); text-align: center; }
+.booking-sub { text-align: center; color: var(--text-mid); font-size: 0.95rem; margin: 4px 0 20px; }
+.cal-embed { width: 100%; min-height: 620px; overflow: hidden; border-radius: var(--radius); }
+.booking-divider {
+  display: flex; align-items: center; text-align: center; gap: 16px;
+  color: var(--text-light); font-size: 0.9rem; font-weight: 600;
+  margin: 8px 0 32px;
+}
+.booking-divider::before, .booking-divider::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+@media (max-width: 768px) {
+  .booking-panel { padding: 20px; }
+  .cal-embed { min-height: 560px; }
+}
+
 /* Universal Add-Ons */
 .addons { margin-top: 56px; }
 .addons-header { text-align: center; margin-bottom: 28px; }

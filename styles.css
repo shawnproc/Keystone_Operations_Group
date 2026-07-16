@@ -962,3 +962,59 @@ body {
   .footer-grid { grid-template-columns: 1fr; }
   .about-stats { gap: 24px; }
 }
+
+/* ===== LOGISTICS PRICING EXTRAS ===== */
+/* Rate rows: distance/label on the left, price on the right */
+.pricing-features.rate-list li { justify-content: space-between; align-items: center; cursor: default; }
+.pricing-features.rate-list li strong { color: var(--teal-dark); font-weight: 700; white-space: nowrap; margin-left: 12px; }
+/* Disable the tooltip pseudo-elements for these plain rate rows */
+.pricing-features.rate-list li::after,
+.pricing-features.rate-list li::before { content: none; }
+.pricing-card .btn-ghost.full-width,
+.pricing-card .btn-primary.full-width { margin-top: 8px; }
+
+/* Universal Add-Ons */
+.addons { margin-top: 56px; }
+.addons-header { text-align: center; margin-bottom: 28px; }
+.addons-header h3 { font-size: 1.5rem; font-weight: 700; color: var(--navy); margin-bottom: 6px; }
+.addons-header p { color: var(--text-mid); font-size: 0.95rem; }
+.addons-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+.addon-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px 22px;
+}
+.addon-item h4 { font-size: 0.95rem; font-weight: 700; color: var(--navy); margin-bottom: 10px; }
+.addon-price { display: block; font-size: 1.5rem; font-weight: 800; color: var(--teal-dark); line-height: 1; margin-bottom: 10px; }
+.addon-price span { font-size: 0.85rem; font-weight: 500; color: var(--text-mid); }
+.addon-item p { font-size: 0.85rem; color: var(--text-mid); line-height: 1.6; }
+
+/* Best For band */
+.bestfor {
+  margin-top: 56px;
+  background: var(--navy);
+  border-radius: var(--radius-lg);
+  padding: 44px 40px;
+}
+.bestfor-title { text-align: center; margin-bottom: 32px; }
+.bestfor-title h3 { font-size: 1.5rem; font-weight: 700; color: var(--white); }
+.bestfor-title span { display: block; font-size: 0.9rem; color: rgba(255,255,255,0.6); margin-top: 6px; }
+.bestfor-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
+.bestfor-col h4 {
+  font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em;
+  color: var(--teal-light); margin-bottom: 16px; padding-bottom: 12px;
+  border-bottom: 1px solid rgba(74,171,184,0.25);
+}
+.bestfor-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+.bestfor-col li { font-size: 0.92rem; color: rgba(255,255,255,0.8); padding-left: 20px; position: relative; }
+.bestfor-col li::before { content: '✓'; position: absolute; left: 0; color: var(--teal-light); font-weight: 700; }
+
+@media (max-width: 1024px) {
+  .addons-grid { grid-template-columns: repeat(2, 1fr); }
+  .bestfor-grid { grid-template-columns: 1fr; gap: 24px; }
+}
+@media (max-width: 768px) {
+  .addons-grid { grid-template-columns: 1fr; }
+  .bestfor { padding: 32px 24px; }
+}

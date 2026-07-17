@@ -42,62 +42,11 @@
   <link rel="stylesheet" href="styles.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
   <style>
-    /* ===== EXTERIOR-CLEANING PAGE EXTRAS ===== */
-
-    /* Veteran badge */
-    .veteran-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: linear-gradient(135deg, var(--navy), var(--teal-dark));
-      color: var(--white);
-      padding: 10px 20px;
-      border-radius: 50px;
-      font-size: 0.82rem;
-      font-weight: 700;
-      letter-spacing: 0.06em;
-      margin-bottom: 24px;
-    }
-    .veteran-badge span { color: var(--gold); font-size: 1rem; }
-
-    /* Who We Serve cards (dark section) */
-    .serve-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-    }
-    .serve-card {
-      background: rgba(255,255,255,0.05);
-      border-radius: var(--radius-lg);
-      padding: 32px 26px;
-      border: 1px solid rgba(74,171,184,0.15);
-      transition: transform 0.2s, background 0.2s, border-color 0.2s;
-    }
-    .serve-card:hover { transform: translateY(-4px); background: rgba(74,171,184,0.1); border-color: var(--teal-light); }
-    .serve-icon { font-size: 2.2rem; margin-bottom: 14px; }
-    .serve-card h3 { font-size: 1.05rem; font-weight: 700; color: var(--white); margin-bottom: 10px; }
-    .serve-card p { color: rgba(255,255,255,0.65); font-size: 0.9rem; line-height: 1.7; }
-
-    /* KOG Difference pillars */
-    .diff-grid {
+    /* Override services grid to 4 columns for 8 even cards */
+    .ext-services-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: 40px;
-    }
-    .diff-item { padding: 32px 0; border-top: 3px solid var(--teal-pale); transition: border-color 0.2s; }
-    .diff-item:hover { border-top-color: var(--teal-mid); }
-    .diff-icon { font-size: 2.4rem; margin-bottom: 16px; }
-    .diff-number { font-size: 3rem; font-weight: 800; color: var(--teal-pale); line-height: 1; margin-bottom: 16px; }
-    .diff-item h3 { font-size: 1.05rem; font-weight: 700; color: var(--navy); margin-bottom: 12px; }
-    .diff-item p { color: var(--text-mid); font-size: 0.91rem; line-height: 1.7; }
-
-    /* Process — matches existing but 3-step horizontal-ish */
-    .ext-process-track {
-      max-width: 720px;
-      margin: 0 auto;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+      gap: 24px;
     }
 
     /* Quote form section */
@@ -129,14 +78,28 @@
     }
     .form-row-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
 
+    /* Trust badges in quote sidebar — consistent pill style */
+    .trust-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: linear-gradient(135deg, var(--teal-dark), var(--teal-mid));
+      color: var(--white);
+      padding: 10px 20px;
+      border-radius: 50px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      margin-top: 12px;
+    }
+    .trust-badge .badge-star { color: var(--gold); }
+
     /* Responsive */
     @media (max-width: 1024px) {
-      .serve-grid { grid-template-columns: repeat(2, 1fr); }
-      .diff-grid { grid-template-columns: repeat(2, 1fr); }
+      .ext-services-grid { grid-template-columns: repeat(2, 1fr); }
     }
     @media (max-width: 768px) {
-      .serve-grid { grid-template-columns: 1fr; }
-      .diff-grid { grid-template-columns: 1fr; }
+      .ext-services-grid { grid-template-columns: 1fr; }
       .quote-grid { grid-template-columns: 1fr; gap: 40px; }
       .form-row-2 { grid-template-columns: 1fr; }
     }
@@ -177,9 +140,8 @@
     <div class="hero-video-overlay"></div>
     <div class="hero-bg"></div>
     <div class="hero-content">
-      <div class="veteran-badge"><span>&#9733;</span> Veteran-Owned &amp; SWaM Certified</div>
-      <p class="hero-eyebrow">KOG Exterior Services · Washington D.C. Metro Area</p>
-      <h1>Clean Surfaces.<br/><span class="gradient-text-light">Sharp Impressions.</span></h1>
+      <p class="hero-eyebrow">KOG Exterior Services · Washington D.C. Metro Area · Veteran-Owned</p>
+      <h1>Clean Surfaces.<br/><span class="gradient-text">Sharp Impressions.</span></h1>
       <p class="hero-sub">Commercial and residential pressure washing built for properties that can't afford to look anything less than professional.</p>
       <div class="hero-actions">
         <a href="#quote" class="btn-primary large">Get a Free Quote</a>
@@ -196,9 +158,9 @@
         <h2>Professional <span class="gradient-text">Exterior Cleaning</span></h2>
         <p>From driveways to rooftops, we handle every surface with the right equipment and technique for a lasting result.</p>
       </div>
-      <div class="services-grid">
+      <div class="ext-services-grid">
         <div class="service-card">
-          <div class="service-icon">&#128739;</div>
+          <div class="service-icon">&#129693;</div>
           <h3>Driveways &amp; Sidewalks</h3>
           <p>High-pressure cleaning that removes oil stains, grime, and buildup from concrete, pavers, and asphalt — restoring curb appeal fast.</p>
         </div>
@@ -208,7 +170,7 @@
           <p>Safe, effective soft and pressure washing for brick, stucco, vinyl, and painted surfaces — without damage to your building envelope.</p>
         </div>
         <div class="service-card">
-          <div class="service-icon">&#128663;</div>
+          <div class="service-icon">&#128340;</div>
           <h3>Parking Lots &amp; Garages</h3>
           <p>Heavy-duty degreasing and surface cleaning for commercial parking areas that see high traffic and heavy staining.</p>
         </div>
@@ -224,7 +186,7 @@
           <p>Scheduled fleet wash services for trucks, vans, and commercial vehicles — keeping your brand looking sharp on the road.</p>
         </div>
         <div class="service-card">
-          <div class="service-icon">&#127912;</div>
+          <div class="service-icon">&#128396;</div>
           <h3>Graffiti Removal</h3>
           <p>Fast, professional graffiti removal from walls, fences, and surfaces using safe chemical treatments and pressure washing techniques.</p>
         </div>
@@ -247,9 +209,9 @@
   <section class="who-we-help section" id="who-we-serve">
     <div class="container">
       <div class="section-header">
-        <span class="section-label">Who We Serve</span>
+        <span class="section-label light">Who We Serve</span>
         <h2>Built for Properties That <span class="gradient-text-light">Demand More</span></h2>
-        <p style="color:rgba(255,255,255,0.7);">We work with property managers, HOAs, government agencies, and business owners who expect professional results and accountable service.</p>
+        <p class="light-text">We work with property managers, HOAs, government agencies, and business owners who expect professional results and accountable service.</p>
       </div>
 
       <div class="ticker-wrap">
@@ -269,34 +231,34 @@
         </div>
       </div>
 
-      <div class="serve-grid">
-        <div class="serve-card">
-          <div class="serve-icon">&#127979;</div>
+      <div class="who-grid">
+        <div class="who-card">
+          <div class="who-icon">&#127979;</div>
           <h3>Commercial Property Managers</h3>
           <p>Keep your portfolio looking professional with recurring exterior cleaning contracts that fit your maintenance schedule.</p>
         </div>
-        <div class="serve-card">
-          <div class="serve-icon">&#127968;</div>
+        <div class="who-card">
+          <div class="who-icon">&#127968;</div>
           <h3>HOAs &amp; Residential Communities</h3>
           <p>Community-wide pressure washing and soft washing services that protect property values and keep common areas spotless.</p>
         </div>
-        <div class="serve-card">
-          <div class="serve-icon">&#127963;</div>
+        <div class="who-card">
+          <div class="who-icon">&#127963;</div>
           <h3>Government &amp; Municipal Facilities</h3>
           <p>SWaM-certified and fully compliant. We meet the documentation, insurance, and service standards required for government contracts.</p>
         </div>
-        <div class="serve-card">
-          <div class="serve-icon">&#127869;</div>
+        <div class="who-card">
+          <div class="who-icon">&#127869;</div>
           <h3>Retail &amp; Restaurant Exteriors</h3>
           <p>First impressions start at the curb. We keep storefronts, awnings, and entrances clean and inviting for customers.</p>
         </div>
-        <div class="serve-card">
-          <div class="serve-icon">&#128663;</div>
+        <div class="who-card">
+          <div class="who-icon">&#128663;</div>
           <h3>Fleet &amp; Transportation Companies</h3>
           <p>Scheduled wash programs for entire fleets — keeping your vehicles clean, your brand strong, and your drivers proud.</p>
         </div>
-        <div class="serve-card">
-          <div class="serve-icon">&#127968;</div>
+        <div class="who-card who-card-wide">
+          <div class="who-icon">&#127956;</div>
           <h3>Real Estate &amp; Property Prep</h3>
           <p>Pre-listing exterior cleaning that increases perceived value and helps homes and commercial properties sell faster.</p>
         </div>
@@ -312,28 +274,24 @@
         <h2>The KOG <span class="gradient-text">Difference</span></h2>
         <p>We're not a pop-up operation. KOG Exterior Services is built on military precision, proper credentials, and a commitment to showing up and delivering.</p>
       </div>
-      <div class="diff-grid">
-        <div class="diff-item">
-          <div class="diff-icon">&#127919;</div>
-          <div class="diff-number">01</div>
+      <div class="why-grid">
+        <div class="why-item">
+          <div class="why-number">01</div>
           <h3>Veteran-Owned &amp; Operated</h3>
           <p>Founded and led by veterans who bring military discipline and accountability to every job — on time, on spec, no excuses.</p>
         </div>
-        <div class="diff-item">
-          <div class="diff-icon">&#127942;</div>
-          <div class="diff-number">02</div>
+        <div class="why-item">
+          <div class="why-number">02</div>
           <h3>SWaM Certified</h3>
           <p>Certified Small, Women-owned, and Minority-owned Business — eligible for government and municipal contracts requiring SWaM vendors.</p>
         </div>
-        <div class="diff-item">
-          <div class="diff-icon">&#128737;</div>
-          <div class="diff-number">03</div>
+        <div class="why-item">
+          <div class="why-number">03</div>
           <h3>Fully Insured — $1M+ General Liability</h3>
           <p>Property managers and government agencies can work with us with full confidence. COIs available upon request before any job starts.</p>
         </div>
-        <div class="diff-item">
-          <div class="diff-icon">&#128203;</div>
-          <div class="diff-number">04</div>
+        <div class="why-item">
+          <div class="why-number">04</div>
           <h3>Recurring Contract Specialists</h3>
           <p>We're built for ongoing relationships. Predictable scheduling, consistent crews, and reliable reporting — so you can set it and forget it.</p>
         </div>
@@ -349,7 +307,7 @@
         <h2>How It <span class="gradient-text">Works</span></h2>
         <p>Getting started is simple. We keep the process tight so you spend less time coordinating and more time enjoying a clean property.</p>
       </div>
-      <div class="ext-process-track process-track">
+      <div class="process-track">
         <div class="process-step">
           <div class="step-number">1</div>
           <div class="step-content">
@@ -399,12 +357,8 @@
               <span>Washington D.C. Metro Area / Northern Virginia</span>
             </div>
           </div>
-          <div class="veteran-badge" style="background: linear-gradient(135deg, var(--teal-dark), var(--teal-mid)); margin-top: 8px;">
-            <span>&#9733;</span> Veteran-Owned &amp; SWaM Certified
-          </div>
-          <div class="veteran-badge" style="background: linear-gradient(135deg, var(--navy), var(--slate)); margin-top: 8px;">
-            <span style="color: var(--teal-light);">&#128737;</span> Fully Insured — $1M+ General Liability
-          </div>
+          <div class="trust-badge"><span class="badge-star">&#9733;</span> Veteran-Owned &amp; SWaM Certified</div>
+          <div class="trust-badge"><span class="badge-star">&#128737;</span> Fully Insured — $1M+ General Liability</div>
         </div>
 
         <form class="quote-form" action="https://formspree.io/f/mykayqza" method="POST">
@@ -532,7 +486,7 @@
       link.addEventListener('click', () => navLinks.classList.remove('open'));
     });
 
-    // Scroll reveal animation
+    // Scroll reveal animation — same elements as main site
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -542,7 +496,7 @@
       });
     }, { threshold: 0.1 });
 
-    document.querySelectorAll('.service-card, .serve-card, .diff-item, .process-step').forEach(el => {
+    document.querySelectorAll('.service-card, .who-card, .why-item, .process-step').forEach(el => {
       el.style.opacity = '0';
       el.style.transform = 'translateY(24px)';
       el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';

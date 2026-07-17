@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+  <title>Facility Support &amp; Residential Cleaning | Sunday Reset | Keystone Operations Group</title>
+  <meta name="description" content="Professional residential cleaning, move-in/move-out, and facility support services in Fredericksburg, VA. Family owned and operated under KOG. Request a free quote today." />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:title" content="Facility Support &amp; Residential Cleaning | Sunday Reset | Keystone Operations Group" />
+  <meta property="og:description" content="Professional residential cleaning, move-in/move-out, and facility support services in Fredericksburg, VA. Family owned and operated under KOG. Request a free quote today." />
+  <meta property="og:url" content="https://keystoneoperationsgroup.net/facility-services.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://keystoneoperationsgroup.net/google-cover-photo.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Facility Support &amp; Residential Cleaning | Sunday Reset | Keystone Operations Group" />
+  <meta name="twitter:description" content="Professional residential cleaning, move-in/move-out, and facility support services in Fredericksburg, VA. Family owned and operated under KOG. Request a free quote today." />
+  <meta name="twitter:image" content="https://keystoneoperationsgroup.net/google-cover-photo.png" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Sunday Reset — KOG Facility Services",
+    "description": "Professional residential cleaning, move-in/move-out, and facility support services in Fredericksburg, VA. Family owned and operated.",
+    "url": "https://keystoneoperationsgroup.net/facility-services.html",
+    "telephone": "+15404260945",
+    "email": "info@keystoneoperationsgroup.net",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Fredericksburg",
+      "addressRegion": "VA",
+      "addressCountry": "US"
+    },
+    "areaServed": "Fredericksburg, VA & Surrounding Areas",
+    "serviceType": "Residential Cleaning, Facility Support, Move-In/Move-Out Cleaning",
+    "priceRange": "$$"
+  }
+  </script>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+  <style>
+    /* ===== PAGE-SPECIFIC OVERRIDES ===== */
+
+    /* Sub-brand badge */
+    .subbrand-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(74,171,184,0.18);
+      border: 1px solid rgba(74,171,184,0.35);
+      color: var(--teal-light);
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 6px 16px;
+      border-radius: 50px;
+      margin-bottom: 18px;
+    }
+    .subbrand-label span { opacity: 0.65; }
+
+    /* Services grid — 3 columns */
+    .fs-services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    /* Who We Serve grid */
+    .fs-serve-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    /* Pricing table section */
+    .fs-pricing { background: var(--off-white); }
+    .fs-pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+      align-items: start;
+    }
+    .fs-pricing-card {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border);
+      overflow: hidden;
+    }
+    .fs-pricing-card.featured {
+      border-color: var(--teal-mid);
+      box-shadow: var(--shadow-lg);
+    }
+    .fs-card-header {
+      background: linear-gradient(135deg, var(--navy), var(--teal-dark));
+      color: var(--white);
+      padding: 24px 28px 20px;
+    }
+    .fs-card-header.featured-header {
+      background: linear-gradient(135deg, var(--teal-dark), var(--teal-mid));
+    }
+    .fs-card-header h3 { font-size: 1.1rem; font-weight: 800; margin-bottom: 4px; letter-spacing: 0.04em; }
+    .fs-card-header p { font-size: 0.82rem; opacity: 0.75; }
+    .fs-card-body { padding: 24px 28px 28px; }
+    .fs-rate-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding: 12px 0;
+      border-bottom: 1px solid var(--border);
+      gap: 12px;
+    }
+    .fs-rate-row:last-of-type { border-bottom: none; }
+    .fs-rate-label { font-size: 0.88rem; color: var(--text); flex: 1; }
+    .fs-rate-label em { display: block; font-style: normal; font-size: 0.78rem; color: var(--text-light); margin-top: 2px; }
+    .fs-rate-price { font-weight: 700; color: var(--teal-dark); white-space: nowrap; font-size: 0.95rem; text-align: right; }
+    .fs-rate-price em { display: block; font-style: normal; font-size: 0.78rem; color: var(--text-light); font-weight: 500; }
+    .fs-card-note {
+      margin-top: 16px;
+      padding: 12px 14px;
+      background: var(--teal-pale);
+      border-radius: 8px;
+      font-size: 0.82rem;
+      color: var(--teal-dark);
+      font-weight: 600;
+      line-height: 1.5;
+    }
+
+    /* Pillars / Why section */
+    .fs-why { background: linear-gradient(150deg, var(--navy) 0%, #0f2a3a 40%, var(--teal-dark) 100%); color: var(--white); position: relative; overflow: hidden; }
+    .fs-why .ai-bg-pattern { position: absolute; inset: 0; background-image: radial-gradient(circle at 20% 20%, rgba(74,171,184,0.12) 0%, transparent 50%), radial-gradient(circle at 80% 80%, rgba(74,171,184,0.08) 0%, transparent 50%); pointer-events: none; }
+    .fs-why .section-header h2 { color: var(--white); }
+    .fs-pillars-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+    }
+    .fs-pillar {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(74,171,184,0.2);
+      border-radius: var(--radius-lg);
+      padding: 36px 28px;
+      text-align: center;
+      transition: transform 0.2s, background 0.2s;
+    }
+    .fs-pillar:hover { transform: translateY(-4px); background: rgba(255,255,255,0.1); }
+    .fs-pillar-icon { font-size: 2.4rem; margin-bottom: 18px; }
+    .fs-pillar h3 { font-size: 1.05rem; font-weight: 700; color: var(--white); margin-bottom: 10px; }
+    .fs-pillar p { font-size: 0.88rem; color: rgba(255,255,255,0.7); line-height: 1.7; }
+
+    /* Quote form */
+    .fs-quote { background: var(--off-white); }
+    .fs-quote-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.5fr;
+      gap: 80px;
+      align-items: start;
+    }
+    .fs-quote-info h3 { font-size: 1.5rem; font-weight: 700; color: var(--navy); margin-bottom: 14px; }
+    .fs-quote-info p { color: var(--text-mid); line-height: 1.8; margin-bottom: 24px; }
+    .fs-quote-form {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      padding: 44px;
+      box-shadow: var(--shadow);
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .form-row-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+
+    /* Responsive overrides */
+    @media (max-width: 1024px) {
+      .fs-services-grid { grid-template-columns: repeat(2, 1fr); }
+      .fs-serve-grid { grid-template-columns: repeat(2, 1fr); }
+      .fs-pricing-grid { grid-template-columns: 1fr; }
+      .fs-pillars-grid { grid-template-columns: repeat(2, 1fr); }
+      .fs-quote-grid { grid-template-columns: 1fr; gap: 40px; }
+      .form-row-3 { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 768px) {
+      .fs-services-grid { grid-template-columns: 1fr; }
+      .fs-serve-grid { grid-template-columns: 1fr; }
+      .fs-pillars-grid { grid-template-columns: 1fr; }
+      .fs-quote-form { padding: 28px 20px; }
+      .form-row-3 { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <img src="logo.png" alt="Keystone Operations Group" class="logo-img" />
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#services">Services</a></li>
+        <li><a href="index.html#ai-solutions">Our Approach</a></li>
+        <li><a href="logistics.html">Logistics</a></li>
+        <li><a href="exterior-cleaning.html">Exterior Services</a></li>
+        <li><a href="facility-services.html">Facility Services</a></li>
+        <li><a href="https://crm.keystoneoperationsgroup.net/about" target="_blank">KOGNITE</a></li>
+        <li><a href="index.html#pricing">Pricing</a></li>
+        <li><a href="contact.html" class="nav-cta">Contact Us</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="home">
+    <div class="hero-video-wrap">
+      <video id="hero-video" autoplay muted loop playsinline>
+        <source src="https://videos.pexels.com/video-files/4107112/4107112-hd_1920_1080_25fps.mp4" type="video/mp4" />
+        <source src="https://videos.pexels.com/video-files/5977455/5977455-hd_1920_1080_25fps.mp4" type="video/mp4" />
+      </video>
+    </div>
+    <div class="hero-video-overlay"></div>
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+      <div class="subbrand-label">&#127968; Sunday Reset <span>|</span> KOG Facility Services</div>
+      <h1>Start Every Week<br/><span class="gradient-text">Right.</span></h1>
+      <p class="hero-sub">Professional residential cleaning, facility support, and move-in/move-out services — family operated, detail obsessed, and built around your schedule.</p>
+      <div class="hero-actions">
+        <a href="#quote" class="btn-primary">Get a Free Quote</a>
+        <a href="#services" class="btn-ghost">View Services</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SERVICES ===== -->
+  <section class="services section" id="services">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Sunday Reset | KOG Facilities</span>
+        <h2>What We <span class="gradient-text">Do</span></h2>
+        <p>From weekly residential cleans to post-construction site sweeps, Sunday Reset handles every detail so you don't have to.</p>
+      </div>
+      <div class="fs-services-grid">
+        <div class="service-card">
+          <div class="service-icon">&#127968;</div>
+          <h3>Residential Recurring Cleaning</h3>
+          <p>Weekly, bi-weekly, or monthly home cleaning tailored to your space and schedule. Consistent crews, consistent standards — every time.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">&#128666;</div>
+          <h3>Move-In / Move-Out Cleaning</h3>
+          <p>Deep, top-to-bottom cleaning before or after a move. We handle everything from appliances to baseboards so spaces are truly ready.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">&#127970;</div>
+          <h3>Small Commercial &amp; Office Cleaning</h3>
+          <p>Professional cleaning for small offices, retail storefronts, and medical suites. Scheduled around your business hours, not ours.</p>
+        </div>
+        <div class="service-card featured-service">
+          <div class="service-badge">Most Requested</div>
+          <div class="service-icon">&#129529;</div>
+          <h3>Deep Cleaning Services</h3>
+          <p>A full reset for any space — scrubbing grout, cleaning inside appliances, tackling built-up grime, and reaching areas routine cleaning misses.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">&#9989;</div>
+          <h3>Post-Construction Cleanup</h3>
+          <p>Construction-grade dust and debris removal for newly built or renovated spaces. We get it clean and ready for occupancy.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">&#128260;</div>
+          <h3>Facility Maintenance Support</h3>
+          <p>Ongoing light maintenance and cleaning support for HOAs, property managers, and residential communities — keeping common areas sharp.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== WHO WE SERVE ===== -->
+  <section class="who-we-help section" id="who-we-serve">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label light">Who We Serve</span>
+        <h2>Built for People Who <span class="gradient-text-light">Value Their Space</span></h2>
+        <p class="light-text">Whether it's your home, your rental portfolio, or your office — Sunday Reset brings the same detail-obsessed standard to every job.</p>
+      </div>
+      <div class="fs-serve-grid">
+        <div class="who-card">
+          <div class="who-icon">&#128106;</div>
+          <h3>Homeowners &amp; Families</h3>
+          <p>Spend less time cleaning and more time living. We keep your home consistently clean on a schedule that fits your life.</p>
+        </div>
+        <div class="who-card">
+          <div class="who-icon">&#127968;</div>
+          <h3>Property Managers &amp; Landlords</h3>
+          <p>Fast, thorough turnovers between tenants. We help you protect your investment and get units market-ready quickly.</p>
+        </div>
+        <div class="who-card">
+          <div class="who-icon">&#127968;</div>
+          <h3>Real Estate Agents</h3>
+          <p>First impressions sell homes. Our pre-listing and post-closing cleans make every showing and handoff spotless.</p>
+        </div>
+        <div class="who-card">
+          <div class="who-icon">&#128188;</div>
+          <h3>Small Business Owners</h3>
+          <p>A clean workspace reflects your brand. We keep your office or storefront looking professional without disrupting your operations.</p>
+        </div>
+        <div class="who-card">
+          <div class="who-icon">&#128138;</div>
+          <h3>Medical &amp; Professional Offices</h3>
+          <p>Discreet, thorough, and detail-focused cleaning that meets the higher standards required in professional and healthcare environments.</p>
+        </div>
+        <div class="who-card">
+          <div class="who-icon">&#127963;</div>
+          <h3>HOAs &amp; Residential Communities</h3>
+          <p>Common area maintenance, clubhouse cleaning, and recurring facility support that keeps your community looking its best.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PRICING ===== -->
+  <section class="fs-pricing section" id="pricing">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Pricing</span>
+        <h2>Simple. Transparent. <span class="gradient-text">No Surprises.</span></h2>
+        <p>Clear pricing built around your space and needs. No hidden fees, no upsells at the door — just honest rates and thorough work.</p>
+      </div>
+
+      <div class="fs-pricing-grid">
+
+        <!-- Residential Recurring -->
+        <div class="fs-pricing-card">
+          <div class="fs-card-header">
+            <h3>Residential Recurring</h3>
+            <p>Weekly, bi-weekly, or monthly</p>
+          </div>
+          <div class="fs-card-body">
+            <div class="fs-rate-row">
+              <div class="fs-rate-label">Up to 1,000 sq ft</div>
+              <div class="fs-rate-price">$120 <em>$200 deep</em></div>
+            </div>
+            <div class="fs-rate-row">
+              <div class="fs-rate-label">1,000 – 1,800 sq ft</div>
+              <div class="fs-rate-price">$150 <em>$250 deep</em></div>
+            </div>
+            <div class="fs-rate-row">
+              <div class="fs-rate-label">1,800 – 2,500 sq ft</div>
+              <div class="fs-rate-price">$185 <em>$300 deep</em></div>
+            </div>
+            <div class="fs-rate-row">
+              <div class="fs-rate-label">2,500 – 3,500 sq ft</div>
+              <div class="fs-rate-price">$220 <em>$375 deep</em></div>
+            </div>
+            <div class="fs-card-note">
+              &#10003; Weekly clients receive a 10% discount<br/>
+              &#10003; First clean is always billed as a deep clean
+            </div>
+          </div>
+        </div>
+
+        <!-- Move-In / Move-Out -->
+        <div class="fs-pricing-card featured">
+          <div class="fs-card-header featured-header">
+            <h3>Move-In / Move-Out</h3>
+            <p>Full top-to-bottom clean</p>
+          </div>
+          <div class="fs-card-body">
+            <div class="fs-rate-row">
+              <div class="fs-rate-label">Studio / 1 Bedroom</div>
+              <div class="fs-rate-price">$200</div>
+            </div>
+            <div class="fs-rate-row">
+              <div class="fs-rate-label">2 Bedroom</div>
+              <div class="fs-rate-price">$275</div>
+            </div>
+            <div class="fs-rate-row">
+              <div class="fs-rate-label">3 Bedroom</div>
+              <div class="fs-rate-price">$350</div>
+            </div>
+            <div class="fs-rate-row">
+              <div class="fs-rate-label">4 Bedroom+</div>
+              <div class="fs-rate-price">$450+</div>
+            </div>
+            <div class="fs-card-note">
+              <strong>Add-Ons:</strong><br/>
+              Inside appliances +$50 &nbsp;·&nbsp; Inside cabinets +$75<br/>
+              Garage sweep +$50
+            </div>
+          </div>
+        </div>
+
+        <!-- Small Commercial -->
+        <div class="fs-pricing-card">
+          <div class="fs-card-header">
+            <h3>Small Commercial</h3>
+            <p>3-month minimum contracts</p>
+          </div>
+          <div class="fs-card-body">
+            <div class="fs-rate-row">
+              <div class="fs-rate-label">Small office <em>up to 1,000 sq ft</em></div>
+              <div class="fs-rate-price">from $400<em>/mo</em></div>
+            </div>
+            <div class="fs-rate-row">
+              <div class="fs-rate-label">Medical / dental office</div>
+              <div class="fs-rate-price">from $700<em>/mo</em></div>
+            </div>
+            <div class="fs-rate-row">
+              <div class="fs-rate-label">Retail storefront</div>
+              <div class="fs-rate-price">from $500<em>/mo</em></div>
+            </div>
+            <div class="fs-card-note">
+              &#10003; All commercial on minimum 3-month contracts<br/>
+              &#10003; Custom scopes available — contact us for a quote
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div style="text-align:center; margin-top: 40px;">
+        <a href="#quote" class="btn-primary large">Get a Custom Quote</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== WHY SUNDAY RESET ===== -->
+  <section class="fs-why section" id="why-us">
+    <div class="ai-bg-pattern"></div>
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label light">Why Choose Us</span>
+        <h2>The Sunday Reset <span class="gradient-text-light">Difference</span></h2>
+        <p class="light-text">We're not a franchise. We're a family-run operation built on accountability, consistency, and doing the job right the first time.</p>
+      </div>
+      <div class="fs-pillars-grid">
+        <div class="fs-pillar">
+          <div class="fs-pillar-icon">&#128106;</div>
+          <h3>Family Owned &amp; Operated</h3>
+          <p>Personal accountability on every job. When something matters to you, it matters to us — because our name is on it too.</p>
+        </div>
+        <div class="fs-pillar">
+          <div class="fs-pillar-icon">&#128269;</div>
+          <h3>Detail Obsessed</h3>
+          <p>We don't cut corners — we clean them. Every job is treated as if it were our own home.</p>
+        </div>
+        <div class="fs-pillar">
+          <div class="fs-pillar-icon">&#128197;</div>
+          <h3>Flexible Scheduling</h3>
+          <p>Built around your life, not ours. Morning, evening, weekend — we work with your schedule, not against it.</p>
+        </div>
+        <div class="fs-pillar">
+          <div class="fs-pillar-icon">&#128274;</div>
+          <h3>Fully Insured</h3>
+          <p>Peace of mind on every visit. We carry full liability insurance so you never have to worry about what happens in your space.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROCESS ===== -->
+  <section class="process section" id="process">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">How It Works</span>
+        <h2>Three Steps to a <span class="gradient-text">Cleaner Space</span></h2>
+        <p>Simple, straightforward, and built around you. Getting started with Sunday Reset takes less than 10 minutes.</p>
+      </div>
+      <div class="process-track">
+        <div class="process-step">
+          <div class="step-number">1</div>
+          <div class="step-content">
+            <h3>Request Your Free Quote</h3>
+            <p>Fill out the form below with your property details and service needs. We'll review your request and send a detailed quote — typically within a few hours.</p>
+          </div>
+        </div>
+        <div class="process-arrow">&#8595;</div>
+        <div class="process-step">
+          <div class="step-number">2</div>
+          <div class="step-content">
+            <h3>We Build Your Custom Cleaning Plan</h3>
+            <p>We'll discuss your priorities, schedule, and any special requests to put together a cleaning plan that fits your space and your life exactly.</p>
+          </div>
+        </div>
+        <div class="process-arrow">&#8595;</div>
+        <div class="process-step">
+          <div class="step-number">3</div>
+          <div class="step-content">
+            <h3>We Show Up &amp; Reset Your Space</h3>
+            <p>Our team arrives on time, fully equipped, and ready to work. We handle everything — then leave your space exactly the way you'd want to find it.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== QUOTE / CONTACT FORM ===== -->
+  <section class="fs-quote section" id="quote">
+    <div class="container">
+      <div class="fs-quote-grid">
+        <div class="fs-quote-info">
+          <span class="section-label">Get In Touch</span>
+          <h3>Request Your Free Quote</h3>
+          <p>Tell us about your space and what you need. No obligations — just honest pricing and fast turnaround.</p>
+          <div class="contact-details">
+            <div class="contact-item">
+              <span class="contact-icon">&#128222;</span>
+              <a href="tel:+15404260945" style="color: var(--teal-mid); text-decoration:none; font-weight:500;">(540) 426-0945</a>
+            </div>
+            <div class="contact-item">
+              <span class="contact-icon">&#128231;</span>
+              <a href="mailto:info@keystoneoperationsgroup.net" style="color: var(--teal-mid); text-decoration:none; font-weight:500;">info@keystoneoperationsgroup.net</a>
+            </div>
+            <div class="contact-item">
+              <span class="contact-icon">&#128205;</span>
+              <span>Fredericksburg, VA &amp; Surrounding Areas</span>
+            </div>
+          </div>
+        </div>
+
+        <form class="fs-quote-form" action="https://formspree.io/f/mykayqza" method="POST">
+          <input type="hidden" name="_subject" value="Sunday Reset — Free Quote Request" />
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fs-name">Full Name</label>
+              <input type="text" id="fs-name" name="name" placeholder="Jane Smith" required />
+            </div>
+            <div class="form-group">
+              <label for="fs-email">Email Address</label>
+              <input type="email" id="fs-email" name="email" placeholder="jane@email.com" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="fs-phone">Phone Number</label>
+            <input type="tel" id="fs-phone" name="phone" placeholder="(540) 000-0000" />
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fs-service">Service Type</label>
+              <select id="fs-service" name="service_type" required>
+                <option value="" disabled selected>Select a service…</option>
+                <option value="Residential Recurring">Residential Recurring</option>
+                <option value="Move-In Cleaning">Move-In Cleaning</option>
+                <option value="Move-Out Cleaning">Move-Out Cleaning</option>
+                <option value="Small Commercial">Small Commercial</option>
+                <option value="Deep Clean">Deep Clean</option>
+                <option value="Post-Construction">Post-Construction Cleanup</option>
+                <option value="Not Sure Yet">Not Sure Yet</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="fs-size">Property Size</label>
+              <select id="fs-size" name="property_size">
+                <option value="" disabled selected>Select size…</option>
+                <option value="Under 1,000 sq ft">Under 1,000 sq ft</option>
+                <option value="1,000–1,800 sq ft">1,000 – 1,800 sq ft</option>
+                <option value="1,800–2,500 sq ft">1,800 – 2,500 sq ft</option>
+                <option value="2,500–3,500 sq ft">2,500 – 3,500 sq ft</option>
+                <option value="3,500+ sq ft">3,500+ sq ft</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="fs-date">Preferred Start Date</label>
+            <input type="date" id="fs-date" name="preferred_date" />
+          </div>
+          <div class="form-group">
+            <label for="fs-notes">Additional Notes</label>
+            <textarea id="fs-notes" name="notes" rows="4" placeholder="Tell us anything specific about your space, access, pets, priorities, or timing…"></textarea>
+          </div>
+          <button type="submit" class="btn-primary full-width">Send My Quote Request</button>
+          <p style="font-size:0.78rem;color:var(--text-light);text-align:center;margin-top:-8px;">We typically respond within a few hours during business hours.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="nav-logo">
+            <img src="logo.png" alt="Keystone Operations Group" class="logo-img footer-logo-img" />
+          </div>
+          <p>Operational excellence and intelligent innovation — delivered with purpose.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="index.html#about">About Us</a></li>
+            <li><a href="index.html#services">Services</a></li>
+            <li><a href="index.html#ai-solutions">Our Approach</a></li>
+            <li><a href="logistics.html">Logistics</a></li>
+            <li><a href="exterior-cleaning.html">Exterior Services</a></li>
+            <li><a href="facility-services.html">Facility Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Facility Services</h4>
+          <ul>
+            <li><a href="#services">Residential Cleaning</a></li>
+            <li><a href="#services">Move-In / Move-Out</a></li>
+            <li><a href="#services">Small Commercial</a></li>
+            <li><a href="#services">Deep Cleaning</a></li>
+            <li><a href="#services">Post-Construction</a></li>
+            <li><a href="#services">Facility Support</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Get Started</h4>
+          <ul>
+            <li><a href="#pricing">View Pricing</a></li>
+            <li><a href="#quote">Free Quote</a></li>
+            <li><a href="tel:+15404260945">(540) 426-0945</a></li>
+            <li><a href="mailto:info@keystoneoperationsgroup.net">Email Us</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Keystone Operations Group LLC. All rights reserved. &nbsp;|&nbsp; (540) 426-0945 &nbsp;|&nbsp; info@keystoneoperationsgroup.net &nbsp;|&nbsp; <span style="color: var(--teal-mid); font-weight: 600;">&#9733; Veteran-Owned Business</span></p>
+        <div class="footer-legal">
+          <a href="terms.html">Terms of Service</a>
+          <span>·</span>
+          <a href="privacy.html">Privacy Policy</a>
+          <span>·</span>
+          <a href="sms-opt-in.html">SMS Opt-In</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Navbar scroll
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 40);
+    });
+
+    // Mobile hamburger
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.querySelector('.nav-links');
+    hamburger.addEventListener('click', () => navLinks.classList.toggle('open'));
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => navLinks.classList.remove('open'));
+    });
+
+    // Scroll reveal
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.service-card, .who-card, .fs-pillar, .process-step, .fs-pricing-card').forEach(el => {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(24px)';
+      el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+      observer.observe(el);
+    });
+  </script>
+</body>
+</html>

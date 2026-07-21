@@ -7,165 +7,290 @@
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
   <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
-  <title>Facility Support &amp; Residential Cleaning | Sunday Reset | Keystone Operations Group</title>
-  <meta name="description" content="Professional residential cleaning, move-in/move-out, and facility support services in Fredericksburg, VA. Family owned and operated under KOG. Request a free quote today." />
+  <title>Sunday Reset Cleaning Co. | Residential &amp; Commercial Cleaning | Fredericksburg, VA</title>
+  <meta name="description" content="Professional residential cleaning, move-in/move-out, and facility support in Fredericksburg, VA. Book online, get a quote, or pay your invoice — Sunday Reset by Keystone Operations Group." />
   <meta name="robots" content="index, follow" />
-  <meta property="og:title" content="Facility Support &amp; Residential Cleaning | Sunday Reset | Keystone Operations Group" />
-  <meta property="og:description" content="Professional residential cleaning, move-in/move-out, and facility support services in Fredericksburg, VA. Family owned and operated under KOG. Request a free quote today." />
-  <meta property="og:url" content="https://keystoneoperationsgroup.net/facility-services.html" />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="https://keystoneoperationsgroup.net/google-cover-photo.png" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Facility Support &amp; Residential Cleaning | Sunday Reset | Keystone Operations Group" />
-  <meta name="twitter:description" content="Professional residential cleaning, move-in/move-out, and facility support services in Fredericksburg, VA. Family owned and operated under KOG. Request a free quote today." />
-  <meta name="twitter:image" content="https://keystoneoperationsgroup.net/google-cover-photo.png" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    "name": "Sunday Reset — KOG Facility Services",
-    "description": "Professional residential cleaning, move-in/move-out, and facility support services in Fredericksburg, VA. Family owned and operated.",
+    "name": "Sunday Reset Cleaning Co.",
+    "description": "Professional residential cleaning, move-in/move-out, and facility support in Fredericksburg, VA.",
     "url": "https://keystoneoperationsgroup.net/facility-services.html",
-    "telephone": "+17575910000",
+    "telephone": "+15404260945",
     "email": "info@keystoneoperationsgroup.net",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Fredericksburg",
-      "addressRegion": "VA",
-      "addressCountry": "US"
-    },
+    "address": { "@type": "PostalAddress", "addressLocality": "Fredericksburg", "addressRegion": "VA", "addressCountry": "US" },
     "areaServed": "Fredericksburg, VA & Surrounding Areas",
-    "serviceType": "Residential Cleaning, Facility Support, Move-In/Move-Out Cleaning",
-    "priceRange": "$$"
+    "serviceType": "Residential Cleaning, Move-In/Move-Out, Commercial Cleaning"
   }
   </script>
   <link rel="stylesheet" href="styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet" />
   <style>
-    /* ===== NAV GAP — 9 items need tighter spacing ===== */
+    /* ===== NAV: tighten for 9 links ===== */
     .nav-links { gap: 22px; }
     @media (max-width: 1280px) { .nav-links { gap: 16px; } .nav-links a { font-size: 0.82rem; } }
     @media (max-width: 1100px) { .nav-links { gap: 12px; } .nav-links a { font-size: 0.78rem; } }
 
-    /* ===== PAGE-SPECIFIC OVERRIDES ===== */
+    /* ===== SUNDAY RESET BRAND TOKENS ===== */
+    :root {
+      --sr-green:       #6b7c5e;
+      --sr-green-dark:  #3d4a35;
+      --sr-green-light: #a8b89a;
+      --sr-green-pale:  #dce8d4;
+      --sr-cream:       #faf7f2;
+      --sr-cream-mid:   #f0ebe0;
+      --sr-warm-white:  #ffffff;
+      --sr-ink:         #2a2f27;
+      --sr-ink-mid:     #4a5244;
+    }
 
-    /* Sub-brand badge */
-    .subbrand-label {
+    /* ===== SR HERO ===== */
+    .sr-hero {
+      background: linear-gradient(160deg, var(--sr-green-dark) 0%, var(--sr-green) 60%, #8a9e7a 100%);
+      min-height: 88vh;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      padding: 120px 0 80px;
+    }
+    .sr-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(circle at 70% 30%, rgba(255,255,255,0.07) 0%, transparent 55%),
+                        radial-gradient(circle at 20% 80%, rgba(0,0,0,0.15) 0%, transparent 50%);
+      pointer-events: none;
+    }
+    .sr-hero-inner {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 0 40px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+    .sr-hero-text { color: #fff; }
+    .sr-hero-eyebrow {
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      background: rgba(74,171,184,0.18);
-      border: 1px solid rgba(74,171,184,0.35);
-      color: var(--teal-light);
-      font-size: 0.75rem;
+      background: rgba(255,255,255,0.15);
+      border: 1px solid rgba(255,255,255,0.25);
+      border-radius: 50px;
+      padding: 5px 14px;
+      font-size: 0.72rem;
       font-weight: 700;
       letter-spacing: 0.12em;
       text-transform: uppercase;
-      padding: 6px 16px;
-      border-radius: 50px;
+      color: rgba(255,255,255,0.9);
+      margin-bottom: 20px;
+    }
+    .sr-hero h1 {
+      font-family: 'Lora', serif;
+      font-size: clamp(2.4rem, 5vw, 3.6rem);
+      font-weight: 600;
+      line-height: 1.15;
       margin-bottom: 18px;
+      color: #fff;
     }
-    .subbrand-label span { opacity: 0.65; }
+    .sr-hero h1 em { font-style: italic; color: var(--sr-green-pale); }
+    .sr-hero-sub {
+      font-size: 1.05rem;
+      color: rgba(255,255,255,0.82);
+      line-height: 1.75;
+      margin-bottom: 36px;
+      max-width: 480px;
+    }
+    .sr-hero-btns { display: flex; gap: 14px; flex-wrap: wrap; }
+    .sr-btn-primary {
+      background: #fff;
+      color: var(--sr-green-dark);
+      font-weight: 700;
+      font-size: 0.95rem;
+      padding: 14px 28px;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.2s;
+      display: inline-block;
+    }
+    .sr-btn-primary:hover { background: var(--sr-cream); transform: translateY(-1px); }
+    .sr-btn-ghost {
+      background: transparent;
+      color: #fff;
+      font-weight: 600;
+      font-size: 0.95rem;
+      padding: 14px 28px;
+      border-radius: 8px;
+      text-decoration: none;
+      border: 2px solid rgba(255,255,255,0.5);
+      transition: border-color 0.2s, background 0.2s;
+      display: inline-block;
+    }
+    .sr-btn-ghost:hover { border-color: #fff; background: rgba(255,255,255,0.08); }
+    .sr-hero-logo-wrap {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .sr-logo-circle {
+      width: 320px;
+      height: 320px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.1);
+      border: 2px solid rgba(255,255,255,0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      backdrop-filter: blur(8px);
+      box-shadow: 0 24px 64px rgba(0,0,0,0.2);
+    }
+    .sr-logo-circle img { width: 86%; height: 86%; object-fit: contain; border-radius: 50%; }
+    .sr-logo-placeholder { text-align: center; color: rgba(255,255,255,0.9); }
+    .sr-logo-placeholder .sr-lp-icon { font-size: 4rem; display: block; margin-bottom: 12px; }
+    .sr-logo-placeholder .sr-lp-name { font-family: 'Lora', serif; font-size: 1.5rem; font-style: italic; font-weight: 600; display: block; margin-bottom: 4px; }
+    .sr-logo-placeholder .sr-lp-sub { font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; opacity: 0.7; display: block; }
 
-    /* Services grid — 3 columns */
-    .fs-services-grid {
+    /* ===== QUICK ACTIONS ===== */
+    .sr-actions { background: var(--sr-cream); padding: 0; }
+    .sr-actions-strip {
+      max-width: 1180px;
+      margin: 0 auto;
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
+      border-top: 1px solid #e0dbd0;
+      border-bottom: 1px solid #e0dbd0;
     }
-
-    /* Who We Serve grid */
-    .fs-serve-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-    }
-
-    /* Pillars / Why section */
-    .fs-why { background: linear-gradient(150deg, var(--navy) 0%, #0f2a3a 40%, var(--teal-dark) 100%); color: var(--white); position: relative; overflow: hidden; }
-    .fs-why .ai-bg-pattern { position: absolute; inset: 0; background-image: radial-gradient(circle at 20% 20%, rgba(74,171,184,0.12) 0%, transparent 50%), radial-gradient(circle at 80% 80%, rgba(74,171,184,0.08) 0%, transparent 50%); pointer-events: none; }
-    .fs-why .section-header h2 { color: var(--white); }
-    .fs-pillars-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 24px;
-    }
-    .fs-pillar {
-      background: rgba(255,255,255,0.06);
-      border: 1px solid rgba(74,171,184,0.2);
-      border-radius: var(--radius-lg);
-      padding: 36px 28px;
+    .sr-action-tile {
+      padding: 44px 40px;
       text-align: center;
-      transition: transform 0.2s, background 0.2s;
-    }
-    .fs-pillar:hover { transform: translateY(-4px); background: rgba(255,255,255,0.1); }
-    .fs-pillar-icon { font-size: 2.4rem; margin-bottom: 18px; }
-    .fs-pillar h3 { font-size: 1.05rem; font-weight: 700; color: var(--white); margin-bottom: 10px; }
-    .fs-pillar p { font-size: 0.88rem; color: rgba(255,255,255,0.7); line-height: 1.7; }
-
-    /* Quote form */
-    .fs-quote { background: var(--off-white); }
-    .fs-quote-grid {
-      display: grid;
-      grid-template-columns: 1fr 1.5fr;
-      gap: 64px;
-      align-items: start;
-    }
-    .fs-quote-info h3 { font-size: 1.4rem; font-weight: 700; color: var(--navy); margin-bottom: 12px; }
-    .fs-quote-info p { color: var(--text-mid); line-height: 1.8; margin-bottom: 28px; }
-    .fs-quote-form {
-      background: var(--white);
-      border-radius: var(--radius-lg);
-      padding: 44px;
-      box-shadow: var(--shadow);
+      text-decoration: none;
+      color: inherit;
+      transition: background 0.2s;
+      border-right: 1px solid #e0dbd0;
       display: flex;
       flex-direction: column;
-      gap: 20px;
+      align-items: center;
+      gap: 12px;
     }
-
-    /* Trust list */
-    .fs-trust-list { display: flex; flex-direction: column; gap: 16px; margin-bottom: 28px; }
-    .fs-trust-item { display: flex; align-items: flex-start; gap: 14px; }
-    .fs-trust-icon { font-size: 1.2rem; min-width: 28px; }
-    .fs-trust-item strong { display: block; font-size: 0.88rem; font-weight: 700; color: var(--navy); margin-bottom: 2px; }
-    .fs-trust-item a { font-size: 0.88rem; color: var(--teal-mid); text-decoration: none; font-weight: 500; }
-    .fs-trust-item span { font-size: 0.88rem; color: var(--text-mid); }
-
-    /* Guarantee box */
-    .fs-guarantee-box {
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-left: 4px solid var(--teal-mid);
-      border-radius: var(--radius);
-      padding: 24px 22px;
+    .sr-action-tile:last-child { border-right: none; }
+    .sr-action-tile:hover { background: var(--sr-cream-mid); }
+    .sr-action-icon {
+      width: 56px; height: 56px;
+      background: var(--sr-green);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.5rem; color: #fff; flex-shrink: 0;
     }
-    .fs-guarantee-items { display: flex; flex-direction: column; gap: 10px; }
-    .fs-guarantee-item { font-size: 0.88rem; color: var(--text); font-weight: 500; }
+    .sr-action-tile h3 { font-size: 1.05rem; font-weight: 700; color: var(--sr-ink); margin: 0; }
+    .sr-action-tile p { font-size: 0.85rem; color: var(--sr-ink-mid); line-height: 1.6; margin: 0; }
+    .sr-action-tile .sr-action-cta { font-size: 0.82rem; font-weight: 700; color: var(--sr-green-dark); letter-spacing: 0.04em; }
 
-    /* Responsive overrides */
+    /* ===== SERVICES ===== */
+    .sr-services { background: var(--sr-warm-white); padding: 80px 0; }
+    .sr-container { max-width: 1180px; margin: 0 auto; padding: 0 40px; }
+    .sr-section-label { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--sr-green); margin-bottom: 10px; }
+    .sr-section-title { font-family: 'Lora', serif; font-size: clamp(1.8rem, 3.5vw, 2.5rem); font-weight: 600; color: var(--sr-ink); margin-bottom: 12px; }
+    .sr-section-title em { font-style: italic; color: var(--sr-green); }
+    .sr-section-sub { font-size: 1rem; color: var(--sr-ink-mid); line-height: 1.7; max-width: 560px; margin-bottom: 48px; }
+    .sr-services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .sr-service-card {
+      background: var(--sr-cream);
+      border: 1px solid #e4ddd2;
+      border-radius: 12px;
+      padding: 32px 28px;
+      transition: box-shadow 0.2s, transform 0.2s;
+    }
+    .sr-service-card:hover { box-shadow: 0 8px 32px rgba(61,74,53,0.12); transform: translateY(-3px); }
+    .sr-service-card.featured { background: var(--sr-green); border-color: var(--sr-green); color: #fff; }
+    .sr-card-icon { font-size: 1.8rem; margin-bottom: 14px; }
+    .sr-service-card h3 { font-size: 0.98rem; font-weight: 700; color: var(--sr-ink); margin-bottom: 8px; }
+    .sr-service-card.featured h3 { color: #fff; }
+    .sr-service-card p { font-size: 0.86rem; color: var(--sr-ink-mid); line-height: 1.65; margin: 0; }
+    .sr-service-card.featured p { color: rgba(255,255,255,0.85); }
+    .sr-most-requested { display: inline-block; background: rgba(255,255,255,0.2); font-size: 0.68rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #fff; padding: 3px 10px; border-radius: 50px; margin-bottom: 10px; }
+
+    /* ===== TRUST BAR ===== */
+    .sr-trust { background: var(--sr-green-dark); padding: 48px 0; }
+    .sr-trust-inner { max-width: 1180px; margin: 0 auto; padding: 0 40px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; text-align: center; }
+    .sr-trust-item { color: rgba(255,255,255,0.85); }
+    .sr-trust-item .sr-ti-icon { font-size: 1.6rem; margin-bottom: 8px; display: block; }
+    .sr-trust-item strong { display: block; color: #fff; font-size: 0.92rem; font-weight: 700; margin-bottom: 4px; }
+    .sr-trust-item span { font-size: 0.8rem; color: rgba(255,255,255,0.65); line-height: 1.5; }
+
+    /* ===== BOOKING SECTION ===== */
+    .sr-booking-section { background: var(--sr-warm-white); padding: 80px 0; border-top: 1px solid #e8e3da; }
+    #cal-booking iframe { border-radius: 14px; }
+
+    /* ===== CONTACT / QUOTE FORM ===== */
+    .sr-contact { background: var(--sr-cream); padding: 80px 0; }
+    .sr-contact-grid { display: grid; grid-template-columns: 1fr 1.4fr; gap: 64px; align-items: start; }
+    .sr-contact-info h2 { font-family: 'Lora', serif; font-size: 1.9rem; font-weight: 600; color: var(--sr-ink); margin-bottom: 14px; }
+    .sr-contact-info h2 em { font-style: italic; color: var(--sr-green); }
+    .sr-contact-info > p { font-size: 0.95rem; color: var(--sr-ink-mid); line-height: 1.75; margin-bottom: 32px; }
+    .sr-contact-links { display: flex; flex-direction: column; gap: 18px; margin-bottom: 32px; }
+    .sr-contact-link { display: flex; align-items: center; gap: 14px; }
+    .sr-contact-link-icon { width: 42px; height: 42px; background: var(--sr-green); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; color: #fff; flex-shrink: 0; }
+    .sr-contact-link strong { display: block; font-size: 0.82rem; font-weight: 700; color: var(--sr-ink); margin-bottom: 2px; }
+    .sr-contact-link a, .sr-contact-link span { font-size: 0.9rem; color: var(--sr-green-dark); font-weight: 500; text-decoration: none; }
+    .sr-contact-link a:hover { text-decoration: underline; }
+    .sr-checklist { display: flex; flex-direction: column; gap: 9px; }
+    .sr-checklist-item { font-size: 0.85rem; color: var(--sr-ink-mid); font-weight: 500; }
+
+    /* Form */
+    .sr-form { background: #fff; border-radius: 14px; padding: 44px; box-shadow: 0 4px 32px rgba(61,74,53,0.1); display: flex; flex-direction: column; gap: 18px; }
+    .sr-form-title { font-family: 'Lora', serif; font-size: 1.25rem; font-weight: 600; color: var(--sr-ink); margin: 0 0 4px; }
+    .sr-form label { font-size: 0.82rem; font-weight: 600; color: var(--sr-ink); display: block; margin-bottom: 6px; }
+    .sr-form input, .sr-form select, .sr-form textarea { width: 100%; padding: 11px 14px; border: 1.5px solid #d8d1c6; border-radius: 8px; font-size: 0.9rem; font-family: 'Inter', sans-serif; color: var(--sr-ink); background: var(--sr-cream); transition: border-color 0.2s; box-sizing: border-box; }
+    .sr-form input:focus, .sr-form select:focus, .sr-form textarea:focus { outline: none; border-color: var(--sr-green); background: #fff; }
+    .sr-form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .sr-form-group { display: flex; flex-direction: column; }
+    .sr-form-submit { background: var(--sr-green); color: #fff; font-weight: 700; font-size: 0.98rem; padding: 15px; border-radius: 8px; border: none; cursor: pointer; transition: background 0.2s, transform 0.2s; width: 100%; }
+    .sr-form-submit:hover { background: var(--sr-green-dark); transform: translateY(-1px); }
+    .sr-form-note { font-size: 0.75rem; color: #999; text-align: center; margin-top: -4px; }
+
+    /* ===== FOOTER ===== */
+    .sr-footer-note { font-size: 0.8rem; color: var(--sr-green-light); margin-top: 4px; }
+
+    /* ===== RESPONSIVE ===== */
     @media (max-width: 1024px) {
-      .fs-services-grid { grid-template-columns: repeat(2, 1fr); }
-      .fs-serve-grid { grid-template-columns: repeat(2, 1fr); }
-      .fs-pillars-grid { grid-template-columns: repeat(2, 1fr); }
-      .fs-quote-grid { grid-template-columns: 1fr; gap: 40px; }
+      .sr-hero-inner { grid-template-columns: 1fr; gap: 48px; text-align: center; }
+      .sr-hero-logo-wrap { justify-content: center; }
+      .sr-hero-sub { max-width: 100%; margin: 0 auto 36px; }
+      .sr-hero-btns { justify-content: center; }
+      .sr-services-grid { grid-template-columns: repeat(2, 1fr); }
+      .sr-trust-inner { grid-template-columns: repeat(2, 1fr); }
+      .sr-contact-grid { grid-template-columns: 1fr; gap: 40px; }
+      .sr-actions-strip { grid-template-columns: 1fr; }
+      .sr-action-tile { border-right: none; border-bottom: 1px solid #e0dbd0; }
+      .sr-action-tile:last-child { border-bottom: none; }
     }
     @media (max-width: 768px) {
-      .fs-services-grid { grid-template-columns: 1fr; }
-      .fs-serve-grid { grid-template-columns: 1fr; }
-      .fs-pillars-grid { grid-template-columns: 1fr; }
-      .fs-quote-form { padding: 28px 20px; }
+      .sr-hero { min-height: auto; padding: 100px 0 60px; }
+      .sr-hero-inner { padding: 0 20px; }
+      .sr-logo-circle { width: 220px; height: 220px; }
+      .sr-services-grid { grid-template-columns: 1fr; }
+      .sr-trust-inner { grid-template-columns: 1fr 1fr; gap: 24px; }
+      .sr-container { padding: 0 20px; }
+      .sr-form { padding: 28px 20px; }
+      .sr-form-row { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 480px) {
+      .sr-trust-inner { grid-template-columns: 1fr; }
     }
   </style>
 </head>
 <body>
 
   <!-- Navigation -->
-  <nav class="navbar" id="navbar">
+  <nav class="navbar scrolled" id="navbar">
     <div class="nav-container">
       <div class="nav-logo">
-        <img src="logo.png" alt="Keystone Operations Group" class="logo-img" />
+        <img src="logo.png" alt="Keystone Operations Group" class="logo-img" style="filter:none;" />
       </div>
-            <ul class="nav-links" id="nav-links">
+      <ul class="nav-links" id="nav-links">
         <li><a href="index.html#about">About</a></li>
         <li><a href="index.html#services">Services</a></li>
         <li><a href="index.html#ai-solutions">Our Approach</a></li>
@@ -183,286 +308,222 @@
   </nav>
 
   <!-- ===== HERO ===== -->
-  <section class="hero" id="home">
-    <div class="hero-video-wrap">
-      <video id="hero-video" autoplay muted loop playsinline>
-        <source src="https://videos.pexels.com/video-files/4107112/4107112-hd_1920_1080_25fps.mp4" type="video/mp4" />
-        <source src="https://videos.pexels.com/video-files/5977455/5977455-hd_1920_1080_25fps.mp4" type="video/mp4" />
-      </video>
-    </div>
-    <div class="hero-video-overlay"></div>
-    <div class="hero-bg"></div>
-    <div class="hero-content">
-      <div class="subbrand-label">&#127968; Sunday Reset <span>|</span> KOG Facility Services</div>
-      <h1>Start Every Week<br/><span class="gradient-text">Right.</span></h1>
-      <p class="hero-sub">Professional residential cleaning, facility support, and move-in/move-out services — family operated, detail obsessed, and built around your schedule.</p>
-      <div class="hero-actions">
-        <a href="#quote" class="btn-primary">Get a Free Quote</a>
-        <a href="#services" class="btn-ghost">View Services</a>
+  <section class="sr-hero" id="home">
+    <div class="sr-hero-inner">
+      <div class="sr-hero-text">
+        <div class="sr-hero-eyebrow">&#127807; A KOG Company &nbsp;·&nbsp; Fredericksburg, VA</div>
+        <h1>Clean Spaces.<br/><em>Clear Mind.</em><br/>Fresh Start.</h1>
+        <p class="sr-hero-sub">Professional residential and commercial cleaning — scheduled around your life, delivered by people who care about the details.</p>
+        <div class="sr-hero-btns">
+          <a href="#booking" class="sr-btn-primary">Book a Cleaning</a>
+          <a href="#quote" class="sr-btn-ghost">Get a Free Quote</a>
+        </div>
       </div>
+      <div class="sr-hero-logo-wrap">
+        <div class="sr-logo-circle">
+          <img src="sunday-reset-logo.png" alt="Sunday Reset Cleaning Co." onerror="this.parentElement.innerHTML=`<div class='sr-logo-placeholder'><span class='sr-lp-icon'>&#127807;</span><span class='sr-lp-name'>Sunday Reset</span><span class='sr-lp-sub'>Cleaning Co.</span></div>`" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== QUICK ACTIONS ===== -->
+  <section class="sr-actions">
+    <div class="sr-actions-strip">
+      <a href="#booking" class="sr-action-tile">
+        <div class="sr-action-icon">&#128197;</div>
+        <h3>Book a Cleaning</h3>
+        <p>Pick your date, service, and time online in minutes.</p>
+        <span class="sr-action-cta">Schedule Now →</span>
+      </a>
+      <a href="#quote" class="sr-action-tile">
+        <div class="sr-action-icon">&#128172;</div>
+        <h3>Request a Quote</h3>
+        <p>Tell us about your space and we'll get back to you same day.</p>
+        <span class="sr-action-cta">Get a Free Quote →</span>
+      </a>
+      <a href="#quote" class="sr-action-tile">
+        <div class="sr-action-icon">&#128179;</div>
+        <h3>Pay Invoice</h3>
+        <p>Check your email for your invoice — sent automatically before each job.</p>
+        <span class="sr-action-cta">Questions? Contact Us →</span>
+      </a>
     </div>
   </section>
 
   <!-- ===== SERVICES ===== -->
-  <section class="services section" id="services">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-label">Sunday Reset | KOG Facilities</span>
-        <h2>What We <span class="gradient-text">Do</span></h2>
-        <p>From weekly residential cleans to post-construction site sweeps, Sunday Reset handles every detail so you don't have to.</p>
-      </div>
-      <div class="fs-services-grid">
-        <div class="service-card">
-          <div class="service-icon">&#127968;</div>
-          <h3>Residential Recurring Cleaning</h3>
-          <p>Weekly, bi-weekly, or monthly home cleaning tailored to your space and schedule. Consistent crews, consistent standards — every time.</p>
+  <section class="sr-services" id="services">
+    <div class="sr-container">
+      <div class="sr-section-label">What We Do</div>
+      <h2 class="sr-section-title">Cleaning Services for <em>Every Space</em></h2>
+      <p class="sr-section-sub">From weekly home cleans to one-time deep scrubs and move-out turnovers — we've got it covered.</p>
+      <div class="sr-services-grid">
+        <div class="sr-service-card">
+          <div class="sr-card-icon">&#127968;</div>
+          <h3>Recurring Residential Cleaning</h3>
+          <p>Weekly, bi-weekly, or monthly home cleaning on a consistent schedule. Same crew, same standards, every time.</p>
         </div>
-        <div class="service-card">
-          <div class="service-icon">&#128666;</div>
-          <h3>Move-In / Move-Out Cleaning</h3>
-          <p>Deep, top-to-bottom cleaning before or after a move. We handle everything from appliances to baseboards so spaces are truly ready.</p>
+        <div class="sr-service-card featured">
+          <span class="sr-most-requested">Most Requested</span>
+          <div class="sr-card-icon">&#129529;</div>
+          <h3>Deep Cleaning</h3>
+          <p>A full reset — inside appliances, grout, baseboards, and every area routine cleaning skips. Perfect for first-time clients.</p>
         </div>
-        <div class="service-card">
-          <div class="service-icon">&#127970;</div>
-          <h3>Small Commercial &amp; Office Cleaning</h3>
-          <p>Professional cleaning for small offices, retail storefronts, and medical suites. Scheduled around your business hours, not ours.</p>
+        <div class="sr-service-card">
+          <div class="sr-card-icon">&#128666;</div>
+          <h3>Move-In / Move-Out</h3>
+          <p>Thorough top-to-bottom cleaning before or after a move so every space is truly ready for what's next.</p>
         </div>
-        <div class="service-card featured-service">
-          <div class="service-badge">Most Requested</div>
-          <div class="service-icon">&#129529;</div>
-          <h3>Deep Cleaning Services</h3>
-          <p>A full reset for any space — scrubbing grout, cleaning inside appliances, tackling built-up grime, and reaching areas routine cleaning misses.</p>
+        <div class="sr-service-card">
+          <div class="sr-card-icon">&#127970;</div>
+          <h3>Small Commercial &amp; Office</h3>
+          <p>Offices, retail spaces, and suites cleaned on your schedule — not ours. Professional, discreet, and reliable.</p>
         </div>
-        <div class="service-card">
-          <div class="service-icon">&#9989;</div>
+        <div class="sr-service-card">
+          <div class="sr-card-icon">&#9989;</div>
           <h3>Post-Construction Cleanup</h3>
-          <p>Construction-grade dust and debris removal for newly built or renovated spaces. We get it clean and ready for occupancy.</p>
+          <p>Construction-grade dust and debris removal so newly built or renovated spaces are move-in ready.</p>
         </div>
-        <div class="service-card">
-          <div class="service-icon">&#128260;</div>
-          <h3>Facility Maintenance Support</h3>
-          <p>Ongoing light maintenance and cleaning support for HOAs, property managers, and residential communities — keeping common areas sharp.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== WHO WE SERVE ===== -->
-  <section class="who-we-help section" id="who-we-serve">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-label light">Who We Serve</span>
-        <h2>Built for People Who <span class="gradient-text-light">Value Their Space</span></h2>
-        <p class="light-text">Whether it's your home, your rental portfolio, or your office — Sunday Reset brings the same detail-obsessed standard to every job.</p>
-      </div>
-      <div class="fs-serve-grid">
-        <div class="who-card">
-          <div class="who-icon">&#128106;</div>
-          <h3>Homeowners &amp; Families</h3>
-          <p>Spend less time cleaning and more time living. We keep your home consistently clean on a schedule that fits your life.</p>
-        </div>
-        <div class="who-card">
-          <div class="who-icon">&#127968;</div>
-          <h3>Property Managers &amp; Landlords</h3>
-          <p>Fast, thorough turnovers between tenants. We help you protect your investment and get units market-ready quickly.</p>
-        </div>
-        <div class="who-card">
-          <div class="who-icon">&#127968;</div>
-          <h3>Real Estate Agents</h3>
-          <p>First impressions sell homes. Our pre-listing and post-closing cleans make every showing and handoff spotless.</p>
-        </div>
-        <div class="who-card">
-          <div class="who-icon">&#128188;</div>
-          <h3>Small Business Owners</h3>
-          <p>A clean workspace reflects your brand. We keep your office or storefront looking professional without disrupting your operations.</p>
-        </div>
-        <div class="who-card">
-          <div class="who-icon">&#128138;</div>
-          <h3>Medical &amp; Professional Offices</h3>
-          <p>Discreet, thorough, and detail-focused cleaning that meets the higher standards required in professional and healthcare environments.</p>
-        </div>
-        <div class="who-card">
-          <div class="who-icon">&#127963;</div>
-          <h3>HOAs &amp; Residential Communities</h3>
-          <p>Common area maintenance, clubhouse cleaning, and recurring facility support that keeps your community looking its best.</p>
+        <div class="sr-service-card">
+          <div class="sr-card-icon">&#128260;</div>
+          <h3>Facility &amp; HOA Support</h3>
+          <p>Recurring maintenance for common areas, clubhouses, and residential communities. We keep your property looking sharp.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== WHY SUNDAY RESET ===== -->
-  <section class="fs-why section" id="why-us">
-    <div class="ai-bg-pattern"></div>
-    <div class="container">
-      <div class="section-header">
-        <span class="section-label light">Why Choose Us</span>
-        <h2>The Sunday Reset <span class="gradient-text-light">Difference</span></h2>
-        <p class="light-text">We're not a franchise. We're a family-run operation built on accountability, consistency, and doing the job right the first time.</p>
+  <!-- ===== TRUST BAR ===== -->
+  <section class="sr-trust">
+    <div class="sr-trust-inner">
+      <div class="sr-trust-item">
+        <span class="sr-ti-icon">&#128106;</span>
+        <strong>Family Owned</strong>
+        <span>Not a franchise — personal accountability on every job</span>
       </div>
-      <div class="fs-pillars-grid">
-        <div class="fs-pillar">
-          <div class="fs-pillar-icon">&#128106;</div>
-          <h3>Family Owned &amp; Operated</h3>
-          <p>Personal accountability on every job. When something matters to you, it matters to us — because our name is on it too.</p>
-        </div>
-        <div class="fs-pillar">
-          <div class="fs-pillar-icon">&#128269;</div>
-          <h3>Detail Obsessed</h3>
-          <p>We don't cut corners — we clean them. Every job is treated as if it were our own home.</p>
-        </div>
-        <div class="fs-pillar">
-          <div class="fs-pillar-icon">&#128197;</div>
-          <h3>Flexible Scheduling</h3>
-          <p>Built around your life, not ours. Morning, evening, weekend — we work with your schedule, not against it.</p>
-        </div>
-        <div class="fs-pillar">
-          <div class="fs-pillar-icon">&#128274;</div>
-          <h3>Fully Insured</h3>
-          <p>Peace of mind on every visit. We carry full liability insurance so you never have to worry about what happens in your space.</p>
-        </div>
+      <div class="sr-trust-item">
+        <span class="sr-ti-icon">&#128274;</span>
+        <strong>Fully Insured</strong>
+        <span>Complete liability coverage — every visit, every time</span>
+      </div>
+      <div class="sr-trust-item">
+        <span class="sr-ti-icon">&#9201;</span>
+        <strong>Same-Day Response</strong>
+        <span>We get back to you fast — usually within a few hours</span>
+      </div>
+      <div class="sr-trust-item">
+        <span class="sr-ti-icon">&#128205;</span>
+        <strong>Serving Fredericksburg, VA</strong>
+        <span>&amp; surrounding areas in Northern Virginia</span>
       </div>
     </div>
   </section>
 
-  <!-- ===== PROCESS ===== -->
-  <section class="process section" id="process">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-label">How It Works</span>
-        <h2>Three Steps to a <span class="gradient-text">Cleaner Space</span></h2>
-        <p>Simple, straightforward, and built around you. Getting started with Sunday Reset takes less than 10 minutes.</p>
-      </div>
-      <div class="process-track">
-        <div class="process-step">
-          <div class="step-number">1</div>
-          <div class="step-content">
-            <h3>Request Your Free Quote</h3>
-            <p>Fill out the form below with your property details and service needs. We'll review your request and send a detailed quote — typically within a few hours.</p>
-          </div>
-        </div>
-        <div class="process-arrow">&#8595;</div>
-        <div class="process-step">
-          <div class="step-number">2</div>
-          <div class="step-content">
-            <h3>We Build Your Custom Cleaning Plan</h3>
-            <p>We'll discuss your priorities, schedule, and any special requests to put together a cleaning plan that fits your space and your life exactly.</p>
-          </div>
-        </div>
-        <div class="process-arrow">&#8595;</div>
-        <div class="process-step">
-          <div class="step-number">3</div>
-          <div class="step-content">
-            <h3>We Show Up &amp; Reset Your Space</h3>
-            <p>Our team arrives on time, fully equipped, and ready to work. We handle everything — then leave your space exactly the way you'd want to find it.</p>
-          </div>
-        </div>
-      </div>
+  <!-- ===== BOOKING ===== -->
+  <section class="sr-booking-section" id="booking">
+    <div class="sr-container">
+      <div class="sr-section-label">Book Online</div>
+      <h2 class="sr-section-title">Pick a <em>Date &amp; Time</em></h2>
+      <p class="sr-section-sub">Choose your service and schedule directly — we'll take care of the rest and send your invoice before the job.</p>
+      <div id="cal-booking" style="min-height:600px;border-radius:14px;overflow:hidden;"></div>
     </div>
   </section>
 
   <!-- ===== QUOTE / CONTACT FORM ===== -->
-  <section class="fs-quote section" id="quote">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-label">Free Quote</span>
-        <h2>Let's Talk About <span class="gradient-text">Your Space</span></h2>
-        <p>Tell us what you need and we'll put together a custom quote — no obligations, no pressure, just straightforward pricing built around your situation.</p>
-      </div>
+  <section class="sr-contact" id="quote">
+    <div class="sr-container">
+      <div class="sr-contact-grid">
 
-      <div class="fs-quote-grid">
-        <div class="fs-quote-info">
-          <h3>How It Works</h3>
-          <p>Fill out the form and we'll reach out within a few hours to confirm details and send your quote. Most clients hear back the same day.</p>
+        <div class="sr-contact-info">
+          <div class="sr-section-label">Get in Touch</div>
+          <h2 class="sr-section-title" style="margin-bottom:14px;">Let's Talk About<br/><em>Your Space</em></h2>
+          <p>Fill out the form and we'll respond same day with a custom quote — no pressure, no commitment, just straightforward pricing.</p>
 
-          <div class="fs-trust-list">
-            <div class="fs-trust-item">
-              <div class="fs-trust-icon">&#128222;</div>
+          <div class="sr-contact-links">
+            <div class="sr-contact-link">
+              <div class="sr-contact-link-icon">&#128222;</div>
               <div>
-                <strong>Prefer to call?</strong>
+                <strong>Call or Text</strong>
                 <a href="tel:+15404260945">(540) 426-0945</a>
               </div>
             </div>
-            <div class="fs-trust-item">
-              <div class="fs-trust-icon">&#128231;</div>
+            <div class="sr-contact-link">
+              <div class="sr-contact-link-icon">&#128231;</div>
               <div>
-                <strong>Email us directly</strong>
+                <strong>Email</strong>
                 <a href="mailto:info@keystoneoperationsgroup.net">info@keystoneoperationsgroup.net</a>
               </div>
             </div>
-            <div class="fs-trust-item">
-              <div class="fs-trust-icon">&#128205;</div>
+            <div class="sr-contact-link">
+              <div class="sr-contact-link-icon">&#128197;</div>
               <div>
-                <strong>Service area</strong>
-                <span>Fredericksburg, VA &amp; Surrounding Areas</span>
+                <strong>Prefer to book directly?</strong>
+                <a href="#booking">Book online now →</a>
               </div>
             </div>
           </div>
 
-          <div class="fs-guarantee-box">
-            <div class="fs-guarantee-items">
-              <div class="fs-guarantee-item">&#9989; No contracts required for residential</div>
-              <div class="fs-guarantee-item">&#9989; Same-day response during business hours</div>
-              <div class="fs-guarantee-item">&#9989; Fully insured — every visit, every time</div>
-              <div class="fs-guarantee-item">&#9989; Family owned — not a franchise</div>
-              <div class="fs-guarantee-item">&#9989; Custom plan built around your schedule</div>
-            </div>
+          <div class="sr-checklist">
+            <div class="sr-checklist-item">&#9989;&nbsp; No contracts required for residential</div>
+            <div class="sr-checklist-item">&#9989;&nbsp; Same-day quote response</div>
+            <div class="sr-checklist-item">&#9989;&nbsp; Fully insured — every visit</div>
+            <div class="sr-checklist-item">&#9989;&nbsp; Custom plan built around your schedule</div>
+            <div class="sr-checklist-item">&#9989;&nbsp; Satisfaction guaranteed</div>
           </div>
         </div>
 
-        <form class="fs-quote-form" action="https://formspree.io/f/mykayqza" method="POST">
-          <input type="hidden" name="_subject" value="Sunday Reset — Free Quote Request" />
-          <div class="form-row">
-            <div class="form-group">
-              <label for="fs-name">Full Name</label>
-              <input type="text" id="fs-name" name="name" placeholder="Jane Smith" required />
+        <form class="sr-form" action="https://formspree.io/f/mykayqza" method="POST">
+          <input type="hidden" name="_subject" value="Sunday Reset — Quote Request" />
+          <div class="sr-form-title">Request a Free Quote</div>
+          <div class="sr-form-row">
+            <div class="sr-form-group">
+              <label for="sr-name">Full Name</label>
+              <input type="text" id="sr-name" name="name" placeholder="Jane Smith" required />
             </div>
-            <div class="form-group">
-              <label for="fs-email">Email Address</label>
-              <input type="email" id="fs-email" name="email" placeholder="jane@email.com" required />
+            <div class="sr-form-group">
+              <label for="sr-phone">Phone</label>
+              <input type="tel" id="sr-phone" name="phone" placeholder="(540) 000-0000" />
             </div>
           </div>
-          <div class="form-group">
-            <label for="fs-phone">Phone Number</label>
-            <input type="tel" id="fs-phone" name="phone" placeholder="(540) 000-0000" />
+          <div class="sr-form-group">
+            <label for="sr-email">Email Address</label>
+            <input type="email" id="sr-email" name="email" placeholder="jane@email.com" required />
           </div>
-          <div class="form-row">
-            <div class="form-group">
-              <label for="fs-service">Service Type</label>
-              <select id="fs-service" name="service_type" required>
+          <div class="sr-form-row">
+            <div class="sr-form-group">
+              <label for="sr-service">Service Needed</label>
+              <select id="sr-service" name="service_type" required>
                 <option value="" disabled selected>Select a service…</option>
-                <option value="Residential Recurring">Residential Recurring Cleaning</option>
-                <option value="Move-In Cleaning">Move-In Cleaning</option>
-                <option value="Move-Out Cleaning">Move-Out Cleaning</option>
-                <option value="Small Commercial">Small Commercial / Office</option>
-                <option value="Deep Clean">Deep Cleaning</option>
-                <option value="Post-Construction">Post-Construction Cleanup</option>
-                <option value="Facility Support">Facility Maintenance Support</option>
-                <option value="Not Sure Yet">Not Sure Yet</option>
+                <option>Recurring Residential Cleaning</option>
+                <option>Deep Cleaning</option>
+                <option>Move-In Cleaning</option>
+                <option>Move-Out Cleaning</option>
+                <option>Small Commercial / Office</option>
+                <option>Post-Construction Cleanup</option>
+                <option>Facility / HOA Support</option>
+                <option>Not Sure Yet</option>
               </select>
             </div>
-            <div class="form-group">
-              <label for="fs-size">Property Size</label>
-              <select id="fs-size" name="property_size">
+            <div class="sr-form-group">
+              <label for="sr-size">Property Size</label>
+              <select id="sr-size" name="property_size">
                 <option value="" disabled selected>Select size…</option>
-                <option value="Under 1,000 sq ft">Under 1,000 sq ft</option>
-                <option value="1,000–1,800 sq ft">1,000 – 1,800 sq ft</option>
-                <option value="1,800–2,500 sq ft">1,800 – 2,500 sq ft</option>
-                <option value="2,500–3,500 sq ft">2,500 – 3,500 sq ft</option>
-                <option value="3,500+ sq ft">3,500+ sq ft</option>
+                <option>Under 1,000 sq ft</option>
+                <option>1,000 – 1,800 sq ft</option>
+                <option>1,800 – 2,500 sq ft</option>
+                <option>2,500 – 3,500 sq ft</option>
+                <option>3,500+ sq ft</option>
               </select>
             </div>
           </div>
-          <div class="form-group">
-            <label for="fs-date">Preferred Start Date</label>
-            <input type="date" id="fs-date" name="preferred_date" />
+          <div class="sr-form-group">
+            <label for="sr-notes">Anything else we should know?</label>
+            <textarea id="sr-notes" name="notes" rows="3" placeholder="Pets, access details, specific focus areas, frequency preferences…"></textarea>
           </div>
-          <div class="form-group">
-            <label for="fs-notes">Anything else we should know?</label>
-            <textarea id="fs-notes" name="notes" rows="4" placeholder="Pets, access instructions, specific areas of focus, frequency preferences — anything that helps us build the right plan for you."></textarea>
-          </div>
-          <button type="submit" class="btn-primary full-width" style="padding: 16px; font-size: 1rem;">Request My Free Quote</button>
-          <p style="font-size:0.78rem;color:var(--text-light);text-align:center;margin-top:-8px;">We typically respond within a few hours. No spam, no pressure.</p>
+          <button type="submit" class="sr-form-submit">Request My Free Quote</button>
+          <p class="sr-form-note">We typically respond within a few hours. No spam, no pressure.</p>
         </form>
+
       </div>
     </div>
   </section>
@@ -476,13 +537,13 @@
             <img src="logo.png" alt="Keystone Operations Group" class="logo-img footer-logo-img" />
           </div>
           <p>Operational excellence and intelligent innovation — delivered with purpose.</p>
+          <p class="sr-footer-note">Sunday Reset is a KOG brand serving Fredericksburg, VA &amp; surrounding areas.</p>
         </div>
         <div class="footer-links">
           <h4>Company</h4>
           <ul>
             <li><a href="index.html#about">About Us</a></li>
             <li><a href="index.html#services">Services</a></li>
-            <li><a href="index.html#ai-solutions">Our Approach</a></li>
             <li><a href="logistics.html">Logistics</a></li>
             <li><a href="exterior-cleaning.html">Exterior Services</a></li>
             <li><a href="facility-services.html">Facility Services</a></li>
@@ -490,27 +551,24 @@
           </ul>
         </div>
         <div class="footer-links">
-          <h4>Facility Services</h4>
+          <h4>Sunday Reset</h4>
           <ul>
-            <li><a href="#services">Residential Cleaning</a></li>
-            <li><a href="#services">Move-In / Move-Out</a></li>
-            <li><a href="#services">Small Commercial</a></li>
-            <li><a href="#services">Deep Cleaning</a></li>
-            <li><a href="#services">Post-Construction</a></li>
-            <li><a href="#services">Facility Support</a></li>
+            <li><a href="#services">Our Services</a></li>
+            <li><a href="#quote">Get a Quote</a></li>
+            <li><a href="#booking">Book Online</a></li>
           </ul>
         </div>
         <div class="footer-links">
-          <h4>Get Started</h4>
+          <h4>Contact</h4>
           <ul>
-            <li><a href="#quote">Get a Free Quote</a></li>
-            <li><a href="tel:+17575910000">(757) 591-0000</a></li>
+            <li><a href="tel:+15404260945">(540) 426-0945</a></li>
             <li><a href="mailto:info@keystoneoperationsgroup.net">Email Us</a></li>
+            <li><span style="color:var(--text-light);font-size:0.85rem;">Fredericksburg, VA &amp; Surrounding Areas</span></li>
           </ul>
         </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; 2026 Keystone Operations Group LLC. All rights reserved. &nbsp;|&nbsp; (757) 591-0000 &nbsp;|&nbsp; info@keystoneoperationsgroup.net &nbsp;|&nbsp; <span style="color: var(--teal-mid); font-weight: 600;">&#9733; Veteran-Owned Business</span></p>
+        <p>&copy; 2026 Keystone Operations Group LLC. All rights reserved. &nbsp;|&nbsp; (757) 591-0000 &nbsp;|&nbsp; info@keystoneoperationsgroup.net</p>
         <div class="footer-legal">
           <a href="terms.html">Terms of Service</a>
           <span>·</span>
@@ -522,14 +580,37 @@
     </div>
   </footer>
 
+  <!-- Cal.com embed -->
+  <script type="text/javascript">
+    (function (C, A, L) {
+      let p = function (a, ar) { a.q.push(ar); };
+      let d = C.document;
+      C.Cal = C.Cal || function () {
+        let cal = C.Cal; let ar = arguments;
+        if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; }
+        if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; typeof namespace === "string" ? (cal.ns[namespace] = api) && p(api, ar) : p(cal, ar); return; }
+        p(cal, ar);
+      };
+    })(window, "https://app.cal.com/embed/embed.js", "init");
+    Cal("init", { origin: "https://cal.com" });
+    Cal("inline", {
+      elementOrSelector: "#cal-booking",
+      calLink: "jade-proctor-kd8h4l",
+      layout: "month_view"
+    });
+    Cal("ui", {
+      styles: { branding: { brandColor: "#6b7c5e" } },
+      hideEventTypeDetails: false,
+      layout: "month_view"
+    });
+  </script>
+
   <script>
-    // Navbar scroll
     const navbar = document.getElementById('navbar');
     window.addEventListener('scroll', () => {
       navbar.classList.toggle('scrolled', window.scrollY > 40);
     });
 
-    // Mobile hamburger
     const hamburger = document.getElementById('hamburger');
     const navLinks = document.querySelector('.nav-links');
     hamburger.addEventListener('click', () => navLinks.classList.toggle('open'));
@@ -537,7 +618,6 @@
       link.addEventListener('click', () => navLinks.classList.remove('open'));
     });
 
-    // Scroll reveal
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -545,12 +625,12 @@
           entry.target.style.transform = 'translateY(0)';
         }
       });
-    }, { threshold: 0.1 });
+    }, { threshold: 0.08 });
 
-    document.querySelectorAll('.service-card, .who-card, .fs-pillar, .process-step').forEach(el => {
+    document.querySelectorAll('.sr-service-card, .sr-trust-item, .sr-action-tile').forEach(el => {
       el.style.opacity = '0';
-      el.style.transform = 'translateY(24px)';
-      el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+      el.style.transform = 'translateY(20px)';
+      el.style.transition = 'opacity 0.45s ease, transform 0.45s ease';
       observer.observe(el);
     });
   </script>

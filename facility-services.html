@@ -27,10 +27,96 @@
   <link rel="stylesheet" href="styles.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet" />
   <style>
-    /* ===== NAV: tighten for 9 links ===== */
-    .nav-links { gap: 22px; }
-    @media (max-width: 1280px) { .nav-links { gap: 16px; } .nav-links a { font-size: 0.82rem; } }
-    @media (max-width: 1100px) { .nav-links { gap: 12px; } .nav-links a { font-size: 0.78rem; } }
+    /* ===== SUNDAY RESET NAV ===== */
+    .sr-nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 1000;
+      background: rgba(61,74,53,0.96);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+      transition: background 0.3s;
+    }
+    .sr-nav-inner {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 0 40px;
+      height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .sr-nav-brand { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+    .sr-nav-logo { height: 44px; width: 44px; border-radius: 50%; object-fit: cover; }
+    .sr-nav-name { font-family: 'Lora', serif; font-size: 1.1rem; font-style: italic; font-weight: 600; color: #fff; }
+    .sr-nav-links { display: flex; align-items: center; gap: 28px; list-style: none; margin: 0; padding: 0; }
+    .sr-nav-links a { color: rgba(255,255,255,0.85); text-decoration: none; font-size: 0.88rem; font-weight: 500; transition: color 0.2s; }
+    .sr-nav-links a:hover { color: #fff; }
+    .sr-nav-cta {
+      background: #fff !important;
+      color: var(--sr-green-dark) !important;
+      font-weight: 700 !important;
+      padding: 9px 20px;
+      border-radius: 7px;
+      transition: background 0.2s, transform 0.2s !important;
+    }
+    .sr-nav-cta:hover { background: var(--sr-cream) !important; transform: translateY(-1px); }
+    .sr-hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 4px;
+    }
+    .sr-hamburger span { display: block; width: 24px; height: 2px; background: #fff; border-radius: 2px; transition: all 0.3s; }
+    @media (max-width: 768px) {
+      .sr-hamburger { display: flex; }
+      .sr-nav-links {
+        display: none;
+        position: absolute;
+        top: 72px; left: 0; right: 0;
+        background: var(--sr-green-dark);
+        flex-direction: column;
+        gap: 0;
+        padding: 16px 0;
+        border-top: 1px solid rgba(255,255,255,0.1);
+      }
+      .sr-nav-links.open { display: flex; }
+      .sr-nav-links li { width: 100%; }
+      .sr-nav-links a { display: block; padding: 12px 28px; font-size: 0.95rem; }
+      .sr-nav-cta { margin: 8px 28px; border-radius: 7px; text-align: center; }
+      .sr-nav-inner { padding: 0 20px; }
+    }
+
+    /* ===== SUNDAY RESET FOOTER ===== */
+    .sr-footer {
+      background: var(--sr-green-dark);
+      color: rgba(255,255,255,0.75);
+      padding: 60px 0 0;
+    }
+    .sr-footer-inner { max-width: 1180px; margin: 0 auto; padding: 0 40px; }
+    .sr-footer-grid { display: grid; grid-template-columns: 1.8fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 48px; }
+    .sr-footer-brand { }
+    .sr-footer-logo { height: 64px; width: 64px; border-radius: 50%; object-fit: cover; margin-bottom: 16px; }
+    .sr-footer-logo-text { font-family: 'Lora', serif; font-size: 1.2rem; font-style: italic; font-weight: 600; color: #fff; line-height: 1.3; display: block; margin-bottom: 16px; }
+    .sr-footer-logo-text small { font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; font-style: normal; opacity: 0.7; }
+    .sr-footer-brand p { font-size: 0.85rem; line-height: 1.7; color: rgba(255,255,255,0.6); }
+    .sr-footer-col h4 { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.5); margin-bottom: 16px; }
+    .sr-footer-col ul { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px; }
+    .sr-footer-col a { color: rgba(255,255,255,0.75); text-decoration: none; font-size: 0.88rem; transition: color 0.2s; }
+    .sr-footer-col a:hover { color: #fff; }
+    .sr-footer-col span { font-size: 0.85rem; color: rgba(255,255,255,0.5); }
+    .sr-footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.1);
+      padding: 20px 0;
+      text-align: center;
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.4);
+    }
+    @media (max-width: 900px) { .sr-footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; } }
+    @media (max-width: 540px) { .sr-footer-grid { grid-template-columns: 1fr; } .sr-footer-inner { padding: 0 20px; } }
 
     /* ===== SUNDAY RESET BRAND TOKENS ===== */
     :root {
@@ -251,8 +337,6 @@
     .sr-form-submit:hover { background: var(--sr-green-dark); transform: translateY(-1px); }
     .sr-form-note { font-size: 0.75rem; color: #999; text-align: center; margin-top: -4px; }
 
-    /* ===== FOOTER ===== */
-    .sr-footer-note { font-size: 0.8rem; color: var(--sr-green-light); margin-top: 4px; }
 
     /* ===== RESPONSIVE ===== */
     @media (max-width: 1024px) {
@@ -285,23 +369,20 @@
 <body>
 
   <!-- Navigation -->
-  <nav class="navbar scrolled" id="navbar">
-    <div class="nav-container">
-      <div class="nav-logo">
-        <img src="logo.png" alt="Keystone Operations Group" class="logo-img" style="filter:none;" />
-      </div>
-      <ul class="nav-links" id="nav-links">
-        <li><a href="index.html#about">About</a></li>
-        <li><a href="index.html#services">Services</a></li>
-        <li><a href="index.html#ai-solutions">Our Approach</a></li>
-        <li><a href="logistics.html">Logistics</a></li>
-        <li><a href="exterior-cleaning.html">Exterior Services</a></li>
-        <li><a href="facility-services.html">Facility Services</a></li>
-        <li><a href="https://crm.keystoneoperationsgroup.net/about" target="_blank">KOGNITE</a></li>
-        <li><a href="index.html#pricing">Pricing</a></li>
-        <li><a href="contact.html" class="nav-cta">Contact Us</a></li>
+  <nav class="sr-nav" id="navbar">
+    <div class="sr-nav-inner">
+      <a href="#home" class="sr-nav-brand">
+        <img src="sunday-reset-logo.png" alt="Sunday Reset Cleaning Co." class="sr-nav-logo" onerror="this.style.display='none';this.nextElementSibling.style.display='block'" />
+        <span class="sr-nav-name" style="display:none;">Sunday Reset</span>
+      </a>
+      <ul class="sr-nav-links" id="nav-links">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#booking">Book Online</a></li>
+        <li><a href="#quote">Get a Quote</a></li>
+        <li><a href="tel:+17577683740">(757) 768-3740</a></li>
+        <li><a href="#booking" class="sr-nav-cta">Book Now</a></li>
       </ul>
-      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <button class="sr-hamburger" id="hamburger" aria-label="Toggle menu">
         <span></span><span></span><span></span>
       </button>
     </div>
@@ -529,53 +610,42 @@
   </section>
 
   <!-- ===== FOOTER ===== -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <div class="nav-logo">
-            <img src="logo.png" alt="Keystone Operations Group" class="logo-img footer-logo-img" />
-          </div>
-          <p>Operational excellence and intelligent innovation — delivered with purpose.</p>
-          <p class="sr-footer-note">Professional cleaning services serving Fredericksburg, VA &amp; surrounding areas.</p>
+  <footer class="sr-footer">
+    <div class="sr-footer-inner">
+      <div class="sr-footer-grid">
+        <div class="sr-footer-brand">
+          <img src="sunday-reset-logo.png" alt="Sunday Reset Cleaning Co." class="sr-footer-logo" onerror="this.style.display='none';this.nextElementSibling.style.display='block'" />
+          <span class="sr-footer-logo-text" style="display:none;">Sunday Reset<br/><small>Cleaning Co.</small></span>
+          <p>Professional cleaning services for homes and businesses in Fredericksburg, VA &amp; surrounding areas.</p>
         </div>
-        <div class="footer-links">
-          <h4>Company</h4>
+        <div class="sr-footer-col">
+          <h4>Services</h4>
           <ul>
-            <li><a href="index.html#about">About Us</a></li>
-            <li><a href="index.html#services">Services</a></li>
-            <li><a href="logistics.html">Logistics</a></li>
-            <li><a href="exterior-cleaning.html">Exterior Services</a></li>
-            <li><a href="facility-services.html">Facility Services</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="#services">Recurring Cleaning</a></li>
+            <li><a href="#services">Deep Cleaning</a></li>
+            <li><a href="#services">Move-In / Move-Out</a></li>
+            <li><a href="#services">Commercial &amp; Office</a></li>
+            <li><a href="#services">Post-Construction</a></li>
           </ul>
         </div>
-        <div class="footer-links">
-          <h4>Sunday Reset</h4>
+        <div class="sr-footer-col">
+          <h4>Quick Links</h4>
           <ul>
-            <li><a href="#services">Our Services</a></li>
-            <li><a href="#quote">Get a Quote</a></li>
             <li><a href="#booking">Book Online</a></li>
+            <li><a href="#quote">Get a Quote</a></li>
           </ul>
         </div>
-        <div class="footer-links">
+        <div class="sr-footer-col">
           <h4>Contact</h4>
           <ul>
             <li><a href="tel:+17577683740">(757) 768-3740</a></li>
-            <li><a href="mailto:jade@1thesundayreset.com">Email Us</a></li>
-            <li><span style="color:var(--text-light);font-size:0.85rem;">Fredericksburg, VA &amp; Surrounding Areas</span></li>
+            <li><a href="mailto:jade@1thesundayreset.com">jade@1thesundayreset.com</a></li>
+            <li><span>Fredericksburg, VA &amp; Surrounding Areas</span></li>
           </ul>
         </div>
       </div>
-      <div class="footer-bottom">
-        <p>&copy; 2026 Sunday Reset Cleaning Co. All rights reserved. &nbsp;|&nbsp; (757) 768-3740 &nbsp;|&nbsp; jade@1thesundayreset.com</p>
-        <div class="footer-legal">
-          <a href="terms.html">Terms of Service</a>
-          <span>·</span>
-          <a href="privacy.html">Privacy Policy</a>
-          <span>·</span>
-          <a href="sms-opt-in.html">SMS Opt-In</a>
-        </div>
+      <div class="sr-footer-bottom">
+        <p>&copy; 2026 Sunday Reset Cleaning Co. All rights reserved.</p>
       </div>
     </div>
   </footer>
@@ -606,15 +676,10 @@
   </script>
 
   <script>
-    const navbar = document.getElementById('navbar');
-    window.addEventListener('scroll', () => {
-      navbar.classList.toggle('scrolled', window.scrollY > 40);
-    });
-
     const hamburger = document.getElementById('hamburger');
-    const navLinks = document.querySelector('.nav-links');
+    const navLinks = document.getElementById('nav-links');
     hamburger.addEventListener('click', () => navLinks.classList.toggle('open'));
-    document.querySelectorAll('.nav-links a').forEach(link => {
+    document.querySelectorAll('.sr-nav-links a').forEach(link => {
       link.addEventListener('click', () => navLinks.classList.remove('open'));
     });
 

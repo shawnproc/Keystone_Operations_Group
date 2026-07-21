@@ -81,59 +81,6 @@
       gap: 20px;
     }
 
-    /* Pricing table section */
-    .fs-pricing { background: var(--off-white); }
-    .fs-pricing-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 28px;
-      align-items: start;
-    }
-    .fs-pricing-card {
-      background: var(--white);
-      border-radius: var(--radius-lg);
-      border: 1px solid var(--border);
-      overflow: hidden;
-    }
-    .fs-pricing-card.featured {
-      border-color: var(--teal-mid);
-      box-shadow: var(--shadow-lg);
-    }
-    .fs-card-header {
-      background: linear-gradient(135deg, var(--navy), var(--teal-dark));
-      color: var(--white);
-      padding: 24px 28px 20px;
-    }
-    .fs-card-header.featured-header {
-      background: linear-gradient(135deg, var(--teal-dark), var(--teal-mid));
-    }
-    .fs-card-header h3 { font-size: 1.1rem; font-weight: 800; margin-bottom: 4px; letter-spacing: 0.04em; }
-    .fs-card-header p { font-size: 0.82rem; opacity: 0.75; }
-    .fs-card-body { padding: 24px 28px 28px; }
-    .fs-rate-row {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      padding: 12px 0;
-      border-bottom: 1px solid var(--border);
-      gap: 12px;
-    }
-    .fs-rate-row:last-of-type { border-bottom: none; }
-    .fs-rate-label { font-size: 0.88rem; color: var(--text); flex: 1; }
-    .fs-rate-label em { display: block; font-style: normal; font-size: 0.78rem; color: var(--text-light); margin-top: 2px; }
-    .fs-rate-price { font-weight: 700; color: var(--teal-dark); white-space: nowrap; font-size: 0.95rem; text-align: right; }
-    .fs-rate-price em { display: block; font-style: normal; font-size: 0.78rem; color: var(--text-light); font-weight: 500; }
-    .fs-card-note {
-      margin-top: 16px;
-      padding: 12px 14px;
-      background: var(--teal-pale);
-      border-radius: 8px;
-      font-size: 0.82rem;
-      color: var(--teal-dark);
-      font-weight: 600;
-      line-height: 1.5;
-    }
-
     /* Pillars / Why section */
     .fs-why { background: linear-gradient(150deg, var(--navy) 0%, #0f2a3a 40%, var(--teal-dark) 100%); color: var(--white); position: relative; overflow: hidden; }
     .fs-why .ai-bg-pattern { position: absolute; inset: 0; background-image: radial-gradient(circle at 20% 20%, rgba(74,171,184,0.12) 0%, transparent 50%), radial-gradient(circle at 80% 80%, rgba(74,171,184,0.08) 0%, transparent 50%); pointer-events: none; }
@@ -161,11 +108,11 @@
     .fs-quote-grid {
       display: grid;
       grid-template-columns: 1fr 1.5fr;
-      gap: 80px;
+      gap: 64px;
       align-items: start;
     }
-    .fs-quote-info h3 { font-size: 1.5rem; font-weight: 700; color: var(--navy); margin-bottom: 14px; }
-    .fs-quote-info p { color: var(--text-mid); line-height: 1.8; margin-bottom: 24px; }
+    .fs-quote-info h3 { font-size: 1.4rem; font-weight: 700; color: var(--navy); margin-bottom: 12px; }
+    .fs-quote-info p { color: var(--text-mid); line-height: 1.8; margin-bottom: 28px; }
     .fs-quote-form {
       background: var(--white);
       border-radius: var(--radius-lg);
@@ -175,23 +122,38 @@
       flex-direction: column;
       gap: 20px;
     }
-    .form-row-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+
+    /* Trust list */
+    .fs-trust-list { display: flex; flex-direction: column; gap: 16px; margin-bottom: 28px; }
+    .fs-trust-item { display: flex; align-items: flex-start; gap: 14px; }
+    .fs-trust-icon { font-size: 1.2rem; min-width: 28px; }
+    .fs-trust-item strong { display: block; font-size: 0.88rem; font-weight: 700; color: var(--navy); margin-bottom: 2px; }
+    .fs-trust-item a { font-size: 0.88rem; color: var(--teal-mid); text-decoration: none; font-weight: 500; }
+    .fs-trust-item span { font-size: 0.88rem; color: var(--text-mid); }
+
+    /* Guarantee box */
+    .fs-guarantee-box {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--teal-mid);
+      border-radius: var(--radius);
+      padding: 24px 22px;
+    }
+    .fs-guarantee-items { display: flex; flex-direction: column; gap: 10px; }
+    .fs-guarantee-item { font-size: 0.88rem; color: var(--text); font-weight: 500; }
 
     /* Responsive overrides */
     @media (max-width: 1024px) {
       .fs-services-grid { grid-template-columns: repeat(2, 1fr); }
       .fs-serve-grid { grid-template-columns: repeat(2, 1fr); }
-      .fs-pricing-grid { grid-template-columns: 1fr; }
       .fs-pillars-grid { grid-template-columns: repeat(2, 1fr); }
       .fs-quote-grid { grid-template-columns: 1fr; gap: 40px; }
-      .form-row-3 { grid-template-columns: 1fr 1fr; }
     }
     @media (max-width: 768px) {
       .fs-services-grid { grid-template-columns: 1fr; }
       .fs-serve-grid { grid-template-columns: 1fr; }
       .fs-pillars-grid { grid-template-columns: 1fr; }
       .fs-quote-form { padding: 28px 20px; }
-      .form-row-3 { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -328,112 +290,6 @@
     </div>
   </section>
 
-  <!-- ===== PRICING ===== -->
-  <section class="fs-pricing section" id="pricing">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-label">Pricing</span>
-        <h2>Simple. Transparent. <span class="gradient-text">No Surprises.</span></h2>
-        <p>Clear pricing built around your space and needs. No hidden fees, no upsells at the door — just honest rates and thorough work.</p>
-      </div>
-
-      <div class="fs-pricing-grid">
-
-        <!-- Residential Recurring -->
-        <div class="fs-pricing-card">
-          <div class="fs-card-header">
-            <h3>Residential Recurring</h3>
-            <p>Weekly, bi-weekly, or monthly</p>
-          </div>
-          <div class="fs-card-body">
-            <div class="fs-rate-row">
-              <div class="fs-rate-label">Up to 1,000 sq ft</div>
-              <div class="fs-rate-price">$120 <em>$200 deep</em></div>
-            </div>
-            <div class="fs-rate-row">
-              <div class="fs-rate-label">1,000 – 1,800 sq ft</div>
-              <div class="fs-rate-price">$150 <em>$250 deep</em></div>
-            </div>
-            <div class="fs-rate-row">
-              <div class="fs-rate-label">1,800 – 2,500 sq ft</div>
-              <div class="fs-rate-price">$185 <em>$300 deep</em></div>
-            </div>
-            <div class="fs-rate-row">
-              <div class="fs-rate-label">2,500 – 3,500 sq ft</div>
-              <div class="fs-rate-price">$220 <em>$375 deep</em></div>
-            </div>
-            <div class="fs-card-note">
-              &#10003; Weekly clients receive a 10% discount<br/>
-              &#10003; First clean is always billed as a deep clean
-            </div>
-          </div>
-        </div>
-
-        <!-- Move-In / Move-Out -->
-        <div class="fs-pricing-card featured">
-          <div class="fs-card-header featured-header">
-            <h3>Move-In / Move-Out</h3>
-            <p>Full top-to-bottom clean</p>
-          </div>
-          <div class="fs-card-body">
-            <div class="fs-rate-row">
-              <div class="fs-rate-label">Studio / 1 Bedroom</div>
-              <div class="fs-rate-price">$200</div>
-            </div>
-            <div class="fs-rate-row">
-              <div class="fs-rate-label">2 Bedroom</div>
-              <div class="fs-rate-price">$275</div>
-            </div>
-            <div class="fs-rate-row">
-              <div class="fs-rate-label">3 Bedroom</div>
-              <div class="fs-rate-price">$350</div>
-            </div>
-            <div class="fs-rate-row">
-              <div class="fs-rate-label">4 Bedroom+</div>
-              <div class="fs-rate-price">$450+</div>
-            </div>
-            <div class="fs-card-note">
-              <strong>Add-Ons:</strong><br/>
-              Inside appliances +$50 &nbsp;·&nbsp; Inside cabinets +$75<br/>
-              Garage sweep +$50
-            </div>
-          </div>
-        </div>
-
-        <!-- Small Commercial -->
-        <div class="fs-pricing-card">
-          <div class="fs-card-header">
-            <h3>Small Commercial</h3>
-            <p>3-month minimum contracts</p>
-          </div>
-          <div class="fs-card-body">
-            <div class="fs-rate-row">
-              <div class="fs-rate-label">Small office <em>up to 1,000 sq ft</em></div>
-              <div class="fs-rate-price">from $400<em>/mo</em></div>
-            </div>
-            <div class="fs-rate-row">
-              <div class="fs-rate-label">Medical / dental office</div>
-              <div class="fs-rate-price">from $700<em>/mo</em></div>
-            </div>
-            <div class="fs-rate-row">
-              <div class="fs-rate-label">Retail storefront</div>
-              <div class="fs-rate-price">from $500<em>/mo</em></div>
-            </div>
-            <div class="fs-card-note">
-              &#10003; All commercial on minimum 3-month contracts<br/>
-              &#10003; Custom scopes available — contact us for a quote
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-      <div style="text-align:center; margin-top: 40px;">
-        <a href="#quote" class="btn-primary large">Get a Custom Quote</a>
-      </div>
-    </div>
-  </section>
-
   <!-- ===== WHY SUNDAY RESET ===== -->
   <section class="fs-why section" id="why-us">
     <div class="ai-bg-pattern"></div>
@@ -507,23 +363,48 @@
   <!-- ===== QUOTE / CONTACT FORM ===== -->
   <section class="fs-quote section" id="quote">
     <div class="container">
+      <div class="section-header">
+        <span class="section-label">Free Quote</span>
+        <h2>Let's Talk About <span class="gradient-text">Your Space</span></h2>
+        <p>Tell us what you need and we'll put together a custom quote — no obligations, no pressure, just straightforward pricing built around your situation.</p>
+      </div>
+
       <div class="fs-quote-grid">
         <div class="fs-quote-info">
-          <span class="section-label">Get In Touch</span>
-          <h3>Request Your Free Quote</h3>
-          <p>Tell us about your space and what you need. No obligations — just honest pricing and fast turnaround.</p>
-          <div class="contact-details">
-            <div class="contact-item">
-              <span class="contact-icon">&#128222;</span>
-              <a href="tel:+17575910000" style="color: var(--teal-mid); text-decoration:none; font-weight:500;">(757) 591-0000</a>
+          <h3>How It Works</h3>
+          <p>Fill out the form and we'll reach out within a few hours to confirm details and send your quote. Most clients hear back the same day.</p>
+
+          <div class="fs-trust-list">
+            <div class="fs-trust-item">
+              <div class="fs-trust-icon">&#128222;</div>
+              <div>
+                <strong>Prefer to call?</strong>
+                <a href="tel:+15404260945">(540) 426-0945</a>
+              </div>
             </div>
-            <div class="contact-item">
-              <span class="contact-icon">&#128231;</span>
-              <a href="mailto:info@keystoneoperationsgroup.net" style="color: var(--teal-mid); text-decoration:none; font-weight:500;">info@keystoneoperationsgroup.net</a>
+            <div class="fs-trust-item">
+              <div class="fs-trust-icon">&#128231;</div>
+              <div>
+                <strong>Email us directly</strong>
+                <a href="mailto:info@keystoneoperationsgroup.net">info@keystoneoperationsgroup.net</a>
+              </div>
             </div>
-            <div class="contact-item">
-              <span class="contact-icon">&#128205;</span>
-              <span>Fredericksburg, VA &amp; Surrounding Areas</span>
+            <div class="fs-trust-item">
+              <div class="fs-trust-icon">&#128205;</div>
+              <div>
+                <strong>Service area</strong>
+                <span>Fredericksburg, VA &amp; Surrounding Areas</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="fs-guarantee-box">
+            <div class="fs-guarantee-items">
+              <div class="fs-guarantee-item">&#9989; No contracts required for residential</div>
+              <div class="fs-guarantee-item">&#9989; Same-day response during business hours</div>
+              <div class="fs-guarantee-item">&#9989; Fully insured — every visit, every time</div>
+              <div class="fs-guarantee-item">&#9989; Family owned — not a franchise</div>
+              <div class="fs-guarantee-item">&#9989; Custom plan built around your schedule</div>
             </div>
           </div>
         </div>
@@ -549,12 +430,13 @@
               <label for="fs-service">Service Type</label>
               <select id="fs-service" name="service_type" required>
                 <option value="" disabled selected>Select a service…</option>
-                <option value="Residential Recurring">Residential Recurring</option>
+                <option value="Residential Recurring">Residential Recurring Cleaning</option>
                 <option value="Move-In Cleaning">Move-In Cleaning</option>
                 <option value="Move-Out Cleaning">Move-Out Cleaning</option>
-                <option value="Small Commercial">Small Commercial</option>
-                <option value="Deep Clean">Deep Clean</option>
+                <option value="Small Commercial">Small Commercial / Office</option>
+                <option value="Deep Clean">Deep Cleaning</option>
                 <option value="Post-Construction">Post-Construction Cleanup</option>
+                <option value="Facility Support">Facility Maintenance Support</option>
                 <option value="Not Sure Yet">Not Sure Yet</option>
               </select>
             </div>
@@ -575,11 +457,11 @@
             <input type="date" id="fs-date" name="preferred_date" />
           </div>
           <div class="form-group">
-            <label for="fs-notes">Additional Notes</label>
-            <textarea id="fs-notes" name="notes" rows="4" placeholder="Tell us anything specific about your space, access, pets, priorities, or timing…"></textarea>
+            <label for="fs-notes">Anything else we should know?</label>
+            <textarea id="fs-notes" name="notes" rows="4" placeholder="Pets, access instructions, specific areas of focus, frequency preferences — anything that helps us build the right plan for you."></textarea>
           </div>
-          <button type="submit" class="btn-primary full-width">Send My Quote Request</button>
-          <p style="font-size:0.78rem;color:var(--text-light);text-align:center;margin-top:-8px;">We typically respond within a few hours during business hours.</p>
+          <button type="submit" class="btn-primary full-width" style="padding: 16px; font-size: 1rem;">Request My Free Quote</button>
+          <p style="font-size:0.78rem;color:var(--text-light);text-align:center;margin-top:-8px;">We typically respond within a few hours. No spam, no pressure.</p>
         </form>
       </div>
     </div>
@@ -621,8 +503,7 @@
         <div class="footer-links">
           <h4>Get Started</h4>
           <ul>
-            <li><a href="#pricing">View Pricing</a></li>
-            <li><a href="#quote">Free Quote</a></li>
+            <li><a href="#quote">Get a Free Quote</a></li>
             <li><a href="tel:+17575910000">(757) 591-0000</a></li>
             <li><a href="mailto:info@keystoneoperationsgroup.net">Email Us</a></li>
           </ul>
@@ -666,7 +547,7 @@
       });
     }, { threshold: 0.1 });
 
-    document.querySelectorAll('.service-card, .who-card, .fs-pillar, .process-step, .fs-pricing-card').forEach(el => {
+    document.querySelectorAll('.service-card, .who-card, .fs-pillar, .process-step').forEach(el => {
       el.style.opacity = '0';
       el.style.transform = 'translateY(24px)';
       el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';

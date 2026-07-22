@@ -24,10 +24,24 @@
       --sr-ink-mid:     #5a4535;
     }
 
-    /* ── Nav gap fix for 9 links ── */
+    /* ── Nav: dark brown, no white flash ── */
     .nav-links { gap: 22px; }
     @media (max-width: 1280px) { .nav-links { gap: 16px; } .nav-links a { font-size: 0.82rem; } }
     @media (max-width: 1100px) { .nav-links { gap: 12px; } .nav-links a { font-size: 0.78rem; } }
+    #navbar,
+    #navbar.scrolled {
+      background: var(--sr-brown-dark) !important;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.25) !important;
+    }
+    #navbar .nav-links a { color: var(--sr-cream) !important; }
+    #navbar .nav-links a:hover { color: var(--sr-taupe-light, #d8ccbe) !important; }
+    #navbar .nav-cta {
+      background: var(--sr-brown) !important;
+      color: var(--sr-cream) !important;
+      border-color: var(--sr-brown) !important;
+    }
+    #navbar .nav-cta:hover { background: var(--sr-brown-mid) !important; }
+    #navbar .logo-img { filter: brightness(0) invert(1) !important; }
 
     /* ── Hero ── */
     .sr-hero {

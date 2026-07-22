@@ -41,32 +41,26 @@
   </script>
   <link rel="stylesheet" href="styles.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
-  <style>
-    /* Tighten nav gap now that Facility Services link was added */
-    .nav-links { gap: 22px; }
-    @media (max-width: 1280px) { .nav-links { gap: 16px; } .nav-links a { font-size: 0.82rem; } }
-    @media (max-width: 1100px) { .nav-links { gap: 12px; } .nav-links a { font-size: 0.78rem; } }
-  </style>
 </head>
 <body>
 
   <!-- Navigation -->
   <nav class="navbar" id="navbar">
     <div class="nav-container">
-      <div class="nav-logo">
+      <a href="/" class="nav-logo">
         <img src="logo.png" alt="Keystone Operations Group" class="logo-img" />
-      </div>
-      <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#ai-solutions">Our Approach</a></li>
-        <li><a href="logistics">Logistics</a></li>
-        <li><a href="exterior-cleaning">Exterior Services</a></li>
-        <li><a href="facility-services">Facility Services</a></li>
-        <li><a href="https://crm.keystoneoperationsgroup.net/about" target="_blank">KOGNITE</a></li>
-        <li><a href="#pricing">Pricing</a></li>
-        <li><a href="contact" class="nav-cta">Contact Us</a></li>
-      </ul>
+      </a>
+      <ul class="nav-links" id="nav-links">
+          <li><a href="/#about">About</a></li>
+          <li><a href="/#services">Services</a></li>
+          <li><a href="/#ai-solutions">Our Approach</a></li>
+          <li><a href="logistics">Logistics</a></li>
+          <li><a href="exterior-cleaning">Exterior Services</a></li>
+          <li><a href="facility-services">Facility Services</a></li>
+          <li><a href="https://crm.keystoneoperationsgroup.net/about" target="_blank">KOGNITE</a></li>
+          <li><a href="/#pricing">Pricing</a></li>
+          <li><a href="contact" class="nav-cta">Contact Us</a></li>
+        </ul>
       <button class="hamburger" id="hamburger" aria-label="Toggle menu">
         <span></span><span></span><span></span>
       </button>
@@ -75,7 +69,6 @@
 
   <!-- Hero -->
   <section class="hero" id="home">
-    <!-- Video Background -->
     <div class="hero-video-wrap">
       <video id="hero-video" autoplay muted loop playsinline>
         <source src="https://videos.pexels.com/video-files/5977455/5977455-hd_1920_1080_25fps.mp4" type="video/mp4" />
@@ -98,32 +91,9 @@
   <!-- About -->
   <section class="about section" id="about">
     <div class="container">
-      <div class="about-grid">
-        <div class="about-text">
-          <span class="section-label">Who We Are</span>
-          <h2>The Keystone of Your <span class="gradient-text">Operations</span></h2>
-          <p>Keystone Operations Group works with service-based businesses to build stronger operations from the ground up. We identify what's slowing you down, design solutions that fit your business, and help you implement them — so things run the way they should.</p>
-          <p>We serve independent operators and growing companies across HVAC, plumbing, pest control, landscaping, electrical, and other trades. You focus on the work. We help everything around it run better.</p>
-        </div>
-        <div class="about-visual">
-          <div class="about-badge">
-            <div class="badge-ring"></div>
-            <div class="badge-inner">
-              <span class="badge-headline">Trusted Partner</span>
-              <span class="badge-sub">Across Industries</span>
-            </div>
-          </div>
-          <div class="industry-tags">
-            <span>Pest Control</span>
-            <span>HVAC</span>
-            <span>Plumbing</span>
-            <span>Property Management</span>
-            <span>Landscaping</span>
-            <span>Small Businesses</span>
-            <span>Service Businesses</span>
-          </div>
-        </div>
-      </div>
+      <span class="section-label">Who We Are</span>
+      <h2>The Keystone of Your <span class="gradient-text">Operations</span></h2>
+      <p>We work with service-based businesses to build stronger operations — identifying what's slowing you down and putting systems in place so things run the way they should.</p>
     </div>
   </section>
 
@@ -139,33 +109,33 @@
         <div class="service-card">
           <div class="service-icon">&#128200;</div>
           <h3>Operational Strategy</h3>
-          <p>We analyze your workflows, identify bottlenecks, and design scalable operational frameworks that drive efficiency and reduce costs.</p>
+          <p>We analyze your workflows, identify bottlenecks, and design scalable frameworks that drive efficiency and reduce costs.</p>
         </div>
         <div class="service-card">
           <div class="service-icon">&#128202;</div>
           <h3>Process Optimization</h3>
-          <p>Lean methodology combined with modern tooling to streamline processes, eliminate waste, and create sustainable competitive advantages.</p>
+          <p>Lean methodology and modern tooling to streamline processes and create sustainable competitive advantages.</p>
         </div>
         <div class="service-card">
           <div class="service-icon">&#128101;</div>
           <h3>Change Management</h3>
-          <p>We guide organizations through complex transitions with structured change management programs that ensure stakeholder alignment and adoption.</p>
+          <p>Structured change management programs that ensure stakeholder alignment and adoption through complex transitions.</p>
         </div>
         <div class="service-card featured-service">
           <div class="service-badge">Core Service</div>
           <div class="service-icon">&#129302;</div>
           <h3>Systems & Workflow Design</h3>
-          <p>We design the operational systems and workflows that keep your business running consistently — reducing errors, improving response times, and freeing up your team.</p>
+          <p>We design the operational systems that keep your business running consistently — reducing errors and freeing up your team.</p>
         </div>
         <div class="service-card">
           <div class="service-icon">&#128196;</div>
           <h3>Technology Integration</h3>
-          <p>Seamless integration of enterprise platforms, data systems, and custom software to create a unified, high-performing tech ecosystem.</p>
+          <p>Seamless integration of platforms, data systems, and custom software into a unified, high-performing tech ecosystem.</p>
         </div>
         <div class="service-card">
           <div class="service-icon">&#127891;</div>
           <h3>Training & Development</h3>
-          <p>Equip your team with the skills and knowledge needed to sustain improvements and lead your organization into the future.</p>
+          <p>Equip your team with the skills to sustain improvements and lead your organization forward.</p>
         </div>
         <div class="service-card featured-service">
           <div class="service-badge">KOGNITE</div>
@@ -175,262 +145,16 @@
           <a href="https://crm.keystoneoperationsgroup.net/about" target="_blank" class="btn-primary" style="margin-top:1rem;display:inline-block;">Try KOGNITE &rarr;</a>
         </div>
         <div class="service-card">
-          <div class="service-icon">&#127783;</div>
-          <h3>KOG Exterior Services</h3>
-          <p>Professional pressure washing and exterior cleaning for commercial, residential, and government properties across the D.C. Metro Area. Veteran-owned, SWaM certified, and fully insured.</p>
-          <a href="exterior-cleaning" class="btn-primary" style="margin-top:1rem;display:inline-block;">Learn More &rarr;</a>
-        </div>
-        <div class="service-card">
           <div class="service-icon">&#127968;</div>
           <h3>Sunday Reset — KOG Facility Services</h3>
-          <p>Professional residential cleaning, move-in/move-out services, and facility support in Fredericksburg, VA &amp; surrounding areas. Family owned, detail obsessed, and fully insured.</p>
-          <a href="facility-services" class="btn-primary" style="margin-top:1rem;display:inline-block;">Learn More &rarr;</a>
+          <p>Professional residential cleaning and facility support in Fredericksburg, VA &amp; surrounding areas. Family owned, detail obsessed, fully insured.</p>
+          <a href="keystone-cleaning-services" class="btn-primary" style="margin-top:1rem;display:inline-block;">Learn More &rarr;</a>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Smart Tools Section (formerly AI Solutions) -->
-  <section class="ai-solutions section" id="ai-solutions">
-    <div class="ai-bg-pattern"></div>
-    <div class="container">
-      <div class="section-header">
-        <span class="section-label light">Our Approach</span>
-        <h2>Work Smarter,<br/><span class="gradient-text-light">Not Harder</span></h2>
-        <p class="light-text">We look at how your business actually runs today — then we help you build the systems, structure, and processes that let it run better tomorrow.</p>
-      </div>
-
-      <div class="ai-intro">
-        <p>Every business has areas where things slip — jobs that don't get followed up, customers who fall through the cracks, teams that aren't sure what the process is. We identify those gaps, design solutions that fit how you work, and help you put them in place. <strong>Less friction. More consistency. Better results.</strong></p>
-      </div>
-
-      <div class="ai-grid">
-        <div class="ai-card">
-          <div class="ai-card-icon">&#128197;</div>
-          <h3>Scheduling & Resource Management</h3>
-          <p>We help you build a scheduling and dispatch structure that keeps jobs moving, reduces conflicts, and ensures your team is always where they need to be.</p>
-          <ul class="ai-features">
-            <li>Job scheduling & routing</li>
-            <li>Capacity planning</li>
-            <li>Team coordination & tracking</li>
-          </ul>
-        </div>
-
-        <div class="ai-card ai-card-highlight">
-          <div class="ai-card-badge">Most Requested</div>
-          <div class="ai-card-icon">&#128172;</div>
-          <h3>Customer Experience & Communication</h3>
-          <p>We build the systems that keep your customers informed at every step — from the first inquiry through job completion — so nothing gets missed and your reputation stays strong.</p>
-          <ul class="ai-features">
-            <li>Lead follow-up processes</li>
-            <li>Appointment & job communication</li>
-            <li>Customer retention programs</li>
-          </ul>
-        </div>
-
-        <div class="ai-card">
-          <div class="ai-card-icon">&#128203;</div>
-          <h3>Estimates, Invoicing & Collections</h3>
-          <p>Tighten your quote-to-cash cycle. We help you get estimates out faster, invoices delivered on time, and payments collected without the back-and-forth.</p>
-          <ul class="ai-features">
-            <li>Faster estimate turnaround</li>
-            <li>Consistent invoice delivery</li>
-            <li>Payment follow-up processes</li>
-          </ul>
-        </div>
-
-        <div class="ai-card">
-          <div class="ai-card-icon">&#128200;</div>
-          <h3>Business Performance Visibility</h3>
-          <p>Know how your business is actually performing — revenue, job completion, response times, and more — without digging through spreadsheets or guessing.</p>
-          <ul class="ai-features">
-            <li>KPI identification & tracking</li>
-            <li>Job & revenue reporting</li>
-            <li>Team performance visibility</li>
-          </ul>
-        </div>
-
-        <div class="ai-card">
-          <div class="ai-card-icon">&#128101;</div>
-          <h3>Workflow & Process Buildout</h3>
-          <p>We map out how your business runs, find where time and money is being lost, and build clear processes your team can follow consistently — every time.</p>
-          <ul class="ai-features">
-            <li>Standard operating procedures</li>
-            <li>Onboarding & training workflows</li>
-            <li>Cross-team process alignment</li>
-          </ul>
-        </div>
-
-        <div class="ai-card">
-          <div class="ai-card-icon">&#128268;</div>
-          <h3>Tool & Software Alignment</h3>
-          <p>We built KOGNITE — our own CRM platform — so our clients never have to piece together multiple tools again. Contacts, pipeline, follow-up, invoicing, and job management in one place.</p>
-          <ul class="ai-features">
-            <li>Software review & optimization</li>
-            <li>Tool configuration & setup</li>
-            <li>Team training & adoption</li>
-          </ul>
-          <a href="https://crm.keystoneoperationsgroup.net/about" target="_blank" class="ai-card-link">See KOGNITE &rarr;</a>
-        </div>
-      </div>
-
-      <div class="ai-cta-block">
-        <h3>Let's start with a conversation.</h3>
-        <p>Every engagement begins with a free discovery call — we learn how your business runs today and identify where we can make the biggest impact.</p>
-        <a href="#contact" class="btn-primary large">Book a Free Discovery Call</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Who We Help -->
-  <section class="who-we-help section" id="who-we-help">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-label">Who We Help</span>
-        <h2>Built for <span class="gradient-text">Service Businesses</span><br/>Ready to Scale</h2>
-        <p>We specialize in helping service-based businesses run smarter — reducing inefficiencies, strengthening operations, and building the foundation needed to grow with confidence.</p>
-      </div>
-
-      <!-- Scrolling ticker -->
-      <div class="ticker-wrap">
-        <div class="ticker">
-          <span>&#127807; Pest Control</span>
-          <span>&#10052; HVAC Contractors</span>
-          <span>&#128167; Plumbing Companies</span>
-          <span>&#127968; Property Management</span>
-          <span>&#127807; Landscaping Companies</span>
-          <span>&#128188; Small Business Owners</span>
-          <span>&#128200; Growing Service Businesses</span>
-          <span>&#127807; Pest Control</span>
-          <span>&#10052; HVAC Contractors</span>
-          <span>&#128167; Plumbing Companies</span>
-          <span>&#127968; Property Management</span>
-          <span>&#127807; Landscaping Companies</span>
-          <span>&#128188; Small Business Owners</span>
-          <span>&#128200; Growing Service Businesses</span>
-        </div>
-      </div>
-
-      <div class="who-grid">
-        <div class="who-card">
-          <div class="who-icon">&#127807;</div>
-          <h3>Pest Control Companies</h3>
-          <p>Improve scheduling, routing, and customer communication so your technicians spend more time on jobs — and less on admin work.</p>
-        </div>
-        <div class="who-card">
-          <div class="who-icon">&#10052;</div>
-          <h3>HVAC Contractors</h3>
-          <p>Streamline dispatch, service agreements, and seasonal demand planning with operational systems built for the pace of the trades.</p>
-        </div>
-        <div class="who-card">
-          <div class="who-icon">&#128167;</div>
-          <h3>Plumbing Companies</h3>
-          <p>From lead management to job costing, we help plumbing businesses tighten operations and scale without the growing pains.</p>
-        </div>
-        <div class="who-card">
-          <div class="who-icon">&#127968;</div>
-          <h3>Property Management Firms</h3>
-          <p>Handle more units with less friction — improve tenant communications, maintenance workflows, and reporting across your portfolio.</p>
-        </div>
-        <div class="who-card">
-          <div class="who-icon">&#127807;</div>
-          <h3>Landscaping Companies</h3>
-          <p>Strengthen crew scheduling, equipment usage, and client retention so your business grows season after season.</p>
-        </div>
-        <div class="who-card">
-          <div class="who-icon">&#128188;</div>
-          <h3>Small Business Owners</h3>
-          <p>Get the operational clarity and structure you need to stop working in your business and start working on it.</p>
-        </div>
-        <div class="who-card who-card-wide">
-          <div class="who-icon">&#128200;</div>
-          <h3>Growing Service Businesses</h3>
-          <p>If your business is outgrowing its current systems and you're ready to invest in the foundation for the next level — we're the partner you've been looking for.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Our Process -->
-  <section class="process section" id="process">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-label">Our Process</span>
-        <h2>How We <span class="gradient-text">Work With You</span></h2>
-        <p>Every engagement follows a proven framework designed to deliver clarity, alignment, and measurable results at every step.</p>
-      </div>
-      <div class="process-track">
-        <div class="process-step">
-          <div class="step-number">1</div>
-          <div class="step-content">
-            <h3>Discovery</h3>
-            <p>We start by listening. Through structured interviews, data review, and stakeholder sessions, we build a clear picture of your current state, goals, and constraints.</p>
-          </div>
-        </div>
-        <div class="process-arrow">&#8595;</div>
-        <div class="process-step">
-          <div class="step-number">2</div>
-          <div class="step-content">
-            <h3>Assessment</h3>
-            <p>We analyze findings against industry benchmarks and best practices to identify gaps, inefficiencies, and the highest-value opportunities for improvement.</p>
-          </div>
-        </div>
-        <div class="process-arrow">&#8595;</div>
-        <div class="process-step">
-          <div class="step-number">3</div>
-          <div class="step-content">
-            <h3>Solution Design</h3>
-            <p>We co-create a tailored roadmap with your team — defining the right strategies, tools, and technologies to address your specific needs and deliver lasting impact.</p>
-          </div>
-        </div>
-        <div class="process-arrow">&#8595;</div>
-        <div class="process-step">
-          <div class="step-number">4</div>
-          <div class="step-content">
-            <h3>Implementation</h3>
-            <p>Our team works alongside yours to execute the plan — deploying solutions, managing change, and ensuring smooth adoption across your organization.</p>
-          </div>
-        </div>
-        <div class="process-arrow">&#8595;</div>
-        <div class="process-step">
-          <div class="step-number">5</div>
-          <div class="step-content">
-            <h3>Ongoing Support</h3>
-            <p>We don't walk away after go-live. We provide continuous monitoring, optimization, and strategic guidance to ensure your investment keeps delivering value.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- Why Keystone -->
-  <section class="why-us section" id="why-us">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-label">Why Keystone</span>
-        <h2>The Difference We <span class="gradient-text">Deliver</span></h2>
-      </div>
-      <div class="why-grid">
-        <div class="why-item">
-          <div class="why-number">01</div>
-          <h3>Results-First Philosophy</h3>
-          <p>Every engagement is tied to clear, measurable KPIs. We don't declare success until your metrics do.</p>
-        </div>
-        <div class="why-item">
-          <div class="why-number">02</div>
-          <h3>Tailored, Not Templated</h3>
-          <p>No two organizations are alike. Our solutions are built from the ground up to fit your unique context and goals.</p>
-        </div>
-        <div class="why-item">
-          <div class="why-number">03</div>
-          <h3>Deep Domain Expertise</h3>
-          <p>Our consultants bring real-world operational and technical experience across diverse industries and functions.</p>
-        </div>
-        <div class="why-item">
-          <div class="why-number">04</div>
-          <h3>Ongoing Partnership</h3>
-          <p>We stay engaged beyond the initial project to ensure solutions scale and continue to deliver value.</p>
+        <div class="service-card">
+          <div class="service-icon">&#128465;</div>
+          <h3>KOG Junk Removal</h3>
+          <p>Fast, affordable junk removal and full property cleanouts for homes, businesses, and government facilities. Same-day pickup available.</p>
+          <a href="junk-removal" class="btn-primary" style="margin-top:1rem;display:inline-block;">Learn More &rarr;</a>
         </div>
       </div>
     </div>
@@ -484,70 +208,14 @@
     </div>
   </section>
 
-  <!-- Contact -->
-  <section class="contact section" id="contact">
-    <div class="container">
-      <div class="contact-grid">
-        <div class="contact-info">
-          <span class="section-label">Get In Touch</span>
-          <h2>Let's Build Something <span class="gradient-text">Together</span></h2>
-          <p>Whether you're looking to improve operations, solve a specific challenge, or simply explore what's possible — we'd love to connect.</p>
-          <div class="contact-details">
-            <div class="contact-item">
-              <span class="contact-icon">&#128205;</span>
-              <span>Washington, D.C. Metro Area</span>
-            </div>
-            <div class="contact-item">
-              <span class="contact-icon">&#128231;</span>
-              <span>info@keystoneoperationsgroup.net</span>
-            </div>
-          </div>
-        </div>
-        <div class="contact-cta-box">
-          <div class="contact-cta-items">
-            <div class="contact-cta-item">
-              <div class="contact-cta-icon">&#9889;</div>
-              <div>
-                <h4>Fast Turnaround</h4>
-                <p>We move quickly. Most engagements are up and running within 1–2 business days.</p>
-              </div>
-            </div>
-            <div class="contact-cta-item">
-              <div class="contact-cta-icon">&#128274;</div>
-              <div>
-                <h4>No Contracts</h4>
-                <p>Cancel anytime. No long-term commitment, no penalty, no hassle.</p>
-              </div>
-            </div>
-            <div class="contact-cta-item">
-              <div class="contact-cta-icon">&#128200;</div>
-              <div>
-                <h4>Built Around You</h4>
-                <p>Every solution is tailored to your business — not a generic off-the-shelf template.</p>
-              </div>
-            </div>
-            <div class="contact-cta-item">
-              <div class="contact-cta-icon">&#128587;</div>
-              <div>
-                <h4>We Stay Involved</h4>
-                <p>You focus on the work. We stay on top of everything we've built to make sure it keeps running right.</p>
-              </div>
-            </div>
-          </div>
-          <a href="contact" class="btn-primary" style="margin-top: 8px;">Get In Touch</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- Footer -->
   <footer class="footer">
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <div class="nav-logo">
+          <a href="/" class="nav-logo">
             <img src="logo.png" alt="Keystone Operations Group" class="logo-img footer-logo-img" />
-          </div>
+          </a>
           <p>Operational excellence and intelligent innovation — delivered with purpose.</p>
         </div>
         <div class="footer-links">
@@ -557,27 +225,10 @@
             <li><a href="#services">Services</a></li>
             <li><a href="#ai-solutions">Our Approach</a></li>
             <li><a href="logistics">Logistics</a></li>
-            <li><a href="exterior-cleaning">Exterior Services</a></li>
-            <li><a href="facility-services">Facility Services</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </div>
-        <div class="footer-links">
-          <h4>Services</h4>
-          <ul>
-            <li><a href="#services">Operational Strategy</a></li>
-            <li><a href="#services">Process Optimization</a></li>
-            <li><a href="#services">Change Management</a></li>
-            <li><a href="#services">Systems & Workflow Design</a></li>
-          </ul>
-        </div>
-        <div class="footer-links">
-          <h4>Our Approach</h4>
-          <ul>
-            <li><a href="#ai-solutions">Scheduling & Resources</a></li>
-            <li><a href="#ai-solutions">Customer Experience</a></li>
-            <li><a href="#ai-solutions">Workflow Buildout</a></li>
-            <li><a href="#ai-solutions">Tool Alignment</a></li>
+            <li><a href="keystone-cleaning-services">Facility Services</a></li>
+            <li><a href="junk-removal">Junk Removal</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="contact">Contact</a></li>
           </ul>
         </div>
       </div>

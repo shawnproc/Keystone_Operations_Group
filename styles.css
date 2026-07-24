@@ -243,6 +243,41 @@ body {
   padding-left: 13px;
 }
 
+/* ── Reviews ─────────────────────────────────────────── */
+.reviews-section { padding: 96px 0; background: var(--surface); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+.reviews-header { margin-bottom: 52px; }
+.reviews-header h2 {
+  font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+  font-weight: 800;
+  color: var(--white);
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+}
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.review-card {
+  background: #161616;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 32px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.review-stars { color: var(--accent); font-size: 1rem; letter-spacing: 2px; }
+.review-text {
+  font-size: 0.97rem;
+  color: var(--text-mid);
+  line-height: 1.8;
+  flex: 1;
+}
+.review-author { display: flex; flex-direction: column; gap: 3px; padding-top: 8px; border-top: 1px solid var(--border); }
+.review-name { font-size: 0.9rem; font-weight: 700; color: var(--white); }
+.review-title { font-size: 0.78rem; color: var(--text-dim); }
+
 /* ── Quote section ─────────────────────────────────────────── */
 .quote-section { padding: 96px 0; }
 .section-label {
@@ -446,6 +481,7 @@ body {
   .nav-links, .nav-phone { display: none; }
   .hamburger { display: flex; }
   .values-grid { grid-template-columns: 1fr; gap: 32px; }
+  .reviews-grid { grid-template-columns: 1fr; }
   .quote-grid { grid-template-columns: 1fr; gap: 48px; }
   .form-row { grid-template-columns: 1fr; }
   .contact-layout { grid-template-columns: 1fr; gap: 48px; }

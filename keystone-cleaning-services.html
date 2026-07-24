@@ -3,367 +3,39 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Facility Services — Keystone Operations Group</title>
+  <title>Cleaning Services | Keystone Operations Group</title>
+  <meta name="robots" content="noindex, follow" />
+  <meta http-equiv="refresh" content="0; url=https://clearawaysolutions.com/services" />
+  <link rel="canonical" href="https://clearawaysolutions.com/services" />
   <link rel="stylesheet" href="styles.css" />
-  <link rel="icon" type="image/x-icon" href="favicon.ico" />
-  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
-  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet" />
-  <style>
-    :root {
-      --sr-brown-dark:  #3d2b1f;
-      --sr-brown:       #7a5540;
-      --sr-brown-mid:   #a07858;
-      --sr-taupe:       #b5a090;
-      --sr-taupe-light: #d8ccbe;
-      --sr-cream:       #faf6ef;
-      --sr-cream-mid:   #ede4d4;
-      --sr-cream-dark:  #e0d4c0;
-      --sr-ink:         #2d1f14;
-      --sr-ink-mid:     #5a4535;
-    }
-
-    /* ── Nav: dark brown, no white flash ── */
-    .nav-links { gap: 22px; }
-    @media (max-width: 1280px) { .nav-links { gap: 16px; } .nav-links a { font-size: 0.82rem; } }
-    @media (max-width: 1100px) { .nav-links { gap: 12px; } .nav-links a { font-size: 0.78rem; } }
-    #navbar,
-    #navbar.scrolled {
-      background: var(--sr-brown-dark) !important;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.25) !important;
-    }
-    #navbar .nav-links a { color: var(--sr-cream) !important; }
-    #navbar .nav-links a:hover { color: var(--sr-taupe-light, #d8ccbe) !important; }
-    #navbar .nav-cta {
-      background: var(--sr-brown) !important;
-      color: var(--sr-cream) !important;
-      border-color: var(--sr-brown) !important;
-    }
-    #navbar .nav-cta:hover { background: var(--sr-brown-mid) !important; }
-    #navbar .logo-img { filter: brightness(0) invert(1) !important; }
-
-    /* ── Hero ── */
-    .sr-hero {
-      background: linear-gradient(135deg, var(--sr-brown-dark) 0%, var(--sr-brown) 60%, var(--sr-brown-mid) 100%);
-      padding: 160px 0 80px;
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-    }
-    .sr-hero::before {
-      content: '';
-      position: absolute; inset: 0;
-      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23faf6ef' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-      pointer-events: none;
-    }
-    .sr-hero-inner { position: relative; z-index: 1; max-width: 700px; margin: 0 auto; padding: 0 24px; }
-    .sr-hero-eyebrow {
-      font-family: 'Inter', sans-serif; font-size: 0.78rem; font-weight: 600;
-      letter-spacing: 0.18em; text-transform: uppercase;
-      color: var(--sr-taupe-light, #d8ccbe); margin-bottom: 14px;
-    }
-    .sr-hero h1 {
-      font-family: 'Lora', serif; font-size: clamp(2rem, 5vw, 3rem);
-      font-weight: 600; color: var(--sr-cream); margin: 0 0 16px; line-height: 1.2;
-    }
-    .sr-hero-sub {
-      font-family: 'Lora', serif; font-style: italic;
-      font-size: 1.05rem; color: var(--sr-taupe-light, #d8ccbe); margin: 0 0 36px;
-    }
-    .sr-hero-cta { display: inline-flex; gap: 14px; flex-wrap: wrap; justify-content: center; }
-    .sr-btn-primary {
-      background: var(--sr-cream); color: var(--sr-brown-dark);
-      padding: 13px 30px; border-radius: 6px; font-weight: 600; font-size: 0.92rem;
-      text-decoration: none; transition: background 0.2s, transform 0.2s;
-      border: none; cursor: pointer; font-family: 'Inter', sans-serif;
-    }
-    .sr-btn-primary:hover { background: var(--sr-cream-mid); transform: translateY(-2px); }
-    .sr-btn-outline {
-      background: transparent; color: var(--sr-cream);
-      padding: 13px 30px; border-radius: 6px; font-weight: 600; font-size: 0.92rem;
-      text-decoration: none; border: 2px solid rgba(250,246,239,0.5);
-      transition: border-color 0.2s, transform 0.2s;
-    }
-    .sr-btn-outline:hover { border-color: var(--sr-cream); transform: translateY(-2px); }
-
-    /* ── Services ── */
-    .sr-services { background: var(--sr-cream); padding: 80px 0; }
-    .sr-section-header { text-align: center; margin-bottom: 48px; }
-    .sr-section-header h2 {
-      font-family: 'Lora', serif; font-size: clamp(1.6rem, 3.5vw, 2.2rem);
-      color: var(--sr-brown-dark); margin: 0 0 12px;
-    }
-    .sr-section-header p { color: var(--sr-ink-mid); max-width: 520px; margin: 0 auto; font-size: 0.95rem; }
-    .sr-services-grid {
-      display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;
-      max-width: 1000px; margin: 0 auto; padding: 0 24px;
-    }
-    .sr-service-card {
-      background: #fff; border: 1px solid var(--sr-taupe-light);
-      border-radius: 10px; padding: 28px 24px;
-      transition: box-shadow 0.2s, transform 0.2s;
-    }
-    .sr-service-card:hover { box-shadow: 0 6px 24px rgba(61,43,31,0.1); transform: translateY(-3px); }
-    .sr-service-card.featured {
-      background: var(--sr-brown); border-color: var(--sr-brown);
-      color: var(--sr-cream);
-    }
-    .sr-service-card.featured h3,
-    .sr-service-card.featured p { color: var(--sr-cream); }
-    .sr-service-card.featured .sr-card-icon { color: var(--sr-cream-mid); }
-    .sr-card-icon { font-size: 1.6rem; margin-bottom: 12px; color: var(--sr-brown); }
-    .sr-service-card h3 { font-size: 1rem; font-weight: 600; color: var(--sr-brown-dark); margin: 0 0 8px; }
-    .sr-service-card p { font-size: 0.85rem; color: var(--sr-ink-mid); margin: 0; line-height: 1.55; }
-    @media (max-width: 800px) { .sr-services-grid { grid-template-columns: repeat(2, 1fr); } }
-    @media (max-width: 520px) { .sr-services-grid { grid-template-columns: 1fr; } }
-
-    /* ── Contact / Quote ── */
-    .sr-contact { background: var(--sr-cream); padding: 80px 0; }
-    .sr-contact-inner {
-      max-width: 900px; margin: 0 auto; padding: 0 24px;
-      display: grid; grid-template-columns: 1fr 1.4fr; gap: 60px; align-items: start;
-    }
-    .sr-contact-info h3 { font-family: 'Lora', serif; font-size: 1.4rem; color: var(--sr-brown-dark); margin: 0 0 12px; }
-    .sr-contact-info p { color: var(--sr-ink-mid); font-size: 0.9rem; margin: 0 0 24px; line-height: 1.65; }
-    .sr-contact-detail { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; }
-    .sr-contact-detail span { color: var(--sr-ink-mid); font-size: 0.88rem; }
-    .sr-form { display: flex; flex-direction: column; gap: 14px; }
-    .sr-form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
-    .sr-form label { display: block; font-size: 0.8rem; font-weight: 600; color: var(--sr-brown-dark); margin-bottom: 5px; }
-    .sr-form input, .sr-form select, .sr-form textarea {
-      width: 100%; padding: 11px 14px;
-      border: 1.5px solid var(--sr-taupe-light); border-radius: 7px;
-      font-size: 0.9rem; font-family: 'Inter', sans-serif;
-      color: var(--sr-ink); background: #fff;
-      transition: border-color 0.2s; box-sizing: border-box;
-    }
-    .sr-form input:focus, .sr-form select:focus, .sr-form textarea:focus {
-      outline: none; border-color: var(--sr-brown);
-    }
-    .sr-form textarea { resize: vertical; }
-    .sr-form-submit {
-      background: var(--sr-brown); color: var(--sr-cream);
-      padding: 13px 0; width: 100%; border: none; border-radius: 7px;
-      font-size: 0.95rem; font-weight: 600; cursor: pointer;
-      font-family: 'Inter', sans-serif; transition: background 0.2s;
-    }
-    .sr-form-submit:hover { background: var(--sr-brown-dark); }
-    @media (max-width: 700px) {
-      .sr-contact-inner { grid-template-columns: 1fr; gap: 36px; }
-      .sr-form-row { grid-template-columns: 1fr; }
-    }
-
-    /* ── Scroll reveal ── */
-    .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.6s ease, transform 0.6s ease; }
-    .reveal.visible { opacity: 1; transform: none; }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
 </head>
 <body>
-
   <nav class="navbar scrolled" id="navbar">
     <div class="nav-container">
-      <a href="/" class="nav-logo"><img src="logo.png" alt="Keystone Operations Group" class="logo-img" style="filter:none;" /></a>
+      <a href="/" class="nav-logo">
+        <img src="logo.png" alt="Keystone Operations Group" class="logo-img" style="filter:none;" />
+      </a>
       <ul class="nav-links" id="nav-links">
-          <li><a href="/#about">About</a></li>
-          <li><a href="/#services">Services</a></li>
-          <li><a href="/#ai-solutions">Our Approach</a></li>
-          <li><a href="logistics">Logistics</a></li>
-          <li><a href="junk-removal">Junk Removal</a></li>
-          <li><a href="keystone-cleaning-services">Facility Services</a></li>
-          <li><a href="https://crm.keystoneoperationsgroup.net/about" target="_blank">KOGNITE</a></li>
-          <li><a href="/#pricing">Pricing</a></li>
-          <li><a href="contact" class="nav-cta">Contact Us</a></li>
-        </ul>
-      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
-        <span></span><span></span><span></span>
-      </button>
+        <li><a href="/#about">About</a></li>
+        <li><a href="/#services">Services</a></li>
+        <li><a href="logistics">Logistics</a></li>
+        <li><a href="https://crm.keystoneoperationsgroup.net/about" target="_blank">KOGNITE</a></li>
+        <li><a href="/#pricing">Pricing</a></li>
+        <li><a href="contact" class="nav-cta">Contact Us</a></li>
+      </ul>
     </div>
   </nav>
 
-  <!-- Hero -->
-  <section class="sr-hero">
-    <div class="sr-hero-inner">
-      <p class="sr-hero-eyebrow">Facility Services &middot; Keystone Operations Group</p>
-      <div class="sr-hero-cta">
-        <a href="#quote" class="sr-btn-primary">Get a Quote</a>
-        <a href="#quote" class="sr-btn-outline">Contact Us</a>
-      </div>
+  <section class="legal-page">
+    <div class="container" style="max-width: 640px; text-align: center;">
+      <div style="font-size: 3rem; margin-bottom: 24px;">🧹</div>
+      <h1 style="color: var(--white);">Cleaning Services Have Moved</h1>
+      <p class="legal-date">This service is now offered through Clear-A-Way Solutions.</p>
+      <p style="color: var(--text-mid); line-height: 1.8; margin-bottom: 32px;">Our commercial and residential cleaning services are now handled by Clear-A-Way Solutions — a dedicated cleaning and property services company serving Hampton Roads, VA.</p>
+      <a href="https://clearawaysolutions.com/services" style="display:inline-block; background: linear-gradient(135deg, var(--teal-dark), var(--teal-mid)); color: #fff; padding: 14px 32px; border-radius: 50px; text-decoration: none; font-weight: 600;">Visit Clear-A-Way Solutions &rarr;</a>
+      <p style="margin-top: 24px; color: var(--text-light); font-size: 0.9rem;">If you're not redirected automatically, click the button above.</p>
     </div>
   </section>
-
-  <!-- Services -->
-  <section class="sr-services">
-    <div class="sr-section-header reveal">
-      <h2>What We Clean</h2>
-      <p>Residential and commercial cleaning tailored to your schedule and space.</p>
-    </div>
-    <div class="sr-services-grid">
-      <div class="sr-service-card featured reveal">
-        <div class="sr-card-icon">&#127968;</div>
-        <h3>Residential Cleaning</h3>
-        <p>Full home cleaning — kitchens, bathrooms, bedrooms, and living areas. One-time or recurring.</p>
-      </div>
-      <div class="sr-service-card reveal">
-        <div class="sr-card-icon">&#127970;</div>
-        <h3>Commercial Cleaning</h3>
-        <p>Offices, suites, and shared workspaces kept spotless before your team arrives.</p>
-      </div>
-      <div class="sr-service-card reveal">
-        <div class="sr-card-icon">&#10024;</div>
-        <h3>Deep Cleaning</h3>
-        <p>Move-in/move-out or seasonal deep cleans — baseboards, appliances, and everything in between.</p>
-      </div>
-      <div class="sr-service-card reveal">
-        <div class="sr-card-icon">&#128722;</div>
-        <h3>Post-Construction</h3>
-        <p>Dust, debris, and residue removed after renovation or new construction work.</p>
-      </div>
-      <div class="sr-service-card reveal">
-        <div class="sr-card-icon">&#127774;</div>
-        <h3>Recurring Service</h3>
-        <p>Weekly, bi-weekly, or monthly plans with consistent crews who know your space.</p>
-      </div>
-      <div class="sr-service-card reveal">
-        <div class="sr-card-icon">&#128197;</div>
-        <h3>Event Prep &amp; Cleanup</h3>
-        <p>Pre-event prep and post-event cleanup so you can focus on your guests.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Quote / Contact -->
-  <section class="sr-contact" id="quote">
-    <div class="sr-contact-inner">
-      <div class="sr-contact-info reveal">
-        <h3>Get a Custom Quote</h3>
-        <p>Not sure what you need? Tell us about your space and we'll put together a custom cleaning plan.</p>
-        <div class="sr-contact-detail">
-          <span>&#128205;</span>
-          <span>Washington, D.C. Metro Area</span>
-        </div>
-        <div class="sr-contact-detail">
-          <span>&#128222;</span>
-          <span><a href="tel:+17575910000" style="color:var(--sr-brown);text-decoration:none;">(757)591-0000</a></span>
-        </div>
-        <div class="sr-contact-detail">
-          <span>&#128231;</span>
-          <span><a href="mailto:info@keystoneoperationsgroup.net" style="color:var(--sr-brown);text-decoration:none;">info@keystoneoperationsgroup.net</a></span>
-        </div>
-      </div>
-      <form class="sr-form reveal" action="https://formspree.io/f/mykayqza" method="POST">
-        <div class="sr-form-row">
-          <div>
-            <label>First Name</label>
-            <input type="text" name="first_name" placeholder="Jane" required />
-          </div>
-          <div>
-            <label>Last Name</label>
-            <input type="text" name="last_name" placeholder="Smith" required />
-          </div>
-        </div>
-        <div>
-          <label>Email</label>
-          <input type="email" name="email" placeholder="jane@email.com" required />
-        </div>
-        <div>
-          <label>Phone</label>
-          <input type="tel" name="phone" placeholder="(555) 000-0000" />
-        </div>
-        <div>
-          <label>Service Type</label>
-          <select name="service_type">
-            <option value="">Select a service...</option>
-            <option>Residential Cleaning</option>
-            <option>Commercial Cleaning</option>
-            <option>Deep Cleaning</option>
-            <option>Post-Construction Cleanup</option>
-            <option>Recurring Service</option>
-            <option>Event Prep &amp; Cleanup</option>
-            <option>Other</option>
-          </select>
-        </div>
-        <div>
-          <label>Square Footage (approx.)</label>
-          <input type="text" name="square_footage" placeholder="e.g. 1,200 sq ft" />
-        </div>
-        <div>
-          <label>Message</label>
-          <textarea name="message" rows="4" placeholder="Tell us about your space and any special requests..."></textarea>
-        </div>
-        <button type="submit" class="sr-form-submit">Send Quote Request</button>
-      </form>
-    </div>
-  </section>
-
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <img src="logo.png" alt="Keystone Operations Group" class="footer-logo" />
-          <p>Operational excellence and intelligent innovation for businesses in the modern economy.</p>
-        </div>
-        <div class="footer-links">
-          <h4>Company</h4>
-          <ul>
-            <li><a href="/#about">About</a></li>
-            <li><a href="/#services">Services</a></li>
-            <li><a href="/#ai-solutions">Our Approach</a></li>
-            <li><a href="contact">Contact</a></li>
-          </ul>
-        </div>
-        <div class="footer-links">
-          <h4>Services</h4>
-          <ul>
-            <li><a href="logistics">Logistics</a></li>
-            <li><a href="keystone-cleaning-services">Facility Services</a></li>
-            <li><a href="junk-removal">Junk Removal</a></li>
-            <li><a href="https://crm.keystoneoperationsgroup.net/about" target="_blank">KOGNITE</a></li>
-          </ul>
-        </div>
-        <div class="footer-links">
-          <h4>Facility Services</h4>
-          <ul>
-            <li><a href="tel:+17575910000">(757)591-0000</a></li>
-            <li><a href="mailto:info@keystoneoperationsgroup.net">info@keystoneoperationsgroup.net</a></li>
-            <li><a href="#quote">Get a Quote</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>&copy; 2026 Keystone Operations Group LLC. All rights reserved. &nbsp;|&nbsp; (757) 591-0000 &nbsp;|&nbsp; info@keystoneoperationsgroup.net</p>
-        <div class="footer-legal">
-          <a href="terms">Terms of Service</a>
-          <span>·</span>
-          <a href="privacy">Privacy Policy</a>
-          <span>·</span>
-          <a href="sms-opt-in">SMS Opt-In</a>
-        </div>
-      </div>
-    </div>
-  </footer>
-
-  <script>
-    // Navbar scroll
-    const navbar = document.getElementById('navbar');
-    window.addEventListener('scroll', () => {
-      navbar.classList.toggle('scrolled', window.scrollY > 40);
-    });
-
-    // Hamburger
-    const hamburger = document.getElementById('hamburger');
-    const navLinks = document.getElementById('nav-links');
-    hamburger.addEventListener('click', () => {
-      navLinks.classList.toggle('open');
-      hamburger.classList.toggle('open');
-    });
-
-    // Scroll reveal
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
-    }, { threshold: 0.12 });
-    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-  </script>
-
 </body>
 </html>

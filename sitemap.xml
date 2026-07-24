@@ -17,16 +17,6 @@
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
-  <url>
-    <loc>https://keystoneoperationsgroup.net/exterior-cleaning.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://keystoneoperationsgroup.net/facility-services.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
 
   <!-- Courier hub -->
   <url>
@@ -58,85 +48,6 @@
   </url>
   <url>
     <loc>https://keystoneoperationsgroup.net/auto-parts-delivery-fredericksburg-va</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
-  </url>
-
-  <!-- Exterior services landing pages -->
-  <url>
-    <loc>https://keystoneoperationsgroup.net/pressure-washing-fredericksburg-va</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://keystoneoperationsgroup.net/roof-soft-washing-fredericksburg-va</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://keystoneoperationsgroup.net/building-exterior-cleaning-northern-virginia</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://keystoneoperationsgroup.net/government-facility-cleaning-virginia</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://keystoneoperationsgroup.net/fleet-vehicle-washing-fredericksburg-va</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://keystoneoperationsgroup.net/graffiti-removal-fredericksburg-va</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://keystoneoperationsgroup.net/parking-lot-cleaning-fredericksburg-va</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://keystoneoperationsgroup.net/dumpster-pad-cleaning-fredericksburg-va</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
-  </url>
-
-  <!-- Cleaning services landing pages -->
-  <url>
-    <loc>https://keystoneoperationsgroup.net/residential-cleaning-fredericksburg-va</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://keystoneoperationsgroup.net/deep-cleaning-services-fredericksburg-va</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://keystoneoperationsgroup.net/move-in-move-out-cleaning-fredericksburg-va</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://keystoneoperationsgroup.net/commercial-office-cleaning-fredericksburg-va</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://keystoneoperationsgroup.net/post-construction-cleanup-fredericksburg-va</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://keystoneoperationsgroup.net/facility-maintenance-support-northern-virginia</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://keystoneoperationsgroup.net/small-office-building-cleaning-fredericksburg-va</loc>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
